@@ -1,0 +1,142 @@
+.welcomeText {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 25px;
+  transform-origin: center;
+  transform: scale(2, 2);
+  /* border: 2px solid white; */
+}
+
+.lineDiv {
+  display: flex;
+  width: fit-content;
+  height: 25px;
+}
+
+.welcomeText text {
+  fill: transparent;
+  //   stroke: url(#welcomeTextGradient);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+  stroke-width: 0.9;
+
+  transition-duration: 3s;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+
+  // border: 1px solid red;
+  animation-name: strokeWidthAnim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes strokeWidthAnim {
+  0% {
+    stroke-width: 0.9;
+  }
+  50% {
+    stroke-width: 0.4;
+  }
+  100% {
+    stroke-width: 0.9;
+  }
+}
+
+.welcomeTextReveal text {
+  stroke-dashoffset: 0;
+}
+
+:global(.pageSwitching-exit) .welcomeText text {
+  transition-timing-function: unset;
+  animation-name: unset;
+  transition-duration: 2s;
+  // transition-delay: 0s !important;
+  // stroke-dashoffset: 0;
+}
+:global(.pageSwitching-exit.pageSwitching-exit-active) .welcomeText text {
+  animation-name: unset;
+  // stroke-dashoffset: 250;
+  filter: blur(20px);
+  opacity: 0;
+}
+
+#welcomeTextGradient {
+  --color-stop-1: rgb(27, 57, 189);
+  --color-stop-2: rgb(158, 192, 255);
+  --color-stop-2: rgb(205, 145, 255);
+}
+
+#welcomeTextGradientWhite {
+  // --color-stop-1: rgb(55, 78, 112);
+  // --color-stop-2: rgb(255, 188, 4);
+  --color-stop-1: rgb(214, 202, 28);
+  --color-stop-2: rgb(165, 121, 0);
+}
+
+.welcomeText .lineDiv .lineSVG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10px;
+  overflow: visible;
+  display: flex;
+  /* border: 1px solid cyan; */
+
+  &:nth-child(12),
+  &:nth-child(13),
+  &:nth-child(14) {
+    filter: 
+        /* drop-shadow(0 0 2px rgb(20, 20, 218)) */ drop-shadow(0 0 5px rgb(170, 165, 117));
+  }
+
+  &:nth-child(12) text,
+  &:nth-child(12) text,
+  &:nth-child(13) text,
+  &:nth-child(14) text {
+    stroke-width: 0.7;
+    //   stroke: url(#welcomeTextGradientWhite);
+    /* transition: 0s !important; */
+    /* stroke: rgb(197, 175, 49); */
+  }
+
+  &[letter="l"] {
+    margin-right: -5px;
+  }
+
+  &[letter="t"] {
+    margin-right: -3px;
+  }
+
+  &[letter="w"] {
+    margin-right: 3px;
+  }
+
+  &[letter="m"] {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .welcomeText {
+    transform: scale(1.65, 1.65) translateX(-10px);
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .welcomeText {
+    transform: scale(1.4, 1.4) translateX(-10px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .welcomeText {
+    transform: scale(1.1, 1.1) translateX(-10px);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .welcomeText {
+    transform: scale(1, 1) translateX(-5px);
+  }
+}

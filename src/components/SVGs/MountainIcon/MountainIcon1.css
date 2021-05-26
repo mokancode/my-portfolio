@@ -1,0 +1,38 @@
+.mountainIconWrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.mountainIcon1SVG {
+    position: absolute;
+    top: 20px;
+    transform: scale(1.2, 1);
+    right: 0px;
+    height: 150px;
+    fill: url("#mountainIcon1Gradient");
+    z-index: 3;
+    filter: drop-shadow(-1px 2px 2px black);
+    /* border: 1px solid red; */
+}
+
+.mountainIconWrapper:nth-child(2) .mountainIcon1SVG {
+    filter: none;
+    /* filter: drop-shadow(0 0 10px black); */
+    transform: scale(1.6, 1);
+    top: 5px;
+    right: 90px;
+    z-index: 2;
+}
+
+.mountainIconPath0 {
+    /* fill:#FFFFFF; */
+    /* stroke:#000000; */
+    stroke-miterlimit:10;
+}
+
+#mountainIcon1Gradient {
+    --color-stop-1: rgba(46, 53, 179, 0.99);
+    --color-stop-2: rgba(9, 16, 35, 0.99);
+    /* --color-stop-3: blue; */
+}

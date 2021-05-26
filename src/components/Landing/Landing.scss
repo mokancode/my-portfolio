@@ -1,0 +1,133 @@
+/* *, *::before, *::after {
+    filter: unset !important;
+    box-shadow: unset !important;
+    text-shadow: unset !important;
+} */
+/* animation: unset !important; */
+
+.landingDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* border: 3px solid limegreen; */
+  /* display: none !important; */
+  transition: 2s ease-in-out all, 1s transform !important;
+  /* transform: translateX(-100%); */
+  /* display: none; */
+
+  &::before {
+    transform: scale(1.5, 0.7);
+    position: absolute;
+    content: "";
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(4, 3, 68), transparent, transparent, transparent);
+    transition: 3s 3s;
+    opacity: 0;
+    /* display: none; */
+  }
+
+  &.landingDivRadialGradient::before {
+    opacity: 1;
+    /* animation: 3s codeBackgroundGradientShowAnim forwards; */
+  }
+}
+
+@keyframes codeBackgroundGradientShowAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Text Div Styles */
+
+.logoTextDivWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  perspective: 700px;
+  height: 150px;
+  margin-top: -100px;
+  z-index: 3;
+  width: 100%;
+  /* border: 2px solid red; */
+  /* display: none; */
+}
+
+.logoTextDiv {
+  transform: rotateY(25deg) rotateX(20deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* border-top: 8px solid rgba(99, 99, 99); */
+  /* border-bottom: 8px solid rgba(99, 99, 99); */
+  /* padding-top: 15px; */
+  /* padding-bottom: 15px; */
+  height: 220px;
+  width: 500px;
+  position: relative;
+  transition: 2s ease-in-out 0s;
+  /* border: 2px solid thistle; */
+  /* display: none !important; */
+
+  &.logoTextDivRotate {
+    transform: unset;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    /* background-color: rgba(99, 99, 99); */
+    background-color: rgb(33, 14, 172);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgb(101, 43, 226);
+    width: 0%;
+    height: 5px;
+    /* display: none !important; */
+    transition: 1.5s ease-in-out 1s;
+  }
+
+  &::after {
+    top: -5px;
+    /* display: none !important; */
+  }
+
+  &::before {
+    bottom: -5px;
+  }
+
+  &.logoTextDivExpandLines::before,
+  &.logoTextDivExpandLines::after {
+    width: 100%;
+  }
+}
+
+/* Page transitions */
+
+.pageSwitching-enter .landingDiv::before {
+  transition: 3s 2s !important;
+  opacity: 0;
+}
+.pageSwitching-enter.pageSwitching-enter-active .landingDiv::before {
+  opacity: 1;
+}
+
+.pageSwitching-exit .landingDiv::before {
+  transition: 3s !important;
+  opacity: 1;
+}
+.pageSwitching-exit.pageSwitching-exit-active .landingDiv::before {
+  opacity: 0 !important;
+}

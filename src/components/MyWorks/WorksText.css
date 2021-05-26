@@ -1,0 +1,117 @@
+.worksTextSVG {
+    /* display: none; */
+    position: absolute;
+    fill:none;
+    stroke:cyan;
+    stroke-width: 2px;
+    stroke-miterlimit:10;
+    /* stroke-dashoffset: 0; */
+    transition: 3s ease-in-out all;
+    /* transform: scale(0, 1); */
+    /* transform-origin: left; */
+    /* filter: blur(20px); */
+    
+    transform: scale(1, 1);
+    filter: 
+    drop-shadow(0 0 5px rgb(0, 42, 255)) 
+    hue-rotate(20deg)
+    ;
+    /* will-change: stroke-dashoffset;  */
+}
+
+.worksTextWrapper:nth-child(1) .worksTextSVG { transition-delay: 0.5s; }
+.worksTextWrapper:nth-child(2) .worksTextSVG { transition-delay: 1.0s; }
+.worksTextWrapper:nth-child(3) .worksTextSVG { transition-delay: 0.5s; }
+
+
+.isMobileMode .worksTextWrapper:nth-child(1) .worksTextSVG {
+    filter: hue-rotate(20deg);
+    stroke-width: 3;
+}
+
+/* .worksTextWillChange { will-change: stroke-dashoffset; } */
+
+.worksTextWrapper svg {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    width: 700px;
+}
+
+.worksTextWrapper:nth-child(1) .worksTextSVG {
+    /* display: none; */
+}
+
+.worksTextWrapper .animateWorksText {
+    stroke-dashoffset: 0;
+}
+
+
+.worksTextWrapper:nth-child(2) .worksTextSVG {
+    /* display: none; */
+    fill:none;
+    stroke:rgb(55, 29, 206);
+    stroke-width: 3px;
+    stroke-miterlimit:10;
+    /* stroke-dashoffset: 0; */
+    transform: scale(1, .9);
+    filter: 
+    drop-shadow(0 0 5px rgb(56, 8, 168))
+    hue-rotate(10deg)
+    ;
+}
+
+.isMobileMode .worksTextWrapper:nth-child(2) .worksTextSVG {
+    stroke:rgb(9, 53, 196);
+    filter: 
+    /* drop-shadow(0 0 5px rgb(65, 20, 168)) */
+    hue-rotate(10deg);
+    stroke-width: 4;
+}
+
+.worksTextWrapper:nth-child(3) .worksTextSVG {
+    /* display: none; */
+    fill:none;
+    stroke:rgb(27, 211, 153);
+    stroke-width: 1px;
+    stroke-miterlimit:10;
+    /* stroke-dashoffset: 0; */
+    transform: scale(1, .85);
+    filter: 
+    drop-shadow(0 0 5px rgb(182, 24, 129))
+    drop-shadow(0 0 5px rgb(24, 182, 153))
+    ;
+}
+
+.isMobileMode .worksTextWrapper:nth-child(3) .worksTextSVG {
+    /* stroke: rgb(255, 255, 255); */
+    filter: unset;
+}
+
+/* Page transitions */
+
+.pageSwitching-enter .worksTextWrapper svg {
+    /* stroke-dashoffset: 700; */
+}
+.pageSwitching-enter.pageSwitching-enter-active .worksTextWrapper svg {
+    /* stroke-dashoffset: 700; */
+}
+
+.pageSwitching-exit .worksTextWrapper svg {
+    stroke-dashoffset: 0;
+}
+.pageSwitching-exit.pageSwitching-exit-active .worksTextWrapper svg {
+    stroke-dashoffset: 700;
+    filter: unset;
+}
+
+.pageSwitching-exit .worksTextWrapper:nth-child(1) .worksTextSVG {
+    transition: 1s ease-in-out 1.0s, 1s filter 1s;
+}
+
+.pageSwitching-exit .worksTextWrapper:nth-child(2) .worksTextSVG {
+    transition: 1s ease-in-out 1.2s, 1s filter 1s;
+}
+
+.pageSwitching-exit .worksTextWrapper:nth-child(3) .worksTextSVG {
+    transition: 1s ease-in-out 1.5s, 1s filter 1s;
+}

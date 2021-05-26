@@ -1,0 +1,33 @@
+.progressiveAppearText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid blue; */
+}
+
+.progressiveAppearText p {
+    opacity: 0;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+.progressiveAppearText.show p {
+    /* border: 2px solid red; */
+    animation-name: progressiveAppearAnim;
+}
+
+@keyframes progressiveAppearAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(5px) translateY(-2px);
+    }
+    100% {
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+.progressiveAppearText .spaceSpan {
+    margin-left: 2px;
+}

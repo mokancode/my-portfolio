@@ -1,0 +1,12 @@
+.fingerPointerSVG {
+    display: block;
+    position: relative;
+    width: 30px;
+}
+
+.fingerPointerPath0 {
+    fill: none;
+    stroke:rgb(217, 251, 169);
+    stroke-width:20;
+    stroke-miterlimit:10;
+}

@@ -1,0 +1,335 @@
+.chandelierDiv *,
+.chandelierDiv *::before,
+.chandelierDiv *::after {
+  /* box-shadow: none !important;
+    filter: unset !important;
+    text-shadow: unset !important; */
+}
+
+.chandelierDiv {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: -200px;
+  /* left: 0vw; */
+  z-index: 2;
+  display: flex;
+  /* display: none; */
+  /* transform: translateY(-100%); */
+  /* transition: 15s; */
+  transition: 1s;
+  transition-timing-function: ease-out;
+  /* border: 2px solid greenyellow; */
+}
+
+/* .tiltChandelier {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 28vw;
+    width: fit-content !important;
+} */
+
+.chandelierItem {
+  will-change: height;
+  transition: 5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  /* background: linear-gradient(to top, rgb(147, 109, 245), rgb(15, 13, 81)); */
+  background: linear-gradient(to top, rgb(90, 43, 211), rgb(15, 13, 81));
+  width: 1px;
+  /* transition: 10s; */
+  width: 2px;
+  /* height: 100px; */
+  transform: translateY(20px);
+
+  /* box-shadow: 0 0 2px 0 rgb(44, 83, 135); */
+  margin-left: 20px;
+  /* border: 1px solid cyan; */
+}
+
+.chandelierItem::before {
+  position: absolute;
+  content: "";
+  bottom: 1px;
+  left: 0px;
+  background-color: rgb(68, 112, 174);
+  box-shadow: 0 0 10px 1px rgb(151, 113, 245);
+  /* transition: 10s; */
+  width: 3px;
+  height: 2px;
+  border-radius: 100px;
+}
+
+.chandelierItemShadow {
+  /* display: none; */
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  animation-delay: inherit;
+  animation-duration: 10s;
+  animation-name: chandelierItemGlowAnim;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 10px 40px 1px rgb(151, 113, 245);
+  will-change: opacity;
+}
+
+@keyframes chandelierItemGlowAnim {
+  20%,
+  100% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+.chandelierItemWrapper {
+  position: relative;
+  top: 0px;
+  width: 30px;
+  height: 90vh;
+  z-index: 10;
+  /* animation-duration: 10s;
+    animation-name: chandelierItemGlowAnim ;
+    animation-iteration-count: infinite; */
+
+  margin-top: 100px;
+  /* border: 1px solid rgba(172, 255, 47, 0.2); */
+
+  transition-duration: 9s;
+}
+
+.chandelierItemWrapper:nth-child(2n) {
+  transform: translateY(110%);
+  /* border: 1px solid yellow; */
+}
+
+.chandelierItemWrapper:nth-child(3n) {
+  transform: translateY(110%);
+  // transition-delay: .5s;
+  /* border: 1px solid plum; */
+}
+
+.chandelierItemWrapper:nth-child(2n + 1) {
+  transform: translateY(-110%);
+  /* border: 1px solid red; */
+}
+
+.chandelierItemWrapper:nth-child(4n + 1) {
+  transform: translateY(-110%);
+  // transition-delay: 1s;
+  /* border: 1px solid royalblue; */
+}
+
+.chandelierDivReveal {
+  .chandelierItemWrapper {
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        // @if ($i % 2==0) {
+        @if ($i % 2!=0) {
+          transition-delay: 400ms * ($i);
+          // transform: unset !important;
+        } @else {
+          transition-delay: 400ms * ($i);
+          // transform: unset !important;
+        }
+        // border: 1px solid royalblue;
+      }
+    }
+
+    @for $i from 12 through 24 {
+      &:nth-child(#{$i}) {
+        // @if ($i % 2==0) {
+        @if ($i % 2!=0) {
+          transition-delay: 400ms * (24 - $i);
+          // transform: unset !important;
+        } @else {
+          transition-delay: 400ms * (24 - $i);
+          // transform: unset !important;
+        }
+        // border: 1px solid royalblue;
+      }
+    }
+
+    // transform: unset !important;
+  }
+
+  &.chandelierDivReveal .chandelierItemWrapper {
+    transform: unset;
+  }
+}
+
+.chandelierItemWrapper:hover .chandelierItem {
+  /* transition: 0.2s;
+    background-color: rgb(147, 109, 245);
+    box-shadow: 
+     0 50px 50px 0px rgb(151, 113, 245, 0.5)
+    , 0 50px 50px 0px rgb(151, 113, 245, 0.5)
+    ; */
+}
+
+.chandelierItemWrapper:hover .chandelierItem::before {
+  transition: 0.2s;
+  /* box-shadow: 0 0 10px 0px rgb(151, 113, 245); */
+  box-shadow: 0 0 10px 1px rgb(151, 113, 245), 0 0 10px 1px rgb(151, 113, 245);
+}
+
+.chandelierItemInner {
+  /* border: 2px solid red; */
+  position: absolute;
+  transition: 15s cubic-bezier(0.33, 1, 0.68, 1);
+  /* transition: 2s cubic-bezier(0.33, 1, 0.68, 1); */
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* animation: 5s chandelierlineReveal cubic-bezier(0.33, 1, 0.68, 1) forwards; */
+  will-change: transform;
+  height: fit-content;
+  animation-name: hangAnim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes hangAnim {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+.chandelierLineEnergyDotWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+
+  opacity: 0;
+  animation-name: energyDotAnim;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.chandelierLineEnergyDot {
+  /* display: none; */
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  right: -0px;
+  /* transition: 3s; */
+  /* background-color: rgb(55, 43, 181); */
+  background-color: rgb(64, 117, 209);
+  box-shadow: 0 0 5px 0px cyan;
+  width: 2px;
+  height: 3px;
+  border-radius: 100px;
+}
+
+@keyframes energyDotAnim {
+  0% {
+    opacity: 0;
+    max-height: 0%;
+  }
+  20% {
+    opacity: 0;
+    max-height: 20%;
+  }
+  50% {
+    opacity: 1;
+    max-height: 50%;
+  }
+  90% {
+    opacity: 1;
+    max-height: 90%;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 0;
+  }
+}
+
+.pageSwitching-enter .chandelierItemWrapper:nth-child(2n),
+.pageSwitching-enter .chandelierItemWrapper:nth-child(3n) {
+  transform: translateY(110%);
+}
+
+.pageSwitching-enter .chandelierItemWrapper:nth-child(2n + 1),
+.pageSwitching-enter .chandelierItemWrapper:nth-child(4n + 1) {
+  transform: translateY(-110%);
+}
+
+.pageSwitching-enter.pageSwitching-enter-active .chandelierDivReveal .chandelierItemWrapper {
+  transform: unset;
+}
+
+.pageSwitching-exit .chandelierDiv .chandelierItemWrapper {
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      // @if ($i % 2==0) {
+      @if ($i % 2!=0) {
+        transition-delay: 40ms * ($i);
+        // transform: unset !important;
+      } @else {
+        transition-delay: 40ms * ($i);
+        // transform: unset !important;
+      }
+      // border: 1px solid royalblue;
+    }
+  }
+
+  @for $i from 12 through 24 {
+    &:nth-child(#{$i}) {
+      // @if ($i % 2==0) {
+      @if ($i % 2!=0) {
+        transition-delay: 40ms * (24 - $i);
+        // transform: unset !important;
+      } @else {
+        transition-delay: 40ms * (24 - $i);
+        // transform: unset !important;
+      }
+      // border: 1px solid royalblue;
+    }
+  }
+  
+  transition: 2s;
+  transform: unset;
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .chandelierItemWrapper:nth-child(2n),
+.pageSwitching-exit.pageSwitching-exit-active .chandelierItemWrapper:nth-child(3n) {
+  transform: translateY(110%);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .chandelierItemWrapper:nth-child(2n + 1),
+.pageSwitching-exit.pageSwitching-exit-active .chandelierItemWrapper:nth-child(4n + 1) {
+  transform: translateY(-110%);
+}
+
+.pageSwitching-exit.pageSwitching-exit-done .chandelierDiv {
+  /* top: -100%; */
+}
+
+@media screen and (max-width: 450px) {
+  .chandelierItemWrapper {
+    width: 24px;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-height: 450px) {
+  .chandelierDiv {
+    margin-top: 10%;
+  }
+}

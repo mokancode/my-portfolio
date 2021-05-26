@@ -1,0 +1,385 @@
+.formSubmittedDiv {
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    /* border: 2px solid red; */
+    background: linear-gradient(-20deg, rgb(9, 42, 68) 20%, rgb(163, 65, 255) 150%);
+    transform: translateZ(-1px) rotateY(180deg);
+    width: 95%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 3;
+    display: flex;
+    display: none;
+
+    &.formSubmittedDivShow { display: flex; }
+}
+
+
+.formSubmittedDiv .textWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 2;
+    /* border: 1px solid cyan; */
+    height: 100%;
+    position: relative;
+}
+
+.formSubmittedDiv p:not(.bigLetter) {
+    /* opacity: 0; */
+    top: -35px;
+}
+
+.formSubmittedDiv .bigLettersWrapper {
+    display: flex;
+    padding: 20px;
+    /* border: 2px solid white; */
+}
+
+.formSubmittedDiv .bigLetterWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    min-width: 130px;
+    height: fit-content;
+    position: relative;
+    /* margin-right: -60px; */
+    /* border: 2px solid white; */
+}
+
+@media screen and (max-width: 400px) {
+    .formSubmittedDiv .bigLettersWrapper {
+        padding-top: 20px;
+    }
+    
+    .formSubmittedDiv .bigLetterWrapper {
+        /* width: 60px; */
+    }
+    
+    .formSubmittedDiv .bigLetterWrapper .formSubmittedLetterSVG {
+        /* width: 200px !important; */
+    }
+}
+
+.formSubmittedDiv p.bigLetter {
+    margin-right: -50px;
+    font-family: 'Kanit';
+    font-weight: 900;
+    font-size: 300px;
+    /* height: 130px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: -webkit-linear-gradient(blueviolet, tomato);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* z-index: 2; */
+    position: relative;
+    /* border: 1px solid cyan; */
+
+    &:nth-child(1) {
+        position: absolute;
+        content: "A";
+        color: white;
+        top: 0px;
+        left: 0px;
+        margin-right: 0px !important;
+        margin: 0px !important;
+        text-shadow: 
+        -5px 0 20px rgba(0, 0, 0, 0.4)
+        , -10px 0 40px rgba(0, 0, 0, 0.4)
+        , -10px 0 40px rgba(0, 0, 0, 0.4)
+        ;
+        /* z-index: 1; */
+        /* border: 1px solid cyan; */
+    }
+}
+
+
+.bigLetterWrapper.letterY {
+    position: relative;
+}
+
+.bigLetterWrapper.letterY .formSubmittedLetterSVG {
+    position: relative;
+    top: -4px;
+    transform-origin: top;
+    transform: scaleY(1.03) !important;
+}
+
+.formSubmittedDiv .bigLetterWrapper .formSubmittedLetterSVG {
+    /* position: absolute; */
+    width: 100%;
+    height: 200px;
+    /* filter: 
+    drop-shadow(-5px 0 10px rgba(0, 0, 0, 0.4))
+    drop-shadow(-10px 0 10px black)
+    brightness(150%)
+    ; */
+    transition: 1s;
+    /* stroke-dasharray: 850;
+    stroke-dashoffset: 0; */
+
+    &:nth-of-type(1) {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation-duration: 5s;
+        animation-name: bigLetterStrokeAnim;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* filter: unset !important; */
+        z-index: 3;
+    }
+    
+    &:nth-of-type(2) {
+        z-index: 2;
+        position: absolute;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation-duration: 20s;
+        animation-name: bigLetterStrokeAnim2;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    &:nth-of-type(3) {
+        position: absolute;
+        z-index: 3;
+    }
+}
+
+
+.formSubmittedDiv .bigLetterWrapper.letterT .formSubmittedLetterSVG:nth-of-type(3) {
+    /* fill: cyan;
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan)
+    drop-shadow(0 0 10px cyan)
+    ; */
+
+    fill: cyan;
+    filter: 
+    drop-shadow(0 0 2px cyan)
+    drop-shadow(0 0 10px violet)
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 5px violet)
+    ;
+    
+    /* margin-left: 40px; */
+}
+
+.formSubmittedDiv .bigLetterWrapper .formSubmittedLetterSVG:nth-of-type(3) g:nth-of-type(1) {
+    display: none;
+}
+
+.formSubmittedDiv .bigLetterWrapper.letterY .formSubmittedLetterSVG:nth-of-type(3) {
+    fill: rgb(255, 183, 124);
+    filter: 
+    drop-shadow(0 0 5px tomato)
+    drop-shadow(0 0 5px tomato)
+    drop-shadow(0 0 10px tomato)
+    drop-shadow(0 0 10px tomato)
+    ;
+}
+
+@keyframes bigLetterStrokeAnim2 {
+    0% {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        filter: drop-shadow(0 0 5px blueviolet);
+    }
+    50% {
+        stroke-dasharray: -850;
+        stroke-dashoffset: 0;
+        filter: drop-shadow(0 0 5px tomato);
+    }
+    100% {
+        stroke-dasharray: -50;
+        stroke-dashoffset: -50;
+        filter: drop-shadow(0 0 5px blueviolet);
+    }
+}
+
+@keyframes bigLetterStrokeAnim {
+    0% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        filter: 
+        drop-shadow(-5px 0 10px rgba(0, 0, 0, 0.4))
+        drop-shadow(-10px 0 10px black)
+        brightness(150%)
+        ;
+    }
+    50% {
+        stroke-dasharray: -850;
+        stroke-dashoffset: 0;
+        filter: 
+        drop-shadow(-5px 0 10px rgba(0, 0, 0, 0.4))
+        drop-shadow(-10px 0 10px black)
+        brightness(100%)
+        ;
+    }
+    100% {
+        stroke-dasharray: -100;
+        stroke-dashoffset: -100;
+        filter: 
+        drop-shadow(-5px 0 10px rgba(0, 0, 0, 0.4))
+        drop-shadow(-10px 0 10px black)
+        brightness(150%)
+        ;
+    }
+}
+
+@keyframes bigLetterStrokeAnimNotChrome {
+    0% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        filter: brightness(150%);
+    }
+    50% {
+        stroke-dasharray: -850;
+        stroke-dashoffset: 0;
+        filter: brightness(100%);
+    }
+    100% {
+        stroke-dasharray: -100;
+        stroke-dashoffset: -100;
+        filter: brightness(150%);
+    }
+}
+
+.browserNotChrome .formSubmittedDiv .bigLetterWrapper .formSubmittedLetterSVG {
+    &:nth-of-type(1) {
+        animation-duration: 5s;
+        animation-name: bigLetterStrokeAnimNotChrome;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    &:nth-of-type(2) {
+        filter: unset !important;
+    }
+}
+
+
+#formSubmittedLetterSVGGradient {
+    --color-stop-1: tomato;
+    --color-stop-2: blueviolet;
+}
+
+.formSubmittedDiv .bigLetterWrapper .formSubmittedLetterSVG path {
+    fill: transparent;
+    stroke: url(#formSubmittedLetterSVGGradient);
+    stroke-width: 4;
+}
+
+.formSubmittedDiv .bigLetterFlare.T1Flare path {
+    filter: drop-shadow(0 0 5px cyan);
+    box-shadow: 0 0 5px cyan;
+}
+
+.formSubmittedDiv .bigLetterFlare.T1Flare {
+    top: 3px;
+    left: -2px;
+}
+
+.formSubmittedDiv .bigLetterWrapper p {
+    position: absolute;
+    color: tomato;
+    text-shadow: 0 0 5px blueviolet;
+    font-size: 15px;
+}
+
+.formSubmittedDiv .bigLetterWrapper.letterT p {
+    top: 5px;
+    right: 13px;
+}
+
+.formSubmittedDiv .bigLetterWrapper.letterY p {
+    top: -25px;
+    right: 10px;
+}
+
+.formSubmittedDiv .reachingOutTextWrapper {
+    position: absolute;
+    bottom: 0px;
+    /* border: 1px solid white; */
+    height: 30%;
+    width: 100%;
+}
+
+.formSubmittedDiv .reachingOutText {
+    font-size: 30px;
+    margin: 0px;
+    background: -webkit-linear-gradient(rgb(55, 127, 235), tomato);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-attachment: fixed; */
+    /* background-size: 260px 260px; */
+    filter: brightness(150%)
+    drop-shadow(0 0 5px black)
+    ;
+    text-align: center;
+
+     span {
+        display: inline-block;
+    }
+}
+
+
+.formSubmittedDiv .waveCirclePicWrapper {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    /* display: none; */
+
+    .waveCirclePicInnerWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid red; */
+        transform: translateY(-200px);
+    }
+}
+
+
+.formSubmittedDiv .waveCirclePic {
+    width: 140%;
+    height: auto;
+    /* transform: rotate(80deg); */
+    /* border: 10px solid red; */
+    animation-duration: 20s;
+    animation-name: clockwiseRotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@media screen and (max-width: 360px) {
+    .formSubmittedDiv .waveCirclePic {
+        width: 480px;
+    }
+}
+
+@keyframes clockwiseRotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media screen and (max-width: 400px) and (orientation: portrait) {    
+    .formSubmittedDiv .bigLetterWrapper.letterT p {
+        top: -2px;
+        right: 13px;
+    }
+    
+    .formSubmittedDiv .bigLetterWrapper.letterY p {
+        top: -29px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,14 @@
+.locationIconLottie {
+    width: 20px;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin-left: 5px;
+    margin-top: -2px;
+    filter: invert(1) brightness(20%) sepia(1) hue-rotate(310deg) saturate(700%);
+    filter: invert(1) brightness(40%) saturate(100%);
+}
+
+.locationIconLottie svg {
+    /* width: 50px !important;
+    height: 50px !important; */
+}

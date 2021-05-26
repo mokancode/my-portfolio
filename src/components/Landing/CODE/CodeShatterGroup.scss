@@ -1,0 +1,143 @@
+.codeShatterOuterWrapper * {
+  /* filter: unset !important; */
+}
+
+.codeShatterOuterWrapper {
+  /* position: absolute; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* width: 500px; */
+  width: fit-content;
+  height: fit-content;
+  perspective: 1000px;
+  z-index: 3;
+  /* border: 2px solid yellow; */
+  /* display: none; */
+  width: fit-content;
+  transition: 2s;
+  /* backdrop-filter: blur(10px);
+    opacity: .5; */
+  filter: drop-shadow(0 2px 1px rgba(128, 162, 255, 0));
+
+  &.toggleGlow {
+    filter: drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8));
+  }
+}
+
+.codeShatterLetter {
+  width: 150px;
+  height: 150px;
+}
+
+.codeShatterPieceWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 150px;
+  /* fill: blue; */
+  /* stroke: cyan; */
+  fill: url("#codeShatterGradient");
+}
+
+#codeShatterGradient {
+  /* --color-stop-1: rgba(53, 84, 224, 0.99);
+    --color-stop-2: rgba(72, 40, 161, 0.99);
+    --color-stop-3: rgb(3, 3, 80); */
+
+  --color-stop-1: rgb(66, 101, 255);
+  --color-stop-2: rgb(95, 55, 207);
+  --color-stop-3: rgb(4, 4, 119);
+}
+
+.codeShatterOuterWrapper .btnsContainer {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  display: none;
+
+  button:disabled {
+    background-color: grey;
+  }
+}
+
+.codeShatterOuterWrapper .animateBtn {
+  width: fit-content;
+  height: 20px;
+  background-color: white;
+  color: black;
+}
+
+.codeShatterTemp {
+  position: absolute;
+  top: 300px;
+  width: 150px;
+  height: 150px;
+  /* display: none; */
+  /* border: 1px solid cyan; */
+  margin-left: 150px;
+
+  path {
+    fill: blue;
+    stroke: cyan;
+  }
+}
+
+.codeShatterGroupByWrapper {
+  position: absolute;
+  bottom: 4px;
+  right: -48px;
+  overflow: hidden;
+  width: 75px;
+  height: 35px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.codeShatterGroupBy {
+  /* font-family: ABeeZee; */
+  font-family: "Cormorant Garamond";
+  font-size: 40px;
+
+  /* color: rgb(74, 18, 214); */
+  background: -webkit-linear-gradient(rgb(74, 18, 214), rgb(27, 7, 78));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  /* border: 1px solid red; */
+
+  margin: 0px;
+  animation: 8s codeShatterGroupByAnim infinite;
+  /* filter: drop-shadow(0 1px 1px rgb(190, 173, 255)); */
+  transition: 2s;
+  margin-left: -200px;
+
+  &.codeShatterGroupByReveal {
+    margin-left: unset;
+  }
+}
+
+@keyframes codeShatterGroupByAnim {
+  0% {
+    text-shadow: 0 0 0px rgba(195, 172, 255, 0);
+  }
+  50% {
+    text-shadow: 0 0 1px rgba(103, 126, 245, 0.9);
+  }
+}
+
+/* Page transition */
+.pageSwitching-exit .codeShatterOuterWrapper {
+  filter: unset;
+  opacity: 1;
+}
+.pageSwitching-exit.pageSwitching-exit-active .codeShatterOuterWrapper {
+  filter: blur(20px);
+  opacity: 0;
+}

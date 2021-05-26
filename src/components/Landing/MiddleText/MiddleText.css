@@ -1,0 +1,344 @@
+.middleTextDiv {
+    /* display: none !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    /* margin-top: -25px; */
+    /* z-index: 100; */
+    /* border: 1px solid cyan; */
+    position: relative;
+    margin-left: 20px;
+    margin-top: -150px;
+    /* display: none; */
+}
+
+.middleTextDiv::before {
+    position: absolute;
+    content: "I think";
+    top: 68px;
+    /* left: 10px; */
+    left: 85px;
+    color: rgba(170, 131, 255, 0.714);
+    font-family: Poiret One;
+    margin-left: -10px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    text-shadow: 0 0 5px blueviolet;
+}
+
+.revealMiddlePreText::before {
+    margin-left: 0px;
+    opacity: 1;
+}
+
+/* ABeeZee|Allura|Italiana|Montserrat|Philosopher|Playball|Poiret+One|Quicksand|Sofia|Cormorant+Garamond */
+.middleTextDiv p {
+    /* font-family: ABeeZee; */
+    font-family: "Cormorant Garamond";
+    font-size: 100px;
+    
+    /* color: rgb(74, 18, 214); */
+    background: -webkit-linear-gradient(rgb(74, 18, 214), rgb(27, 7, 78));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* display: none; */
+}
+
+
+.leftSideText {z-index: 3;}
+.leftSideTextShadow {z-index: 2;}
+.leftSideTextBackgroundGlow {
+    position: absolute;
+    margin-top: .5px;
+    z-index: 2;
+    animation: 1s showGlow 5s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes showGlow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.middleTextDiv .leftSideTextBackgroundGlow p {
+    animation-name: glowMiddleText;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.middleTextDiv .rightSideText p {animation: 3s glowMiddleText2 infinite;}
+
+@keyframes glowMiddleText {
+    0% {
+        text-shadow: 
+        0 0 0px rgba(89, 28, 255, 0.0)
+        , 0 0 0p rgba(124, 104, 175, 0.0)
+        ;
+    }
+    50% {
+        text-shadow: 
+        0 1px 5px rgba(146, 106, 255, 0.6)
+        , 0 0 1px rgba(165, 131, 250, 0.9)
+        ; 
+    }
+}
+
+@keyframes glowMiddleText2 {
+    0% {
+        text-shadow: 
+        0 0 0px rgb(195, 172, 255, 0)
+        , 0 0 0px rgb(195, 172, 255, 0.0)
+        ;
+    }
+    50% {
+        text-shadow: 
+        0 0 30px rgba(105, 101, 238, 0.2)
+        , 0 0 1px rgba(103, 126, 245, 0.9)
+        ; 
+    }
+}
+
+.middleTextDiv .leftSideTextWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid orange; */
+}
+
+.middleTextDiv .rightSideTextWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    /* border: 1px solid violet; */
+}
+
+.middleTextDiv .leftSideText, .middleTextDiv .rightSideText, 
+.middleTextDiv .leftSideTextShadow, .middleTextDiv .rightSideTextShadow {
+    display: flex;
+    transition: 1s ease-in-out;
+}
+
+.middleTextDiv .rightSideText { 
+    transition: 1s ease-in-out 2s !important;
+}
+
+.middleTextDiv .leftSideTextShadow {
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    /* border: 1px solid red; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleTextDiv .leftSideTextShadow p {
+    /* color: rgb(74, 18, 214);
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: none; */
+    
+    /* animation: none; */
+    /* animation-name: shadowAnim;  */
+    animation-duration: .5s;
+    /* animation-timing-function: ease-in-out; */
+    /* animation-delay: 3s; */
+    /* display: none; */
+    /* border: 2px solid red; */
+    opacity: 0;
+    display: none;
+}
+
+.middleTextDiv .leftSideTextShadow .playShadowAnim {
+    transition: 0.5s;
+    opacity: 1;
+    /* border: 2px solid greenyellow; */
+    animation-name: shadowAnim; 
+    /* animation: 1s ghostAwayAnim infinite; */
+}
+
+@keyframes ghostAwayAnim {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes shadowAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    50% { 
+        opacity: .8;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.middleTextDiv .rightSideTextWrapper p {
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.middleTextDiv .leftSideText {
+    transform: translateX(105%);
+}
+
+.middleTextDiv .rightSideText {
+    transform: translateX(-120%);
+}
+
+.middleTextDivFirstReveal .leftSideText {transform: unset;}
+.middleTextDivFirstReveal .rightSideText {transform: unset;}
+
+.middleTextDivVisitedReveal .leftSideText {transform: unset;}
+.middleTextDivVisitedReveal .rightSideText {transform: unset;}
+
+.middleTextDiv .leftSideTextWrapper .revealParagraph {
+    transform: unset;
+}
+.middleTextDiv .rightSideTextWrapper .revealParagraph {
+    transform: unset;
+}
+
+.middleTextDiv .leftSideTextWrapper .revealParagraphVisited {
+    transform: unset;
+}
+.middleTextDiv .rightSideTextWrapper .revealParagraphVisited {
+    transform: unset;
+}
+
+
+/* Shine */
+
+.middleTextDiv .shineGroup {
+    display: none;
+    position: absolute;
+    top: -150px;
+    left: 10px;
+    z-index: 3;
+    /* border: 1px solid white; */
+}
+
+.middleTextDiv .shineGroup:nth-child(2) {
+    left: 65px;
+    overflow: hidden;
+    /* border: 2px solid grey; */
+}
+
+.shineGroupMiddleText {
+    opacity: 0;
+    transition: 5s ease-in-out;
+    transition-delay: 13s;
+}
+
+.shineGroupMiddleTextShow {
+    opacity: 1;
+}
+
+.middleTextDiv .shineGroup .shineShadow {
+    background-color: blueviolet;
+}
+
+/* Page transitions */
+
+/* General */
+.pageSwitching-exit .middleTextDiv p, .pageSwitching-enter .middleTextDiv p {
+    /* transition: 1.5s cubic-bezier(0.64, 0, 0.78, 0); */
+    transition-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+    transition-duration: .6s;
+}
+
+.pageSwitching-enter .middleTextDiv p {
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* Right side container enter */
+.pageSwitching-enter .middleTextDiv .rightSideTextWrapper .revealParagraphVisited {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.pageSwitching-enter.pageSwitching-enter-active .middleTextDiv .rightSideTextWrapper .revealParagraphVisited {
+    opacity: 1;
+    transform: unset;
+}
+
+/* Right side container exit */
+.pageSwitching-exit .middleTextDiv .rightSideTextWrapper p {
+    opacity: 1;
+    transform: unset;
+}
+.pageSwitching-exit.pageSwitching-exit-active .middleTextDiv .rightSideTextWrapper p {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* Left side text enter */
+.pageSwitching-enter .middleTextDiv .leftSideText p {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.pageSwitching-enter.pageSwitching-enter-active .middleTextDiv .leftSideText p {
+    opacity: 1;
+    transform: unset;
+}
+
+/* Left side text exit */
+.pageSwitching-exit .middleTextDiv .leftSideTextWrapper p {
+    opacity: 1;
+    transform: unset;
+}
+.pageSwitching-exit.pageSwitching-exit-active .middleTextDiv .leftSideTextWrapper p {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.pageSwitching-exit .middleTextDiv .leftSideTextShadow {
+    opacity: 1;
+}
+.pageSwitching-exit.pageSwitching-exit-active .middleTextDiv .leftSideTextShadow {
+    opacity: 0;
+}
+
+/* ////////////////////////////////// */
+
+/* Left side container enter */
+.pageSwitching-enter .middleTextDivFirstReveal .leftSideText {
+    transform: translateX(105%);
+}
+.pageSwitching-enter.pageSwitching-enter-active .middleTextDivFirstReveal .leftSideText {
+    transform: unset;
+}
+
+/* Right side container exit */
+/* .pageSwitching-exit .middleTextDivFirstReveal .rightSideTextWrapper p {
+    opacity: 1;
+    transform: unset;
+}
+.pageSwitching-exit.pageSwitching-exit-active .middleTextDivFirstReveal .rightSideTextWrapper p {
+    opacity: 0;
+    transform: translateY(20px);
+} */

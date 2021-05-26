@@ -1,0 +1,257 @@
+.codeLetterC {
+    /* border: 1px solid cyan; */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: .5s;
+    transform-origin: center;
+    filter: 
+    /* drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8)) */
+    /* brightness(140%) */
+    ;
+    /* animation: 1s rotateLetterC infinite; */
+    
+    transition: 3s;
+    /* transform: rotateY(-20deg) translateZ(80px); */
+}
+
+.codeLetterC_Reveal {
+    animation: 3s codeLetterC_RevealAnim forwards;
+}
+
+@keyframes codeLetterC_RevealAnim {
+    0% {
+        transform: rotateY(-20deg) translateZ(80px);
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+.animateLetterC {
+    animation: 1s rotateLetterC;
+}
+
+@keyframes rotateLetterC {
+    0% {
+        transform: unset;
+    }
+    10% {
+        transform: rotateY(5deg);
+    }
+    20% {
+        transform: unset;
+    }
+    75% {
+        transform: rotateY(-20deg) translateZ(80px);
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+:root {
+    --cTopLeftAnimTranslateX: -20px;
+    --cTopLeftAnimTranslateZ1: 120px;
+    --cTopLeftAnimTranslateZ2: 150px;
+}
+
+@keyframes cTopLeftAnim {
+    0% {
+        transform: unset;
+        filter: unset;
+    }
+    40% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ1)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    45% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ2)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    50% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ1)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    55% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ2)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    60% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ1)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    65% {
+        transform: translateZ(var(--cTopLeftAnimTranslateZ2)) translateX(var(--cTopLeftAnimTranslateX));
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    100% {
+        transform: unset;
+        filter: unset;
+    }
+}
+
+
+.codeLetterC_BottomRight {
+    opacity: 0;
+    /* animation: 1s cTopLeftAnim infinite; */
+}
+.codeLetterC_BottomRight_Reveal {animation: 2s .5s codeLetterC_PieceRevealAnim forwards;}
+.codeLetterC_BottomRight_Animate {animation: 1s cTopLeftAnim;}
+.codeLetterC_BottomRight_Opacity {opacity: 1;}
+
+.codeLetterC_TopRight {
+    opacity: 0;
+    /* animation: 1s cTopLeftAnim infinite; */
+}
+.codeLetterC_TopRight_Reveal {animation: 1.5s .8s codeLetterC_PieceRevealAnim forwards;}
+.codeLetterC_TopRight_Animate {animation: 1s cTopLeftAnim;}
+.codeLetterC_TopRight_Opacity {opacity: 1;}
+
+.codeLetterC_TopLeft {
+    opacity: 0;
+    /* animation: 1s cTopLeftAnim infinite; */
+}
+.codeLetterC_TopLeft_Reveal {animation: 1s 1s codeLetterC_PieceRevealAnim forwards;}
+.codeLetterC_TopLeft_Animate {animation: 1s cTopLeftAnim;}
+.codeLetterC_TopLeft_Opacity {opacity: 1;}
+
+.codeLetterC_Body { 
+    opacity: 0;
+    transform-origin: bottom right;
+}
+.codeLetterC_Body_Reveal {animation: 3s codeLetterC_BodyRevealAnim forwards;}
+.codeLetterC_Body_Opacity {opacity: 1;}
+
+
+@keyframes codeLetterC_BodyRevealAnim {
+    0% {
+        opacity: 0;
+        transform: rotateX(-40deg) rotateY(-40deg) rotate(-10deg);
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 1;
+        filter: unset;
+    }
+    100% {
+        opacity: 1;
+        transform: unset;
+    }
+}
+
+@keyframes codeLetterC_PieceRevealAnim {
+    0% {
+        opacity: 0;
+        transform: translateZ(var(--cTopLeftAnimTranslateZ1)) translateX(var(--cTopLeftAnimTranslateX));
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: unset;
+    }
+}
+
+/* Old animations */
+
+/* @keyframes rotateLetterC {
+    0% {
+        transform: unset;
+    }
+    10% {
+        transform: rotateY(20deg);
+    }
+    20% {
+        transform: unset;
+    }
+    75% {
+        transform: rotateY(-20deg) translateZ(50px);
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes cTopLeftAnim {
+    0% {
+        transform: unset;
+        filter: unset;
+    }
+    40% {
+        transform: translateZ(10px) translateX(-30px);
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    45% {
+        transform: translateZ(55px) translateX(-30px);
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    50% {
+        transform: translateZ(10px) translateX(-30px);
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    55% {
+        transform: translateZ(55px) translateX(-30px);        
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    60% {
+        transform: translateZ(10px) translateX(-30px);
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    65% {
+        transform: translateZ(55px) translateX(-30px);        
+        filter: 
+        drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+        drop-shadow(0 0 20px rgba(70, 43, 226, 0.5))
+        ;
+    }
+    100% {
+        transform: unset;
+        filter: unset;
+    }
+} */
+
+/* Page transitions */
+
+.pageSwitching-exit .codeLetterC {
+    filter: 
+    drop-shadow(0 2px 1px rgba(128, 162, 255, 0.8))
+    brightness(140%)
+    ;
+}
+.pageSwitching-exit.pageSwitching-exit-active .codeLetterC {
+    filter: unset;
+}

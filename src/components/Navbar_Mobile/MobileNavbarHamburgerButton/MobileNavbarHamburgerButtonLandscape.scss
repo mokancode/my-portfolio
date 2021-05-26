@@ -1,0 +1,199 @@
+/* Landscape lines */
+.mobileNavbarHamburgerButton.isLandscape {
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 40px;
+}
+
+.mobileNavbarHamburgerButton .landscapeLinesWrapper {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid cyan; */
+    transition: 0s all, .5s transform;
+}
+
+.mobileNavbarHamburgerButton.pullDown .landscapeLinesWrapper {
+    transform: translateX(-5px);
+}
+
+.mobileNavbarHamburgerButton .landscapeLines {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    /* background-color: white; */
+    position: relative;
+    border-radius: 50px;
+    transition-duration: .5s, 0s, 1s;
+    transition-property: all, background-color, width;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+
+.mobileNavbarHamburgerButton .landscapeLine {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    transition-duration: .5s, 0s, .5s;
+    transition-property: all, background-color, box-shadow;
+    transform: scaleX(0);
+    box-shadow: 0 0 10px 0 white;
+
+    &.leftLine {
+        transform-origin: right;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    
+    &.rightLine {
+        transform-origin: left;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLine { box-shadow: unset; } 
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLine { background-color: transparent; }
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines { background-color: white; }
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(2)::before {
+    transform-origin: left;
+}
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(1)::before,
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(3)::before
+{
+    transform-origin: right;
+}
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(2) .landscapeLine { transition-delay: .3s, 0s; }
+
+.mobileNavbarHamburgerButton.revealLines .landscapeLines:nth-child(1) {
+     .leftLine,
+     .rightLine {
+        transition-duration: .3s, 0s;
+        transform-origin: left;
+    }
+
+     .rightLine {
+        transition-timing-function: ease-in;
+    }
+    
+     .leftLine {
+        transition-delay: .3s;
+        transition-timing-function: ease-out;
+    }
+}
+
+.mobileNavbarHamburgerButton.revealLines .landscapeLines:nth-child(3)  {
+     .leftLine,
+     .rightLine {
+        transition-duration: .3s, 0s;
+        transform-origin: right;
+    }
+    
+     .leftLine {
+        transition-timing-function: ease-in;
+    }
+    
+     .rightLine {
+        transition-delay: .3s;
+        transition-timing-function: ease-out;
+    }
+
+}
+
+
+.mobileNavbarHamburgerButton.revealLines .landscapeLines .landscapeLine {
+    transform: unset;
+}
+
+.mobileNavbarHamburgerButton.revealEnded .landscapeLines .landscapeLine {
+    transform: unset;
+    transition-duration: .3s, 0s;
+}
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(1) { transform-origin: right; z-index: 2;}
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(2) { transform-origin: right; }
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(3) { transform-origin: right; z-index: 3;}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(1) {
+    transform: rotate(60deg) translateY(8px) translateX(9px);
+}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(3) {
+    transform: rotate(-60deg) translateY(-8px) translateX(9px);
+}
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(2)::before {
+    transition-duration: .8s;
+    transform-origin: left;
+}
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(1)::before,
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(3)::before {
+    transition-duration: .7s;
+    transition-delay: .5s;
+    transform-origin: right;
+}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(1)::before,
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(3)::before {
+    transform: unset;
+}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(2)::before {
+    transform: unset;
+}
+
+.mobileNavbarHamburgerButton .landscapeLines::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition-duration: inherit;
+    background: linear-gradient(to left, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+    border-radius: inherit;
+    transform: scaleX(0);
+}
+
+.mobileNavbarHamburgerButton.transformLandscapeLinesToArrow .landscapeLines:nth-child(2) {
+    transition-delay: 0.5s, 0s, 0s;
+    transform-origin: right;
+    transform: scaleX(0);
+    width: 80%;
+}
+
+.mobileNavbarHamburgerButton.openNav .landscapeLines:nth-child(1) {
+    transform: rotate(45deg) translateY(15px) translateX(16px);
+}
+
+.mobileNavbarHamburgerButton.openNav .landscapeLines:nth-child(3) {
+    transform: rotate(-45deg) translateY(-20px) translateX(20px);
+    box-shadow: 0px 5px 10px 0 black;
+}   
+
+.mobileNavbarHamburgerButton .landscapeLines:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition-duration: .3s;
+    /* background: linear-gradient(to bottom, blueviolet, rgb(184, 184, 255)); */
+    background: linear-gradient(to top, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+
+    /* background-color: red; */
+    border-radius: inherit;
+    opacity: 0;
+}
+
+.mobileNavbarHamburgerButton.openNav .landscapeLines:nth-child(3)::after {
+    opacity: 1;
+}

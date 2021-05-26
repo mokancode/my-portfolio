@@ -1,0 +1,59 @@
+.navBtn:nth-child(3) {
+    position: relative;
+    /* display: none; */
+    /* border: 1px solid red; */
+}
+
+.contactIconDivWrapper {
+    /* display: none; */
+    /* border: 1px solid greenyellow; */
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    
+    width: 50px;
+    height: 35px;
+    filter: 
+    drop-shadow(-0.5px .5px 0.5px rgba(0, 255, 255, 1))
+    drop-shadow(0 0 5px rgb(8, 0, 255))
+    drop-shadow(2px 2px 5px rgb(8, 0, 255))
+    ;
+    
+    transition: 1s linear;
+    stroke-dasharray: 1900;
+    stroke-dashoffset: 1900;
+    /* stroke-dashoffset: 0; */
+    pointer-events: none;
+}
+
+.contactIconDivDrawStroke {
+    stroke-dashoffset: 0;
+}
+
+.contactIconDiv {
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    width: 100px !important;
+    height: 50px !important;
+    /* border: 2px solid cyan; */
+}
+
+.contactIconDiv svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    transform: scale(0.7, 0.7) !important;
+    
+    width: 120px !important;
+    height: 50px !important;
+}
+
+.contactIconDiv path {
+    stroke: rgb(31, 166, 218);
+}
+
+.hideContactIcon {
+    display: none
+}

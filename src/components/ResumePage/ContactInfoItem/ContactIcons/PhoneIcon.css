@@ -1,0 +1,80 @@
+.phoneIcon {
+    margin-top: -2px;
+    border: 1px solid dimgray;
+    width: 15px;
+    height: 95%;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.8, 1);
+    background: linear-gradient(rgb(61, 101, 133), rgb(176, 255, 237));
+    box-shadow: inset 0 3px 3px 5px rgba(61, 110, 122, 0.5);
+    z-index: 4;
+    overflow: hidden;
+    transform: scale(.5);
+    opacity: 0;
+    animation: 2s phoneScreenGlowAnim infinite
+}
+
+@keyframes phoneScreenGlowAnim {
+    0% {
+        box-shadow: inset 0 3px 3px 5px rgba(61, 110, 122, 0.5);
+    }
+    50% {
+        box-shadow: inset 0 3px 3px 3px rgb(84, 180, 204);
+    }
+}
+
+.phoneIcon.show { transform: unset; opacity: 1; }
+
+.phoneIcon::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(35deg) scaleX(2) translateX(-45%);
+}
+
+.phoneIcon .notch {
+    width: 100%;
+    height: 14%;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    background-color: dimgray;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoneIcon .notch::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 1.5px;
+    background-color: white;
+}
+
+.phoneIcon .navigationBar {
+    width: 100%;
+    height: 12%;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    background-color: dimgray;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoneIcon .navigationBar::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50px;
+}

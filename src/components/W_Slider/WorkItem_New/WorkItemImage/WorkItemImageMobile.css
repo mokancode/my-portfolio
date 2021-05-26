@@ -1,0 +1,282 @@
+.workDescriptionImageInnerWrapper img {
+    /* display: none; */
+}
+
+@media screen and (max-width: 800px) {
+    .workDescriptionImageWrapper {
+        min-height: 130px;
+    }
+    
+    .workDescriptionImageInnerWrapper {
+        height: 130px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 130px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 130px !important;
+        width: 130px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Landscape .workDescriptionImage {
+        height: 130px;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 180px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        height: 180px;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        /* height: 180px; */
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink .workDescriptionImage {
+        height: 170px !important;
+        transform: translateY(-20px) !important;
+    }
+    
+    .greenZenphonyWorkItemDiv .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(-20px);
+        height: 170px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(0px);
+        height: 180px;
+    }
+
+    .imgSubtitute_TitleInitialWrapper {
+        width: 130px;
+        height: 130px;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .workDescriptionImageWrapper {
+        min-height: 100px;
+    }
+    
+    .workDescriptionImageInnerWrapper {
+        height: 100px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 100px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 100px !important;
+        width: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Landscape .workDescriptionImage {
+        height: 100px;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 180px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        height: 180px;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        /* height: 180px; */
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink .workDescriptionImage {
+        height: 140px !important;
+        /* width: 150px !important; */
+        transform: translateY(-20px) !important;
+    }
+    
+    .greenZenphonyWorkItemDiv .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(-20px);
+        height: 140px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(0px);
+        height: 180px;
+    }
+
+    .imgSubtitute_TitleInitialWrapper {
+        width: 100px;
+        height: 100px;
+    }    
+}
+
+@media screen and (max-width: 400px) {
+    .workDescriptionImageWrapper {
+        min-height: 120px;
+    }
+    
+    .workDescriptionImageInnerWrapper {
+        height: 120px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 120px;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 120px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Landscape .workDescriptionImage {
+        height: 120px;
+    }
+    
+    .greenZenphonyWorkItemDiv .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(-20px);
+        height: 160px;
+    }
+
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink .workDescriptionImage {
+        height: 160px !important;
+        transform: translateY(-20px) !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 120px;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 120px;
+        /* transform: translateY(-20px); */
+    }
+    
+    
+    .imgSubtitute_TitleInitialWrapper {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .workDescriptionImageWrapper {
+        min-height: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper {
+        height: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Landscape .workDescriptionImage {
+        height: 100px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 130px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        /* height: 180px !important; */
+        max-height: 180px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        height: 180px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 100px !important;
+        /* width: 100px !important; */
+        max-width: 100px !important;
+        max-height: 100px;
+        /* border: 2px solid red; */
+        /* transform: unset; */
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink .workDescriptionImage {
+        height: 140px !important;
+        transform: translateY(-20px) !important;
+    }
+    
+    .greenZenphonyWorkItemDiv .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(-20px);
+        height: 140px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(0px);
+        height: 180px;
+    }
+
+    .imgSubtitute_TitleInitialWrapper {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .workDescriptionImageWrapper {
+        min-height: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper {
+        height: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 100px !important;
+    }
+    
+    .workDescriptionImageInnerWrapper_Landscape .workDescriptionImage {
+        height: 100px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait {
+        max-width: 130px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        max-height: 120px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper {
+        height: 180px !important;
+    }
+    
+    .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        height: 100px !important;
+        max-width: 100px !important;
+        max-height: 100px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait_Shrink .workDescriptionImage {
+        height: 140px !important;
+        transform: translateY(-20px) !important;
+    }
+    
+    .greenZenphonyWorkItemDiv .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(-20px);
+        height: 140px;
+    }
+    
+    .greenZenphonyWorkItemDiv .largeWorkDescriptionImageWrapper .workDescriptionImageInnerWrapper_Portrait .workDescriptionImage {
+        transform: translateY(0px);
+        height: 120px;
+    }
+
+    .imgSubtitute_TitleInitialWrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .workDescriptionImageInnerWrapper_Portrait_Shrink {
+        /* height: unset !important; */
+        width: unset !important;
+    }
+}

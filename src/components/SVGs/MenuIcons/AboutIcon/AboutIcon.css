@@ -1,0 +1,58 @@
+.aboutIconSVG {
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    /* border: 1px solid white; */
+    /* filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 20px cyan)
+    ; */
+
+    filter: 
+    drop-shadow(-0.5px .5px 0.5px rgba(0, 255, 255, 1))
+    /* drop-shadow(0 0 10px cyan) */
+    drop-shadow(0 0 5px rgb(8, 0, 255))
+    ;
+    
+    user-select: none !important;
+    transform: scale(1,1) !important;
+    /* border: 3px solid red; */
+}
+
+.aboutIconPath {
+    /* width: 100px;
+    height: 100px; */
+    fill:transparent;
+    stroke: rgb(86, 156, 255);
+    /* stroke:cyan; */
+    stroke-miterlimit:10;
+    stroke-width: 10px;
+    stroke-dasharray: 1300;
+    stroke-dashoffset: 1300;
+    /* stroke-dashoffset: 0; */
+    transition: 1s ease-in-out;
+    transform-origin: center;
+    transform: scale(1,1) !important;
+}
+
+.hideAboutIcon {
+    display: none;
+}
+
+.showIcon .aboutIconPath {
+    stroke-dashoffset: 0 !important;
+}
+
+
+.navBtn:not(:first-child) .aboutIconSVG {
+    display: none;
+}
+
+.path3, .path4, .path5 {
+    /* fill: cyan; */
+    /* stroke-width: 2px; */
+
+    /* padding: 30px !important;
+    width: 50px !important;
+    height: 50px !important; */
+}

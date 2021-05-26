@@ -1,0 +1,80 @@
+.typeAnimatedTextDiv {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &.hideTypeAnimatedTextDiv {
+    display: none;
+  }
+}
+
+.typeWriterWord {
+  margin: 0px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+
+  transition-duration: 0.7s;
+
+  &.hideTypeWriterWord {
+    transform: translateX(10px) translateY(-10px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.typeWriterLetter {
+  opacity: 0;
+  display: flex;
+
+  transform: translateX(10px) translateY(5px) rotate(90deg) skew(50deg);
+  /* border: 1px solid cyan; */
+
+  &.typeWriterLetterAnimate {
+    /* animation: .5s showLetter forwards; */
+
+    transform: unset !important;
+    filter: unset !important;
+    opacity: 1;
+  }
+
+  &.hideTypeWriterLetter {
+    /* transition-duration: .2s; */
+    transform: translateX(10px) translateY(-10px);
+    opacity: 0 !important;
+    filter: blur(20px);
+  }
+
+  &.typeWriterLetterNoAnim {
+    animation: 0s showLetter 0s forwards !important;
+  }
+}
+
+.typeWriterTextWhole {
+  perspective: 1000px;
+
+  .typeWriterLetter {
+    transition: 1s 1s;
+    transform: translateX(50px) /* translateY(-20px) */ rotateY(-40deg) /* skewY(-10deg) */;
+    transform-origin: left;
+    filter: blur(10px);
+  }
+}
+
+@keyframes showLetter {
+  0% {
+    transform: translateX(10px) translateY(5px) rotate(90deg) skew(50deg);
+    opacity: 0;
+  }
+  100% {
+    transform: unset;
+    opacity: 1;
+  }
+}

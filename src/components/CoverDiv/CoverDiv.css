@@ -1,0 +1,256 @@
+.coverDivs {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid yellow; */
+    overflow: hidden;
+    /* z-index: 48; */
+}
+
+.adjustZIndexCoverDivs {
+    /* z-index: -1; */
+}
+
+.coverSplitterDiv {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    background-color: cyan;
+    box-shadow: 
+    0 0 5px 1px cyan
+    , 0 0 20px 1px cyan
+    ;
+    height: 0vh;
+    width: 1px;
+    z-index: 50;
+    transition: 0.2s;
+    animation: 0.3s expandCoverSplitter ease-in forwards 0.7s, 0.4s hideCoverSplitter 1.2s forwards;
+}
+
+@keyframes expandCoverSplitter {
+    0% {
+        height: 0vh;
+    }
+    100% {
+        height: 100vh;
+    }
+}
+
+@keyframes hideCoverSplitter {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.coverDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+    transition: 0.5s;
+    /* z-index: 60; */
+}
+
+.hideCover {
+    opacity: 0;
+}
+
+.coverDiv:nth-child(1) {
+    /* display: none; */
+}
+
+.coverDiv:nth-child(2) {
+    /* display: none; */
+}
+
+.coverDiv:nth-child(3) {
+    /* display: none; */
+}
+
+.leftCover, .rightCover {
+    /* display: none; */
+    position: relative;
+    min-width: 50vw;
+    min-height: 300vh;
+    /* width: 50%; */
+    /* height: 100%; */
+}
+
+.coverDiv:nth-child(1) .leftCover, .coverDiv:nth-child(1) .rightCover {
+    min-width: unset !important;
+    min-height: unset !important;
+    width: 50vw;
+    height: 100vh !important;
+}
+
+.coverDiv:nth-child(1) .leftCover, .coverDiv:nth-child(1) .rightCover {
+    transition: 2s ease-in-out 0s;
+    z-index: 50;
+}
+
+.coverDiv:nth-child(1) .leftCover {
+    /* display: none; */
+    background-color: rgb(13, 23, 44);
+    /* background: linear-gradient(to right, rgb(13, 23, 44), rgb(27, 70, 108)); */
+    /* box-shadow: 
+    -10px 0 400px 0 rgb(93, 161, 255) */
+    /* , inset -80px 0 200px 0 rgb(93, 161, 255, 0.5) */
+    ;
+    /* transform: translateX(-250px); */
+}
+
+.coverDiv:nth-child(1) .rightCover {
+    /* background-color: rgb(27, 70, 108); */
+    background-color: rgb(13, 23, 44);
+    /* background: linear-gradient(to left, rgb(13, 23, 44), rgb(27, 70, 108)); */
+    transform: translateX(0vw);
+    box-shadow: 
+    /* 0px 0 100px 0 rgb(93, 161, 255) */
+    /* , inset 80px 0 400px 0 rgb(93, 161, 255, 0.5) */
+    ;
+    /* transform: translateX(250px); */
+}
+
+.coverDiv:nth-child(1) .leftUncover {
+    transform: translateX(-50vw);
+}
+
+.coverDiv:nth-child(1) .rightUncover {
+    transform: translateX(50vw);
+}
+
+
+/* 2nd cover */
+
+.coverDiv:nth-child(2) .leftCover, .coverDiv:nth-child(2) .rightCover {
+    /* display: none; */
+    transition: 4s ease-in-out .7s;
+    z-index: 49;
+}
+
+.coverDiv:nth-child(2) .leftCover {
+    background-color: rgb(27, 70, 108);
+    transform-origin: bottom;
+    /* box-shadow: 
+    -10px 0 500px 0 rgb(93, 225, 255),
+    inset -10px 0 500px 0 rgb(93, 225, 255); */
+}
+
+.coverDiv:nth-child(2) .rightCover {
+    transition: 3s ease-in-out .7s;
+    background-color: rgb(13, 23, 44);
+    /* box-shadow: 
+    10px 0 500px 0 rgb(93, 225, 255),
+    inset 80px 0 300px 0 rgb(93, 225, 255); */
+}
+
+.coverDiv:nth-child(2) .leftUncover {
+    transform: translateX(-110vw) rotate(-45deg);
+}
+
+.coverDiv:nth-child(2) .rightUncover {
+    transform: translateX(110vw) rotate(-45deg);
+}
+
+
+/* 3nd cover */
+
+.coverDiv:nth-child(3) .leftCover, .coverDiv:nth-child(3) .rightCover {
+    /* display: none; */
+    transition: 4s ease-in-out 1.5s;
+    z-index: 48;
+}
+
+.coverDiv:nth-child(3) .leftCover {
+    background-color: rgb(13, 23, 44);
+    transform-origin: bottom;
+    /* box-shadow: 
+    -10px 0 500px 0 rgb(93, 115, 255),
+    inset -10px 0 500px 0 rgb(93, 115, 255)
+    ; */
+    box-shadow: 
+    -10px 0 500px 0 rgb(13, 23, 44),
+    inset -10px 0 500px 0 rgb(13, 23, 44)
+    ;
+}
+
+.coverDiv:nth-child(3) .rightCover {
+    transition: 3s ease-in-out 1.5s;
+    background-color: rgb(27, 70, 108);
+    /* box-shadow: 
+    10px 0 500px 0 rgb(93, 115, 255),
+    inset 10px 0 500px 0 rgb(93, 115, 255)
+    ; */
+    box-shadow: 
+    10px 0 500px 0 rgb(27, 70, 108),
+    inset 10px 0 500px 0 rgb(27, 70, 108)
+    ;
+}
+
+.coverDiv:nth-child(3) .leftUncover {
+    transform: translateX(-110vw) rotate(-45deg);
+}
+
+
+.coverDiv:nth-child(3) .rightUncover {
+    transform: translateX(110vw) rotate(-45deg);
+}
+
+/* Cover Texts */
+
+.coverDiv:nth-child(1) .leftCover {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.textCover {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 50px;
+    color: rgb(46, 66, 123);
+    text-shadow: 
+    0 0 20px rgb(38, 44, 130), 
+    /* 0 0 2px rgb(151, 191, 231), */
+    0 2px 10px black
+    ;
+    filter: blur(3px);
+    animation: 1s dragFromLeft forwards ease-in-out;
+}
+
+.rightTextCover1 {
+    left: unset;
+    top: 100px;
+    right: 300px;
+    animation: 1s dragFromRight forwards ease-in-out;
+}
+
+@keyframes dragFromRight {
+    0% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes dragFromLeft {
+    0% {
+        transform: translateX(-50vw);
+    }
+    100% {
+        transform: translateY(0vw);
+    }
+}

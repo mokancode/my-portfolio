@@ -1,0 +1,269 @@
+.navigationPullBtnOuterWrapper {
+  transition: 0.3s ease-out, 0.2s margin-left 0.1s, 1s margin-top 1s;
+  transform: translateY(0px);
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* border: 3px solid cyan; */
+
+  &.getInPosition {
+    margin-top: 30px;
+    margin-left: -20px;
+  }
+
+  &.pullNavbar {
+    transition: 0.3s ease-out, 0.3s margin-left 0s !important;
+    margin-left: -100% !important;
+  }
+
+  &:hover {
+    /* transition: .2s; */
+    margin-left: -10px;
+  }
+}
+
+.navigationPullBtnWrapper {
+  position: relative;
+  width: fit-content;
+  /* overflow: hidden; */
+  transform-origin: bottom left;
+  transition: 2s 1s, 2s margin 0s;
+  transform: translateX(-130%);
+  box-shadow: 0 0 50px rgba(63, 23, 241, 0.5);
+  /* border: 4px solid red; */
+
+  &.pullOutBtn {
+    transform: translateX(0%);
+  }
+}
+
+.navigationPullBtn {
+  width: fit-content;
+  padding: 10px 30px;
+  position: relative;
+  border-bottom-right-radius: 10px;
+  transition: 1s;
+}
+
+.navigationPullBtnWrapper.getInPosition .navigationPullBtn {
+  padding: 10px 10px;
+  padding-left: 25px;
+  border-top-right-radius: 10px;
+}
+
+.gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 0;
+  transition-duration: 1s;
+
+  &.verticalGradient {
+    background: linear-gradient(rgb(3, 3, 31) 0%, rgb(17, 9, 90) 120%);
+    transition-delay: 0.5s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(transparent, rgba(63, 23, 241, 0.4));
+      border-radius: inherit;
+    }
+  }
+
+  &.horizontalGradient {
+    opacity: 0;
+    background: linear-gradient(to right, rgb(3, 3, 31) 0%, rgb(22, 12, 112) 120%);
+  }
+}
+
+.navigationPullBtnWrapper.getInPosition .gradient.verticalGradient {
+  opacity: 0;
+}
+.navigationPullBtnWrapper.getInPosition .gradient.horizontalGradient {
+  opacity: 1;
+}
+
+.navigationPullBtnElements {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 5;
+  /* border: 2px solid cyan; */
+}
+
+.neonBar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  &.bottomNeonBar {
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid rgba(176, 167, 255, 0.8);
+    border-radius: inherit;
+    filter: drop-shadow(0 0 2px rgb(176, 167, 255)) drop-shadow(0 0 10px rgba(176, 167, 255, 0.8))
+      drop-shadow(0 0 10px rgba(176, 167, 255, 0.5));
+    transition: 1s;
+    border-bottom-left-radius: 0px;
+  }
+  &.rightNeonBar {
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid rgba(176, 167, 255, 0);
+    border-radius: inherit;
+    filter: drop-shadow(0 0 2px rgb(176, 167, 255)) drop-shadow(0 0 10px rgba(176, 167, 255, 0.8))
+      drop-shadow(0 0 10px rgba(176, 167, 255, 0.5));
+    transition: 1s;
+  }
+}
+
+.navigationPullBtnWrapper.getInPosition .rightNeonBar {
+  border-right: 3px solid rgba(176, 167, 255, 0.8);
+}
+
+.navigationPullBtnWrapper.getInPosition .bottomNeonBar {
+  border-bottom: 3px solid rgba(176, 167, 255, 0);
+}
+
+.topBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(15, 51, 92);
+  box-shadow: 0 0 5px 0 rgb(112, 43, 223), 0 0 20px 0 rgb(112, 43, 223);
+  transition: 1s;
+}
+
+.navigationPullBtnWrapper.getInPosition .topBar {
+  opacity: 0;
+}
+
+.leftBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 90%;
+  background: linear-gradient(black, rgb(76, 72, 114));
+  transition: 1s;
+}
+
+.rightBar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 1px;
+  height: 90%;
+  background: linear-gradient(black, rgb(64, 57, 124));
+  /* display: none; */
+  transition: 1s;
+}
+
+.navigationPullBtnWrapper.getInPosition .leftBar,
+.navigationPullBtnWrapper.getInPosition .rightBar {
+  opacity: 0;
+}
+
+.navigationText {
+  display: flex;
+}
+
+.navigationPullBtn p {
+  white-space: pre;
+  margin: 0px;
+  font-size: 30px;
+  color: rgb(21, 31, 122);
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgb(124, 110, 255), 1px 0px 1px rgba(124, 110, 255, 0), 2px -2px 1px black;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: 1s;
+
+  span.avigation {
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
+    max-width: 220px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+  }
+}
+
+.verticalText {
+  overflow: hidden;
+  max-height: 0px;
+  transition: 1s cubic-bezier(0.45, 0, 0.55, 1) 1s;
+
+  p {
+    margin-top: -7px;
+  }
+}
+
+.navigationPullBtnWrapper.getInPosition p {
+  text-shadow: 0px 1px 1px rgba(124, 110, 255, 0), 1px 0px 1px rgba(124, 110, 255, 1), -2px 0px 1px black;
+}
+
+.navigationPullBtnWrapper.getInPosition .navigationPullBtn p span.avigation {
+  max-width: 0px;
+}
+
+.navigationPullBtnWrapper.getInPosition .verticalText {
+  max-height: 100px;
+}
+
+.expandingPullTrigger {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  transform: scaleX(0);
+  transform-origin: right;
+  height: 100%;
+  width: 100%;
+  transition: 0.2s;
+  background-color: rgba(86, 56, 219, 0.3);
+  /* background: linear-gradient(to right, transparent, rgba(119, 56, 219, 0.5)); */
+  z-index: 1;
+  /* opacity: .3; */
+  border-radius: inherit;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+
+  box-shadow: inset 0 0 20px 0 blueviolet;
+
+  &.expandingPullTriggerPullOut {
+    transform: scaleX(1);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+.navigationPullBtnOuterWrapper:hover {
+  .expandingPullTrigger {
+  }
+
+  .navigationPullBtnWrapper.getInPosition p {
+    color: rgb(32, 46, 173);
+  }
+}

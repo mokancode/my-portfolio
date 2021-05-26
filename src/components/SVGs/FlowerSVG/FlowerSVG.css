@@ -1,0 +1,58 @@
+.flowerSVG {
+    opacity: .7;
+    
+    position: absolute;
+    top: -50px;
+    right: -120px;
+    
+    display: none;
+    width: 350px;
+    height: auto;
+    
+    /* transition: 5s stroke-dashoffset cubic-bezier(0.55, 0.055, 0.675, 0.19), 1s filter; */
+    transition: 1s stroke-dashoffset cubic-bezier(0.55, 0.055, 0.675, 0.19), 1s filter;
+    /* stroke-dasharray: 10000px;
+    stroke-dashoffset: 10000px; */
+    
+    filter: 
+    drop-shadow(0 0 5px black)
+    /* drop-shadow(0 0 5px black) */
+    /* drop-shadow(0 0 10px black) */
+    ;
+    
+    stroke-dasharray: 950px;
+    stroke-dashoffset: 950px;
+    /* stroke-dashoffset: 0px !important; */
+    
+    z-index: 1;
+}
+
+.readyToDraw {
+    stroke-dashoffset: 0px;
+}
+
+.flowerSVGPath {
+    fill:none;
+    stroke:rgb(124, 247, 124);
+    stroke-width:1;
+    stroke-miterlimit:10;
+}
+
+.flowerSvgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+    /* border: 10px solid white; */
+}
+
+@media screen and (max-width: 450px) {
+    .flowerSvgWrapper {
+        transform: scale(0.5,0.5);
+        top: -20px;
+        transition: .5s ease-in-out;
+    }
+}

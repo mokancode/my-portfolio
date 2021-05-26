@@ -1,0 +1,55 @@
+.contactFormContainer .textTrackerLetterWrapper p {
+    margin: 0px;
+    color: rgba(155, 195, 255, 0.99);
+    text-shadow: 
+    0 0 20px rgb(155, 195, 255)
+    , 0 0 50px rgb(155, 195, 255)
+    , 0 0 10px rgb(155, 195, 255)
+    , 0 0 100px rgb(155, 195, 255)
+    ;
+    opacity: 0;
+    /* display: none; */
+    /* animation: .5s showTypeTrackingLetter forwards linear; */
+
+    /* display: none !important; */
+    /* content-visibility: auto; */
+
+  }
+  
+  .contactFormContainer .textTrackerLetterWrapper p:not(:first-child) {
+    /* display: none; */
+  }
+  
+  .contactFormContainer .textTrackerLetterWrapper p.animateTextTracker {
+    /* display: block; */
+    animation: 1s showTypeTrackingLetter forwards linear;
+  }
+  
+  .textTrackerLetterWrapper {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    /* width: 100%; */
+    /* border: 1px solid yellow; */
+    /* text-align: center; */
+  }
+  
+  @keyframes showTypeTrackingLetter {
+    0% {
+      transform: translateY(0px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+  
+  .textTrackerInput {
+    width: 200px;
+    height: 40px;
+  }

@@ -1,0 +1,19 @@
+@media screen and (orientation: portrait) {
+    .workItemsInnerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .workItemsChunk {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+    .workItemsInnerContainer {
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
+        /* padding: 50px 20px; */
+    }
+}

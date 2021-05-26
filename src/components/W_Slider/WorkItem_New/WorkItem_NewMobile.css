@@ -1,0 +1,74 @@
+@media screen and (max-width: 1400px) {    
+    .workItemWrapper {
+        width: 150px;
+        height: 150px;
+        /* border: 2px solid cyan; */
+        /* transform: unset !important; */
+        /* display: none; */
+        max-width: 500px;
+    }
+    
+    
+    
+    .workItemWrapper * {
+        /* display: none !important; */
+    }
+
+    .workItemWrapperExpand {
+        width: 90%;
+        height: 400px;
+        max-width: 500px;
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .workItemWrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    .workItemWrapperExpand {
+        width: 90%;
+        height: 400px;
+        max-width: 500px;
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .workItemWrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .workItemWrapperExpand {
+        width: 90%;
+        height: 400px;
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .quizaWorkItemDiv .workItemWrapperExpand {
+        margin-top: 40px;
+        height: 380px;
+    }
+
+    .quizaWorkItemDiv .workItemWrapperExpand {
+        margin-top: 40px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .workItemWrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .workItemWrapperExpand {
+        height: 350px;
+        width: 90%;
+    }
+}

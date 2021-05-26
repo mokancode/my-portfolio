@@ -1,0 +1,199 @@
+.attributesAndBlockDescriptionsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    min-height: 45px;
+}
+
+.blockDescriptionIconWrapper {
+  animation: 2s iconFloatAnim infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+  position: absolute;
+}
+
+.blockDescriptionIcon {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 1s 1s;
+    
+    .blockDescriptionIconShow {
+        opacity: 1;
+        transform: unset;
+    }
+    
+    .hideBlockDescriptionIcon {
+        transition: 1s;
+        filter: blur(20px);
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+
+.blockDescriptionItemShadow {
+    transition: 1s .5s;
+}
+
+.blockDescriptionsWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 50px; */
+    height: 100%;
+    /* display: none; */
+    /* border: 2px solid white; */
+    perspective: 100px;
+}
+
+.hideBlockDescriptionsWrapper::before, 
+.hideBlockDescriptionsWrapper::after {
+    transition: 1s !important;
+    filter: blur(20px);
+    opacity: 0 !important;
+}
+
+.blockDescriptionsWrapper::before
+, .blockDescriptionsWrapper::after
+ {
+    position: absolute;
+    content: "";    
+    width: 90%;
+    height: 100%;
+    /* transform: rotateX(10deg) skew(-10deg); */
+    padding: 0px 20px;
+    transition-duration: inherit;
+    transition-property: opacity;
+    z-index: 2;
+    /* display: none; */
+}
+
+.blockDescriptionsWrapper::after { z-index: 1; }
+
+.blockDescriptionItem {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -3px;
+    /* border: 1px solid red; */
+    z-index: 3;
+    /* transform: rotateX(-5deg) translateZ(-20px) translateY(-30px) translateX(0px) scale(1.1, 1.1); */
+    transition: 1s;
+}
+
+.blockDescriptionItem p {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    /* display: none; */
+}
+
+.blockDescriptionItem:not(:first-child) {
+    /* border-left: 1px solid rgb(147, 147, 147); */
+    position: relative;
+    margin-left: 20px;
+}
+
+.blockDescriptionItem:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    transform: rotate(45deg);
+    top: -3px;
+    right: -10px;
+    width: 30px;
+    height: 10px;
+    /* background-color: rgba(103, 103, 103, 0.8); */
+}
+
+.blockDescriptionItem:not(:first-child)::after {
+    position: absolute;
+    content: "";
+    transform: rotate(45deg);
+    bottom: -3px;
+    left: -10px;
+    width: 30px;
+    height: 10px;
+    /* background-color: rgba(103, 103, 103, 0.8); */
+}
+
+.blockDescriptionItem .blockFirstWord {
+    /* font-family: Italiana; */
+    font-family: Cormorant Garamond;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: rgb(241, 241, 241);
+    font-size: 23px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+}
+
+.blockDescriptionItem .blockFirstWord .blockFirstWordLetter {
+    display: block;
+    /* border: 1px solid red; */
+    transform-origin: bottom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition-duration: 2s;
+    transform: scale(0, 0) skew(50deg) rotate(50deg);
+}
+
+.blockDescriptionItem .blockFirstWord .blockFirstWordLetterAnimate {
+    /* animation-name: revealBlockLetter; */
+    transform: unset;
+}
+
+@keyframes revealBlockLetter {
+    0% {
+        transform: scale(0, 0) skew(50deg) rotate(50deg);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.blockFirstWordLetter {
+    /* transition-duration: 1s;
+    filter: blur(20px);
+    transform: translateX(20px) translateY(-20px) !important;
+    opacity: 0; */
+} 
+
+.hideBlockFirstWordLetter {
+    transition-duration: 1s !important;
+    filter: blur(20px);
+    transform: translateX(10px) translateY(-10px) !important;
+    opacity: 0;
+}
+
+/* ABeeZee|Allura|Italiana|Montserrat|Philosopher|Playball|Poiret+One|Quicksand|Sofia */
+.blockDescriptionItem .blockSentence {
+    font-family: Quicksand;
+
+    /* font-family: Italiana; */
+    /* text-transform: uppercase; */
+    
+    color: rgb(206, 206, 206);
+    font-size: 17px;
+    opacity: 0;
+    /* transform: translateX(-20px) skew(10deg); */
+    transition: 1s 1s;
+}
+
+.blockDescriptionItem .blockSentenceShow {
+    opacity: 1;
+    transform: unset;
+}
+
+.hideBlockSentence {
+    transition: 1s !important;
+    transform: translateY(5px) !important;
+    filter: blur(20px);
+    opacity: 0 !important;
+}

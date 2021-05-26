@@ -1,0 +1,319 @@
+.mobileNavbarHamburgerButton {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition-duration: 0.5s, 0s, 0s;
+  transition-property: all, width, height;
+  transition-timing-function: ease-in-out;
+  position: fixed;
+  bottom: 0px;
+  padding-top: 10px;
+  pointer-events: all;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, transparent 130%, transparent);
+  /* border: 1px solid darkslategray; */
+
+  &.hide {
+    transform: translateY(100%);
+  }
+}
+
+.mobileNavbarHamburgerButton .revealBtn {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  z-index: 5;
+}
+
+.mobileNavbarHamburgerButton .openForCentralLineBtn {
+  position: fixed;
+  top: 0px;
+  left: 200px;
+  /* display: none; */
+}
+
+.mobileNavbarHamburgerButton .openNavBtn {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.mobileNavbarHamburgerButton .portraitWrapper {
+  width: 80px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  transition: 0.5s;
+  margin-bottom: 5px;
+}
+
+.mobileNavbarHamburgerButton.pullDown .portraitWrapper {
+  transform: translateY(5px);
+}
+
+.mobileNavbarHamburgerButton .sideLines {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* border: 1px solid darkturquoise; */
+  transition: 1s;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.mobileNavbarHamburgerButton .sideLinesWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.mobileNavbarHamburgerButton .sideLines .sideLine {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  transition-duration: 0.3s;
+  transition-property: margin-left, transform, border-radius, box-shadow;
+  box-shadow: 0 0 10px 0 white;
+
+  &.leftLine {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform-origin: right;
+  }
+
+  &.rightLine {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform-origin: left;
+  }
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .sideLine {
+  box-shadow: unset;
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .sideLine.leftLine {
+  transform-origin: left;
+}
+.mobileNavbarHamburgerButton .sideLines:nth-child(3) .sideLine.rightLine {
+  transform-origin: right;
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(1) .sideLine.leftLine {
+  transform-origin: right;
+}
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(3) .sideLine.rightLine {
+  transform-origin: left;
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(2) .sideLine {
+  transition-delay: 0.3s;
+}
+.mobileNavbarHamburgerButton .sideLines:nth-child(3) .sideLine {
+  transition-delay: 0.4s;
+}
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(1) .sideLine {
+  transition-delay: 0.2s, 0.4s, 0.2s;
+}
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(2) .sideLine {
+  transition-delay: 0.1s, 0.4s;
+}
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(3) .sideLine {
+  transition-delay: 0s, 0.2s;
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines .sideLine.rightLine {
+  margin-left: 10%;
+}
+
+.mobileNavbarHamburgerButton .centralLine {
+  position: absolute;
+  height: calc(100%);
+  width: 5px;
+  background-color: cyan;
+  /* background: linear-gradient(to top, blueviolet, rgb(184, 184, 255)); */
+  background: linear-gradient(to top, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+  transition-duration: 0.4s, 0s;
+  transition-property: all, transform-origin, height;
+  transition-timing-function: ease, linear;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  z-index: 2;
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .centralLine {
+  transition-delay: 0.2s, 0s, 0.3s;
+  transform: scaleY(1);
+
+  &.shrink {
+    transition-delay: 0s, 0s, 0.3s;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) {
+  .leftLine {
+    transform-origin: right;
+    position: relative;
+    z-index: 2;
+  }
+
+  .rightLine {
+    transform-origin: left;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.mobileNavbarHamburgerButton .sideLines .sideLine,
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .leftLine,
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .rightLine {
+  transform: scaleX(0);
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(1) {
+  .leftLine {
+    transform: rotate(-20deg) translateX(5px);
+    border-radius: 50px;
+  }
+  .rightLine {
+    transform: rotate(20deg) translateX(-5px);
+    border-radius: 50px;
+  }
+
+  .sideLine::before {
+    transition-delay: 0.4s;
+    transform: scaleX(1);
+  }
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .leftLine::before,
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .rightLine::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) {
+  & .leftLine::before {
+    background: linear-gradient(to left, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+    transform-origin: right;
+  }
+
+  & .rightLine::before {
+    background: linear-gradient(to right, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(2) .sideLine,
+.mobileNavbarHamburgerButton.openForCentralLine .sideLines:nth-child(3) .sideLine {
+  transform: scaleX(0);
+}
+
+.mobileNavbarHamburgerButton.revealLines .sideLines {
+  &:nth-child(1) {
+    .leftLine,
+    .rightLine {
+      transform-origin: left;
+    }
+
+    .rightLine {
+      transition-timing-function: ease-in;
+    }
+
+    .leftLine {
+      transition-delay: 0.3s;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &:nth-child(3) {
+    .leftLine,
+    .rightLine {
+      transition: 0.3s;
+      transform-origin: right;
+    }
+
+    .leftLine {
+      transition-timing-function: ease-in;
+    }
+
+    .rightLine {
+      transition-delay: 0.3s;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  .sideLine {
+    transform: unset;
+  }
+}
+
+.mobileNavbarHamburgerButton {
+  &.revealEnded .sideLines .sideLine {
+    transform: unset;
+    transition-duration: 0.3s;
+  }
+
+  &.openNav .sideLines {
+    &:nth-child(1) .leftLine {
+      transform: rotate(-45deg) translateX(20px) translateY(5px);
+    }
+
+    &:nth-child(1) .rightLine {
+      box-shadow: 0 0 10px 0 black;
+      transform: rotate(45deg) translateX(-20px) translateY(5px);
+    }
+  }
+}
+
+.mobileNavbarHamburgerButton .sideLines:nth-child(1) .rightLine::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to bottom, rgb(74, 106, 252), rgb(56, 68, 236), rgb(45, 11, 199));
+
+  /* background: blueviolet; */
+  /* background: linear-gradient(to bottom, rgb(70, 7, 216), rgb(64, 131, 255)); */
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transition-duration: inherit;
+  transition-delay: 0.3s;
+  /* transform: scaleY(0); */
+  transform-origin: top;
+  opacity: 0;
+}
+
+.mobileNavbarHamburgerButton.openNav .sideLines:nth-child(1) .rightLine::after {
+  /* transform: scaleY(1); */
+  opacity: 0.8;
+}
+
+.mobileNavbarHamburgerButton.hamburgerIsReady .sideLine {
+  transition-delay: 0s !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+@media screen and (orientation: landscape) {
+  .mobileNavbarHamburgerButton {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 30%, transparent 130%, transparent);
+  }
+
+  .mobileNavbarHamburgerButton.hide {
+    transform: translateX(-100%);
+  }
+}

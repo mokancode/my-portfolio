@@ -1,0 +1,377 @@
+.overlayOpenerContainer {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    overflow: hidden;
+    /* transform: scale(1, 1); */
+    /* transition: .5s; */
+    /* border: 3px solid red; */
+    /* border: 3px solid transparent; */
+    display: flex;
+}
+
+.overlayOpenerContainerClose {
+    /* border: 3px solid blue; */
+}
+
+.topGradients, .bottomGradients {
+    width: 50%;
+    height: 100%;
+}
+
+.topGradients *, .bottomGradients * {
+    /* display: none */
+}
+
+.topGradients div:not(.topGradient1), .bottomGradients div:not(.bottomGradient1) {
+    /* display: none   ; */
+}
+
+.topGradients {
+    border: 3px solid red;
+}
+.bottomGradients {
+    border: 3px solid blue;
+}
+
+.topGradient1, .bottomGradient1 {
+    position: absolute;
+    transition-duration: 1.5s;
+    transition-delay: .6s;
+    transition-timing-function: ease-in-out;
+    /* background: linear-gradient(rgb(130, 40, 240), rgb(130, 40, 240)); */
+    background-color: rgb(130, 40, 240);
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    box-shadow: 
+    0 0 30px 0 rgb(130, 40, 240)
+    , inset 0 0 30px 0 rgb(169, 98, 255)
+    ;
+    z-index: 2;
+    /* transform: unset !important; */
+}
+
+.topGradient1 {
+    /* transform: rotate(20deg) translateY(-72%) translateX(-20%); */
+    /* transform: rotate(20deg) translateY(-500px) translateX(-300px); */
+    transform: rotate(20deg) translateY(-60%) translateX(-20%);
+    background-color: rgb(0, 20, 201);
+}
+
+.bottomGradient1 {
+    /* transform: rotate(20deg) translateY(110%) translateX(-20%); */
+    transform: rotate(20deg) translateY(90%) translateX(-20%);
+    background-color: rgb(0, 20, 201);
+}
+
+.overlayOpenerContainerClose .topGradient1 {
+    transform: rotate(20deg) translateY(-35%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .bottomGradient1 {
+    transform: rotate(20deg) translateY(65%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .topGradient1 {
+    transform: rotate(20deg) translateY(-80%) translateX(-20%);
+}
+.pageSwitching-enter-done .topGradient1 { 
+    transform: rotate(20deg) translateY(-60%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .topGradient1 { 
+    transform: rotate(20deg) translateY(-60%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .topGradient1 { 
+    transform: rotate(20deg) translateY(-80%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .bottomGradient1 {
+    transform: rotate(20deg) translateY(105%) translateX(-20%);
+}
+.pageSwitching-enter-done .bottomGradient1 { 
+    transform: rotate(20deg) translateY(90%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .bottomGradient1 { 
+    transform: rotate(20deg) translateY(90%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .bottomGradient1 { 
+    transform: rotate(20deg) translateY(105%) translateX(-20%);
+}
+
+.topGradient2, .bottomGradient2 {
+    position: absolute;
+    transition-duration: 1.7s;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+    /* background: linear-gradient(rgb(164, 67, 255), rgb(164, 67, 255)); */
+    background-color: rgb(164, 67, 255);
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    box-shadow: 
+    0 0 30px 0 rgb(164, 67, 255)
+    , inset 0 0 30px 0 rgb(177, 94, 255)
+    ;
+    z-index: 3;
+}
+
+.topGradient2 {
+    transform: rotate(22deg) translateY(-78%) translateX(-20%);
+}
+
+.bottomGradient2 {
+    transform: rotate(22deg) translateY(95.5%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .topGradient2 {
+    transform: rotate(22deg) translateY(-30%) translateX(-20%);
+    background-color: rgb(31, 33, 165);
+}
+
+.overlayOpenerContainerClose .bottomGradient2 {
+    transform: rotate(22deg) translateY(70%) translateX(-20%);
+    background-color: rgb(31, 33, 165);
+}
+
+/* Enter */
+.pageSwitching-enter .topGradient2 {
+    transform: rotate(22deg) translateY(-78%) translateX(-20%);
+}
+.pageSwitching-enter-done .topGradient2 { 
+    transform: rotate(22deg) translateY(-58%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .topGradient2 { 
+    transform: rotate(30deg) translateY(-50%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .topGradient2 { 
+    transform: rotate(30deg) translateY(-70%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .bottomGradient2 {
+    transform: rotate(22deg) translateY(110%) translateX(-20%);
+}
+.pageSwitching-enter-done .bottomGradient2 { 
+    transform: rotate(22deg) translateY(95.5%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .bottomGradient2 { 
+    transform: rotate(22deg) translateY(95.5%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .bottomGradient2 { 
+    transform: rotate(22deg) translateY(110%) translateX(-20%);
+}
+
+.topGradient3, .bottomGradient3 {
+    position: absolute;
+    transition-duration: 1.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+    /* background-color: rgb(20, 2, 63); */
+    /* background-color: rgb(80, 19, 179); */
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    box-shadow: 
+    0 0 30px 0 rgb(76, 79, 236)
+    , inset 0 0 30px 0 rgb(13, 43, 143)
+    ;
+    z-index: 4;
+}
+
+.topGradient3 {
+    background: linear-gradient(55deg, rgb(143, 49, 180), rgb(26, 45, 131));
+    transform: rotate(30deg) translateY(-70%) translateX(-20%);
+}
+
+.bottomGradient3 {
+    background: linear-gradient(5deg, rgb(86, 14, 114), rgb(24, 43, 128));
+    transform: rotate(30deg) translateY(116%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .topGradient3 {
+    transform: rotate(30deg) translateY(-15%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .bottomGradient3 {
+    transform: rotate(30deg) translateY(85%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .topGradient3 {
+    transform: rotate(30deg) translateY(-70%) translateX(-20%);
+}
+.pageSwitching-enter-done .topGradient3 { 
+    transform: rotate(30deg) translateY(-50%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .topGradient3 { 
+    transform: rotate(30deg) translateY(-50%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .topGradient3 { 
+    transform: rotate(30deg) translateY(-70%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .bottomGradient3 {
+    transform: rotate(30deg) translateY(130%) translateX(-20%);
+}
+.pageSwitching-enter-done .bottomGradient3 { 
+    transform: rotate(30deg) translateY(116%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .bottomGradient3 { 
+    transform: rotate(30deg) translateY(116%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .bottomGradient3 { 
+    transform: rotate(30deg) translateY(130%) translateX(-20%);
+}
+
+.topGradient4, .bottomGradient4 {
+    position: absolute;
+    transition-duration: 3s;    
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+    /* background: linear-gradient(0deg, rgb(241, 49, 75), rgb(219, 34, 58)); */
+    /* background-color: rgb(61, 24, 129); */
+    /* background-color: rgb(220, 20, 113); */
+    background-color: rgb(135, 133, 255);
+    opacity: .6;
+    width: 100%;    
+    height: 100%;
+    box-shadow: 
+    0 0 30px 0 rgb(61, 24, 129)
+    , inset 0 0 5px 0 rgb(145, 85, 255)
+    /* 0 0 30px 0 rgb(75, 126, 223)
+    , inset 0 0 10px 3px rgb(10, 24, 99) */
+    ;
+    z-index: 1;
+}
+
+.topGradient4 {
+    transform: rotate(55deg) translateY(-45%) translateX(-20%);
+}
+
+.bottomGradient4 {
+    transform: rotate(55deg) translateY(195%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .topGradient4 {
+    transform: rotate(55deg) translateY(-45%) translateX(-20%);
+}
+.pageSwitching-enter-done .topGradient4 { 
+    transform: rotate(55deg) translateY(-16%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .topGradient4 { 
+    transform: rotate(55deg) translateY(-15%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .topGradient4 { 
+    transform: rotate(55deg) translateY(-45%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .bottomGradient4 {
+    transform: rotate(55deg) translateY(195%) translateX(-20%);
+}
+.pageSwitching-enter-done .bottomGradient4 { 
+    transform: rotate(55deg) translateY(165%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .bottomGradient4 { 
+    transform: rotate(55deg) translateY(165%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .bottomGradient4 { 
+    transform: rotate(55deg) translateY(195%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .topGradient4 {
+    transform: rotate(55deg) translateY(30%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .bottomGradient4 {
+    transform: rotate(55deg) translateY(130%) translateX(-20%);
+}
+
+.topGradient5, .bottomGradient5 {
+    position: absolute;
+    transition-duration: 1.5s;
+    transition-delay: .7s;
+    transition-timing-function: ease-in-out;
+    /* background: linear-gradient(rgb(130, 40, 240), rgb(130, 40, 240)); */
+    background-color: rgb(130, 40, 240);
+    opacity: .1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 
+    0 0 30px 0 rgb(130, 40, 240)
+    , inset 0 0 30px 0 rgb(169, 98, 255)
+    ;
+    z-index: 2;
+    /* display: none; */
+}
+
+.topGradient5 {
+    transform: rotate(20deg) translateY(-59%) translateX(-20%);
+}
+
+.bottomGradient5 {
+    transform: rotate(20deg) translateY(89%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .topGradient5 {
+    transform: rotate(20deg) translateY(-35%) translateX(-20%);
+}
+
+.overlayOpenerContainerClose .bottomGradient5 {
+    transform: rotate(20deg) translateY(65%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .topGradient5 {
+    transform: rotate(20deg) translateY(-80%) translateX(-20%);
+}
+.pageSwitching-enter-done .topGradient5 { 
+    transform: rotate(20deg) translateY(-59%) translateX(-20%);
+    /* filter: brightness(500%); */
+}
+
+/* Exit */
+.pageSwitching-exit .topGradient5 { 
+    transform: rotate(20deg) translateY(-59%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .topGradient5 { 
+    transform: rotate(20deg) translateY(-80%) translateX(-20%);
+}
+
+/* Enter */
+.pageSwitching-enter .bottomGradient5 {
+    transform: rotate(20deg) translateY(110%) translateX(-20%);
+}
+.pageSwitching-enter-done .bottomGradient5 { 
+    transform: rotate(20deg) translateY(89%) translateX(-20%);
+}
+
+/* Exit */
+.pageSwitching-exit .bottomGradient5 { 
+    transform: rotate(20deg) translateY(89%) translateX(-20%);
+}
+.pageSwitching-exit.pageSwitching-exit-active .bottomGradient5 { 
+    transform: rotate(20deg) translateY(110%) translateX(-20%);
+}

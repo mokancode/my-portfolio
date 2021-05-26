@@ -1,0 +1,356 @@
+.lottieDiv {
+  width: 100px;
+  height: auto;
+  transition: 0.5s linear;
+  transform: scale(1, 1);
+  /* border: 1px solid red; */
+
+  svg {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 2350;
+    /* stroke-dashoffset: 0; */
+  }
+
+  &.destroyElbow {
+    display: none !important;
+    /* border: 2px solid white !important; */
+  }
+
+  &.lottieDivAnimated svg {
+    animation: 8s playNeon forwards linear;
+  }
+
+  &.bracketRemoveAnim svg {
+    animation: none;
+  }
+
+  &.bracketRestrokeAnim svg {
+    animation: 5s playNeonHalf forwards linear;
+  }
+
+  &.lottieDivFill {
+    animation: 0.1s lightUpFillShadow 1.2s 5 linear !important;
+
+    path {
+      fill: rgb(33, 14, 172);
+      transition: 1s ease-in-out fill;
+      animation: 0.1s lightUpFill 1.2s 5 linear !important;
+    }
+  }
+
+  &.lottieDivDisableTransition {
+    animation: 2s colorize forwards linear 1s;
+
+    path {
+      /* transition: unset; */
+      animation: 2s colorize forwards linear 1s;
+    }
+  }
+
+  &.lottieDivRestroke path {
+    /* animation: unset !important; */
+    transition: 0.5s linear !important;
+    stroke-dasharray: 2350 !important;
+    stroke-dashoffset: 0 !important;
+    /* stroke: rgb(33, 14, 172); */
+    /* fill: rgb(33, 14, 172) !important; */
+    /* fill: transparent !important; */
+  }
+
+  &.lottieDivRemoveFill path {
+    animation: 1s removeFillAnim linear forwards !important;
+  }
+
+  &.lottieDivUnstroke svg {
+    animation: 0.6s unstroke forwards linear;
+  }
+}
+
+.lottieDivWrapper {
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+
+  &:nth-child(1) {
+    left: 0px;
+
+    &.lottieDivWrapperTagSlash {
+      transform: translateX(-55px);
+    }
+  }
+
+  &:nth-child(2) {
+    right: 0px;
+    transition: 0.5s linear;
+    transform: rotateY(180deg);
+    /* border: 2px solid white; */
+  }
+
+  path {
+    stroke-miterlimit: 10;
+    fill: rgb(33, 14, 172);
+    stroke: rgb(33, 14, 172);
+    fill: transparent;
+    stroke-width: 10;
+  }
+}
+
+.tagSlashWrapper {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  width: 50px;
+  height: 80%;
+  transform: rotate(20deg);
+  transition: 0.5s linear;
+}
+
+.tagSlash {
+  position: relative;
+  top: 50%;
+  left: 20px;
+  width: 5px;
+  height: 90%;
+  max-height: 0%;
+  background-color: rgb(33, 14, 172);
+  box-shadow: 0 0 5px 0 rgb(33, 14, 172);
+  border-radius: 100px;
+  transform: translate(-50%, -50%);
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &.tagSlashRevealed {
+    max-height: 100%;
+  }
+}
+
+.bracketSVGDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: -35px;
+  width: 500px;
+  min-height: 200px;
+  height: fit-content;
+  z-index: 99;
+}
+
+@keyframes lightUpFillShadow {
+  0% {
+    filter: unset;
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(33, 14, 172, 0.5));
+  }
+  100% {
+    filter: unset;
+  }
+}
+
+@keyframes lightUpFill {
+  0% {
+    fill: rgb(33, 14, 172);
+  }
+  50% {
+    fill: rgb(54, 35, 196);
+  }
+  100% {
+    fill: rgb(33, 14, 172);
+  }
+}
+
+@keyframes playNeon {
+  0% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 2350;
+  }
+  50% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  99% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes playNeonHalf {
+  0% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  99% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes colorize {
+  0% {
+    fill: rgb(33, 14, 172);
+    stroke: rgb(33, 14, 172);
+    filter: drop-shadow(0 0 20px rgb(33, 14, 172));
+  }
+  33% {
+    fill: rgb(57, 32, 240);
+    stroke: rgb(57, 32, 240);
+    filter: drop-shadow(0 0 20px rgb(57, 32, 240));
+  }
+  66% {
+    fill: rgb(38, 62, 181);
+    stroke: rgb(38, 62, 181);
+    filter: drop-shadow(0 0 20px rgb(38, 62, 181));
+  }
+  100% {
+    fill: rgb(33, 14, 172);
+    stroke: rgb(33, 14, 172);
+    filter: drop-shadow(0 0 20px rgb(33, 14, 172));
+  }
+}
+
+@keyframes removeFillAnim {
+  0% {
+    fill: rgb(33, 14, 172);
+    stroke-dasharray: 2350 !important;
+    stroke-dashoffset: 0 !important;
+    stroke: rgb(33, 14, 172);
+  }
+  25% {
+    fill: transparent;
+  }
+  100% {
+    fill: transparent;
+    stroke-dasharray: 2350 !important;
+    stroke-dashoffset: 0 !important;
+    stroke: rgb(33, 14, 172);
+  }
+}
+
+@keyframes unstroke {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2350;
+    stroke-dashoffset: 0;
+    stroke: rgb(33, 14, 172);
+  }
+  100% {
+    fill: transparent;
+    stroke-dasharray: 2350 !important;
+    stroke-dashoffset: 2350 !important;
+    stroke: rgb(33, 14, 172);
+  }
+}
+
+.pageSwitching-exit .lottieDiv {
+  opacity: 1;
+  transition: 2s;
+}
+.pageSwitching-exit.pageSwitching-exit-active .lottieDiv {
+  opacity: 0;
+}
+
+/* Mobile styles */
+
+@media screen and (max-width: 450px) {
+  .bracketSVGDiv {
+    width: 100%;
+  }
+
+  .lottieDivWrapper:nth-child(1) {
+    left: 55px;
+  }
+
+  .lottieDivWrapper:nth-child(2) {
+    right: 55px;
+  }
+
+  .lottieDiv {
+    width: 80px;
+  }
+
+  .tagSlashWrapper {
+    top: 45px;
+    left: 80px;
+    height: 55%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .bracketSVGDiv {
+    width: 100%;
+  }
+
+  .lottieDivWrapper:nth-child(1) {
+    left: 55px;
+  }
+
+  .lottieDivWrapper:nth-child(2) {
+    right: 55px;
+  }
+
+  .lottieDiv {
+    width: 60px;
+  }
+
+  .tagSlashWrapper {
+    top: 55px;
+    left: 60px;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-height: 450px) {
+  .bracketSVGDiv {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .lottieDivWrapper:nth-child(1) {
+    left: 30px;
+  }
+
+  .lottieDivWrapper:nth-child(2) {
+    right: 35px;
+  }
+
+  .lottieDivWrapperTagSlash:nth-child(1) {
+    transform: translateX(-35px);
+  }
+
+  .tagSlashWrapper {
+    top: 55px;
+    left: 55px;
+    height: 45%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .lottieDivWrapper:nth-child(1) {
+    left: 30px;
+  }
+
+  .lottieDivWrapper:nth-child(2) {
+    right: 40px;
+  }
+
+  .lottieDivWrapperTagSlash:nth-child(1) {
+    transform: translateX(-35px);
+  }
+
+  .tagSlashWrapper {
+    top: 55px;
+    left: 55px;
+    height: 45%;
+  }
+}

@@ -1,0 +1,146 @@
+.resumeHeader {
+  width: 100%;
+  /* border: 1px solid red; */
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 1s;
+}
+
+.resumeHeader.show {
+  opacity: 1;
+  transform: unset;
+}
+
+.headerAndLines {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.resumeHeader h1 {
+  padding: 10px 40px;
+  border-radius: 0px;
+  background: linear-gradient(45deg, transparent 30%, rgb(98, 94, 148) 10%, rgb(179, 169, 212) 70%, transparent 20%);
+  background-size: 400% 400%;
+  transition: 1s;
+  background-position-x: 100%;
+  color: black;
+  position: relative;
+  white-space: pre;
+}
+
+.resumeHeader.animate h1 {
+  animation-duration: 2s;
+  animation-name: showResumeHeaderGradient;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showResumeHeaderGradient {
+  0% {
+    color: black;
+    background-position-x: 100%;
+  }
+  20% {
+    color: transparent;
+  }
+  40% {
+    color: transparent;
+    background-position-x: -35%;
+    background-position-y: 15%;
+    box-shadow: unset;
+    transform: unset;
+  }
+  40.0001% {
+    color: white;
+    background-position-x: 100%;
+    /* box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.0); */
+    box-shadow: unset;
+    transform: unset;
+    transform: 
+        /* translate(10px, -10px) */ scale(1.05, 1.05);
+    box-shadow: -20px 20px 10px 0 rgba(0, 0, 0, 0);
+  }
+  70% {
+    transform: 
+        /* translate(10px, -10px) */ scale(1.05, 1.05);
+    box-shadow: unset;
+  }
+  100% {
+    color: white;
+    background-position-x: 40%;
+    /* box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+    transform: unset;
+  }
+}
+
+.headerAndLines .line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: 1s 2s;
+}
+
+.headerAndLines .line:nth-of-type(1) {
+  margin-right: 2px;
+  background: linear-gradient(to left, rgb(147, 141, 219), rgb(120, 115, 179), transparent);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.headerAndLines .line:nth-of-type(2) {
+  margin-left: 2px;
+  background: linear-gradient(to right, rgb(182, 174, 211), rgb(120, 115, 179), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.resumeHeader.animate .headerAndLines .line {
+  transform: unset;
+}
+
+.headerUnderline {
+  position: absolute;
+  left: -80px;
+  margin-top: 45px;
+  width: 50%;
+  height: 2px;
+  /* background-color: black; */
+  background: linear-gradient(to left, rgb(144, 105, 196), rgb(21, 19, 114), black);
+  background-size: 400% 400%;
+  background-position-x: 100%;
+  transition: 1s;
+  /* transform: translateX(-52%); */
+  display: none;
+}
+
+/* Section-specific styles */
+
+/* Education */
+.resumeEducationDiv .resumeHeader h1 {
+  padding: 5px 15px;
+}
+
+.resumeEducationDiv .headerAndLines .line:nth-of-type(1) {
+  height: 1.5px;
+}
+
+.resumeEducationDiv .headerAndLines .line:nth-of-type(2) {
+  background: linear-gradient(to right, rgb(182, 174, 211), rgb(120, 115, 179), rgb(120, 115, 179));
+  height: 1.5px;
+}
+
+/* Skills */
+.resumeSkillsDiv .resumeHeader h1 {
+  padding: 5px 15px;
+}
+
+.resumeSkillsDiv .headerAndLines .line:nth-of-type(1) {
+  background: linear-gradient(to left, rgb(147, 141, 219), rgb(120, 115, 179), rgb(120, 115, 179));
+  height: 1.5px;
+}
+
+.resumeSkillsDiv .headerAndLines .line:nth-of-type(2) {
+  height: 1.5px;
+}

@@ -1,0 +1,202 @@
+.error404TextDiv {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgba(255, 217, 0, 0.4));
+    margin-top: 50px;
+    /* border: 2px solid tomato; */
+    /* display: none; */
+}
+
+.error404TextDiv svg {
+    overflow: visible;
+    /* border: 1px solid red; */
+    max-width: 33%;
+}
+
+.error404TextDiv svg:not(:first-child) {
+    margin-left: 5px;
+}
+
+.error404TextDiv path, .error404TextDiv polygon {
+    transition-duration: 1s;
+    transition-delay: 1.5s, 1s;
+    transition-property: transform, stroke-dashoffset;
+}
+
+/* Digit 4 */
+
+.error404Text4SVG_index2 {
+    /* display: none; */
+}
+
+.error404Text4Path0 {
+    fill:url(#error404Text4_SVGID_1_);
+    transform-origin: center;
+    transform: scale(0) translateX(-100px);
+    transition-delay: 1s !important;
+    /* display: none; */
+}
+
+.error404Text4SVG_index2 .error404Text4Path0 {
+    transform: scale(0) translateX(100px);
+    transition-delay: 1s !important;
+}
+
+.error404Text4Path1 {
+    fill:none;
+    stroke:#FCEE21;
+    stroke-width:2;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+}
+
+.error404Text4Path2 {
+    fill:url(#error404Text4_SVGID_2_);
+    transform: scaleY(0);
+    transform-origin: top right;
+}
+
+.error404Text4Path3 {
+    fill:url(#error404Text4_SVGID_3_);
+    transform: translateX(-10px) scaleX(0);
+    transform-origin: top right;
+}
+
+.error404Text4Path4 {
+    fill:url(#error404Text4_SVGID_4_);
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.error404Text4Path5 {
+    fill:url(#error404Text4_SVGID_5_);
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.error404Text4Path6 {
+    fill:url(#error404Text4_SVGID_6_);
+    transform: translateY(80px) scaleY(.0);
+    transform-origin: center;
+}
+
+.error404Text4Path7 {
+    fill:url(#error404Text4_SVGID_7_);
+    transform: translateX(-40px) scaleX(0);
+    transform-origin: right;
+}
+
+.error404Text4Path8 {
+    fill:url(#error404Text4_SVGID_8_);
+    transform: scaleY(0) translateY(-30px);
+    transform-origin: bottom;
+}
+
+.error404Text4Path9 {
+    fill:url(#error404Text4_SVGID_9_);
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.error404Text4Path10 {
+    fill:url(#error404Text4_SVGID_10_);
+    transform: scaleX(0) translateX(10px);
+    transform-origin: left;
+}
+
+.error404Text4Path11 {
+    fill:url(#error404Text4_SVGID_11_);
+    transform: scaleX(0);
+}
+
+.error404Text4Path12 {
+    fill:url(#error404Text4_SVGID_12_);
+    transform: scale(0);
+    transform-origin: left;
+}
+
+.error404Text4Path13 {
+    fill:#603813;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.error404Text4Path14 {
+    fill:url(#error404Text4_SVGID_13_);
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.error404Text4Path15 {
+    fill:url(#error404Text4_SVGID_14_);
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.error404Text4Path16 {
+    fill:url(#error404Text4_SVGID_15_);
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+/* Digit 0  */
+.error404Text0Path0 {
+    fill:url(#error404Text0_SVGID_1_);
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.error404Text0Path1 {
+    fill:url(#error404Text0_SVGID_2_);
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.error404Text0Path2 {
+    fill:url(#error404Text0_SVGID_3_);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.error404Text0Path3 {
+    fill:url(#error404Text0_SVGID_4_);
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.error404Text0Path4 {
+    fill:url(#error404Text0_SVGID_5_);
+    transform: scale(0);
+    transform-origin: center;
+    transition-delay: 1s !important;
+}
+
+.error404Text0Path5 {
+    fill:none;
+    stroke:#FCEE21;
+    stroke-width:1.5;
+    stroke-miterlimit:10;
+    stroke-dasharray: 850px;
+    stroke-dashoffset: 850px;
+}
+
+.pageNotFoundWrapper.reveal path {
+    stroke-dashoffset: 0;
+}
+
+.pageNotFoundWrapper.reveal path, .pageNotFoundWrapper.reveal polygon {
+    transform: unset;
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .error404TextDiv svg {
+    transition: 1s;
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .error404TextDiv svg:nth-child(1) { transition-delay: 0s !important; }
+.pageSwitching-exit.pageSwitching-exit-active .error404TextDiv svg:nth-child(2) { transition-delay: .2s !important; }
+.pageSwitching-exit.pageSwitching-exit-active .error404TextDiv svg:nth-child(3) { transition-delay: .4s !important; }

@@ -1,0 +1,286 @@
+.overlayOpenerContainer {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.overlayOpenerContainer button {
+    position: absolute;
+    z-index: 5;
+}
+
+.overlayOpenerContainer button:active {
+    background-color: cornflowerblue;
+}
+
+.overlayOpenerContainer button:nth-child(2) {
+    margin-left: 40px;
+}
+
+.triangleSVG {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+.bottomTriangle {
+    bottom: 0px;
+    left: 0px;
+    transform-origin: left bottom;
+}
+
+.topTriangle {
+    top: 0px;
+    right: 0px;
+    transform-origin: right top;
+}
+
+.topTriangleSVGWrapper {
+    /* border: 2px solid red; */
+    width: 100vw;
+    /* height: 100vh; */
+    height: calc(var(--vh, 1vh) * 100);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.bottomTriangleSVGWrapper {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    /* display: none; */
+}
+
+.overlayOpenerContainer .triangleSVGWrapper:not(.topTriangleSVGWrapper4) {
+    /* display: none; */
+}
+
+.topTriangleSVGWrapper1, .bottomTriangleSVGWrapper1 { z-index: 2; }
+
+.topTriangle1, .bottomTriangle1 {
+    transform: scale(2.3, .82);
+    transition: 1s;
+    fill: rgb(0, 20, 201);
+    opacity: .3;
+}
+
+.topTriangleSVGWrapper2, .bottomTriangleSVGWrapper2 { z-index: 3; }
+.topTriangle2, .bottomTriangle2 {
+    transform: scale(1.95, .81);
+    fill: rgb(164, 67, 255);
+    opacity: .4;
+    z-index: 3;
+}
+
+.topTriangleSVGWrapper3, .bottomTriangleSVGWrapper3 { z-index: 4; }
+.topTriangle3, .bottomTriangle3 {
+    transform: scale(1.45, .82);
+    fill: rgb(49, 26, 131);
+    opacity: .6;
+    z-index: 4;
+}
+
+.topTriangleSVGWrapper4, .bottomTriangleSVGWrapper4 { z-index: 1; }
+.topTriangle4, .bottomTriangle4 {
+    transform: scale(1.1, 1.55);
+    fill: rgb(135, 133, 255);
+    opacity: .7;
+    z-index: 1;
+}
+.topTriangle4 { opacity: .4; }
+/* .topTriangle4 polygon { fill: rgb(15, 156, 149) !important; } */
+
+.topTriangleSVGWrapper5, .bottomTriangleSVGWrapper5 { z-index: 1; }
+.topTriangle5, .bottomTriangle5 {
+    transform: scale(2.4, .88);
+    fill: rgb(130, 40, 240);
+    opacity: .1;
+    z-index: 1;
+}
+
+.topTriangle5 { opacity: .3; }
+
+.topTriangleSVGWrapper1 {
+    /* display: none; */
+}
+
+#topTriangleGradient1 {
+    /* --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155); */
+}
+
+#topTriangleGradient2 {
+    --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155);
+}
+
+#topTriangleGradient3 {
+    /* --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155); */
+
+    --color-stop-3: rgb(37, 29, 58);
+    --color-stop-2: rgb(37, 29, 58);
+    --color-stop-1: rgb(13, 2, 31);
+}
+
+#topTriangleGradient4 {
+    /* --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155); */
+    
+    --color-stop-1: rgb(20, 72, 184);
+    --color-stop-2: rgb(72, 21, 255);
+    --color-stop-3: rgb(106, 128, 255);
+    
+    /* --color-stop-1: rgb(163, 172, 38);
+    --color-stop-2: rgb(63, 255, 5);
+    --color-stop-3: rgb(117, 8, 8); */
+}
+
+#topTriangleGradient5 {
+    --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155);
+}
+
+#bottomTriangleGradient1 {
+    /* --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155); */
+}
+
+#bottomTriangleGradient2 {
+    --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155);
+
+    /* --color-stop-3: rgb(29, 63, 214);
+    --color-stop-2: rgb(66, 0, 151);
+    --color-stop-1: rgb(5, 16, 77); */
+}
+
+#bottomTriangleGradient3 {
+    /* --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155); */
+
+    /* --color-stop-1: rgb(8, 5, 39); */
+    --color-stop-1: rgb(37, 29, 58);
+    --color-stop-2: rgb(37, 29, 58);
+    --color-stop-3: rgb(13, 2, 31);
+}
+
+#bottomTriangleGradient4 {
+    --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155);
+}
+
+#bottomTriangleGradient5 {
+    --color-stop-1: rgb(85, 101, 238);
+    --color-stop-2: rgb(42, 56, 184);
+    --color-stop-3: rgb(69, 16, 155);
+}
+
+/* .topTriangleSVGWrapper1 { display: none }
+.topTriangleSVGWrapper2 { display: none }
+.topTriangleSVGWrapper3 { display: none }
+.topTriangleSVGWrapper4 { display: none }
+.topTriangleSVGWrapper5 { display: none } */
+
+.topTriangleSVGWrapper {
+    transition-duration: .7s;
+    transform: translateY(-20vh) translateX(20vw) rotate(-10deg);
+}
+
+.bottomTriangleSVGWrapper {
+    transition-duration: .7s;
+    transform: translateY(20vh) translateX(-20vw) rotate(10deg);
+}
+
+/* Order: 3, 2, 1, 5, 4  */
+.topTriangleSVGWrapper3, .bottomTriangleSVGWrapper3 { transition-delay: 0.0s; }
+.topTriangleSVGWrapper2, .bottomTriangleSVGWrapper2 { transition-delay: 0.15s; }
+.topTriangleSVGWrapper1, .bottomTriangleSVGWrapper1 { transition-delay: 0.3s; }
+.topTriangleSVGWrapper5, .bottomTriangleSVGWrapper5 { transition-delay: 0.45s; }
+.topTriangleSVGWrapper4, .bottomTriangleSVGWrapper4 { transition-delay: 0.6s; }
+
+.firstVisitRevealOverlayOpener .topTriangleSVGWrapper, 
+.firstVisitRevealOverlayOpener .bottomTriangleSVGWrapper { transform: unset; }
+
+.pageSwitching-enter .topTriangleSVGWrapper {
+    transform: translateY(-25vh) translateX(25vw) rotate(-10deg);
+}
+
+.pageSwitching-enter .bottomTriangleSVGWrapper {
+    transform: translateY(25vh) translateX(-25vw) rotate(10deg);
+}
+
+.pageSwitching-enter-done .topTriangleSVGWrapper, 
+.pageSwitching-enter-done .bottomTriangleSVGWrapper { 
+    transform: unset;
+}
+
+/* Exit */
+.pageSwitching-exit .topTriangleSVGWrapper, 
+.pageSwitching-exit .bottomTriangleSVGWrapper { 
+    transform: unset;
+}
+.pageSwitching-exit.pageSwitching-exit-active .topTriangleSVGWrapper { 
+    transform: translateY(-25vh) translateX(25vw) rotate(-10deg);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .bottomTriangleSVGWrapper { 
+    transform: translateY(25vh) translateX(-25vw) rotate(10deg);
+}
+
+@media screen and (orientation: portrait) {
+    .topTriangleSVGWrapper {
+        transform: translateY(-30vh) translateX(30vw) rotate(-10deg);
+    }
+    
+    .bottomTriangleSVGWrapper {
+        transform: translateY(30vh) translateX(-30vw) rotate(10deg);
+    }
+    
+    .pageSwitching-enter .topTriangleSVGWrapper {
+        transform: translateY(-30vh) translateX(30vw) rotate(-10deg);
+    }
+    .pageSwitching-enter .bottomTriangleSVGWrapper {
+        transform: translateY(30vh) translateX(-30vw) rotate(10deg);
+    }
+    
+    .pageSwitching-exit.pageSwitching-exit-active .topTriangleSVGWrapper {
+        transform: translateY(-30vh) translateX(30vw) rotate(-10deg);
+    } 
+    
+    .pageSwitching-exit.pageSwitching-exit-active .bottomTriangleSVGWrapper {
+        transform: translateY(30vh) translateX(-30vw) rotate(10deg);
+    } 
+}
+
+@media screen and (max-width: 1300px) {
+    .triangleSVG {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .triangleSVG {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .triangleSVG {
+        width: 170px;
+        height: 170px;
+    }
+}

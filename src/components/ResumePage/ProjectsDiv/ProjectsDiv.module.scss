@@ -1,0 +1,31 @@
+.projectsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* display: none; */
+  margin-top: 40px;
+  /* border: 1px solid red; */
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+  /* border: 1px solid red; */
+}
+.borders {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  .left,
+  .right {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, rgb(182, 174, 211), black);
+  }
+}

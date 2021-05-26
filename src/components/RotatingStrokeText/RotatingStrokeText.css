@@ -1,0 +1,536 @@
+.rotatingStrokeTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-top: 1px;
+    margin-left: 6px;
+    /* display: none; */
+}
+
+.rotatingStrokeTextContainer .rotatingStrokeTextWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.rotatingStrokeTextContainer .mainTextWrapper {
+    z-index: 3;
+}
+
+.rotatingStrokeTextContainer.startAnim .mainTextWrapper {
+    animation: .07s shakeText 28;
+}
+
+@keyframes shakeText {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+.rotatingStrokeTextContainer h1 {
+    /* display: none; */
+    font-size: 30px;
+    font-family: Quicksand;
+    font-weight: lighter;
+}
+
+.rotatingStrokeTextContainer.startAnim h1 { animation: 2s rotatingTextOpacityAnim forwards; }
+
+@keyframes rotatingTextOpacityAnim {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    80% {
+        font-weight: lighter;
+        opacity: 0;
+    }
+    100% {
+        font-weight: bolder;
+        opacity: 1;
+    }
+}
+
+.rotatingStrokeTextDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    animation-duration: 2s;
+    /* animation-iteration-count:  infinite; */
+    /* border: 1px solid red; */
+    animation-fill-mode: forwards;
+}
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextDiv { animation-name: rotateWrapper; }
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topLeft .rotatingStrokeTextDiv { animation-name: rotateWrapperTopLeft; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomLeft .rotatingStrokeTextDiv { animation-name: rotateWrapperBottomLeft; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomRigh .rotatingStrokeTextDiv { animation-name: rotateWrapperBottomRight; }
+
+.rotatingStrokeTextDiv:nth-of-type(1) {
+    animation-delay: 0s;
+}
+.rotatingStrokeTextDiv:nth-of-type(2) {
+    animation-duration: 1.5s;
+    animation-delay: .4s;
+    opacity: .7;
+}
+.rotatingStrokeTextDiv:nth-of-type(3) {
+    animation-duration: 1s;
+    animation-delay: .7s;
+    opacity: .2;
+}
+
+.rotatingStrokeTextDiv {
+    /* border: 2px solid dodgerblue; */
+}
+
+.rotatingStrokeTextDiv svg {
+    opacity: 0;
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+
+    /* border: 1px solid red; */
+
+    width: 100%;
+    height: 100%;
+    
+    overflow: visible;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transition: 1s;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+}
+
+.rotatingStrokeTextDiv:nth-of-type(1) svg {
+    animation-delay: 0s;
+}
+.rotatingStrokeTextDiv:nth-of-type(2) svg {
+    animation-duration: 1.5s;
+    animation-delay: .3s;
+}
+.rotatingStrokeTextDiv:nth-of-type(3) svg {
+    animation-duration: 1s;
+    animation-delay: .7s;
+}
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topRight .rotatingStrokeTextDiv:nth-of-type(1) svg { animation-name: rotateTextTopRight1; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topRight .rotatingStrokeTextDiv:nth-of-type(2) svg { animation-name: rotateTextTopRight2; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topRight .rotatingStrokeTextDiv:nth-of-type(3) svg { animation-name: rotateTextTopRight3; }
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topLeft .rotatingStrokeTextDiv:nth-of-type(1) svg { animation-name: rotateTextTopLeft1; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topLeft .rotatingStrokeTextDiv:nth-of-type(2) svg { animation-name: rotateTextTopLeft2; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.topLeft .rotatingStrokeTextDiv:nth-of-type(3) svg { animation-name: rotateTextTopLeft3; }
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomLeft .rotatingStrokeTextDiv:nth-of-type(1) svg { animation-name: rotateTextBottomLeft1; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomLeft .rotatingStrokeTextDiv:nth-of-type(2) svg { animation-name: rotateTextBottomLeft2; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomLeft .rotatingStrokeTextDiv:nth-of-type(3) svg { animation-name: rotateTextBottomLeft3; }
+
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomRight .rotatingStrokeTextDiv:nth-of-type(1) svg { animation-name: rotateTextBottomRight1; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomRight .rotatingStrokeTextDiv:nth-of-type(2) svg { animation-name: rotateTextBottomRight2; }
+.rotatingStrokeTextContainer.startAnim .rotatingStrokeTextWrapper.bottomRight .rotatingStrokeTextDiv:nth-of-type(3) svg { animation-name: rotateTextBottomRight3; }
+
+#rotatingTextGradient {
+    --color-stop-1: rgb(78, 84, 133);
+    /* --color-stop-1: white; */
+    --color-stop-2: transparent;
+}
+
+.rotatingStrokeTextDiv svg text {
+    font-size: 30px;
+    font-family: Quicksand;
+    fill: transparent;
+    /* fill: rgb(78, 84, 133); */
+    stroke-width: .5;
+    /* display: none; */
+}
+
+@keyframes rotateWrapper {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(20deg);
+    }
+    92% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotateWrapperTopLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(-20deg);
+    }
+    92% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotateWrapperBottomLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(-20deg);
+    }
+    92% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotateWrapperBottomRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(20deg);
+    }
+    92% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateTextTopRight1 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(20px) translateY(-30px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextTopRight2 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(20px) translateY(-32px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextTopRight3 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(20px) translateY(-34px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+
+@keyframes rotateTextTopLeft1 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(-5px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextTopLeft2 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(-10px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextTopLeft3 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(-15px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateTextBottomLeft1 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(15px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextBottomLeft2 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(15px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextBottomLeft3 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(-50px) translateY(20px) rotate(20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateTextBottomRight1 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(50px) translateY(-10px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextBottomRight2 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(50px) translateY(-10px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+@keyframes rotateTextBottomRight3 {
+    0%{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        transform: unset;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        transform: translateX(50px) translateY(-10px) rotate(-20deg);
+    }
+    92% {
+        transform: unset;
+    }
+    100% {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+.rotatingStrokeTextContainer .secondColorTextWrapper {
+    font-size: 15px;
+}

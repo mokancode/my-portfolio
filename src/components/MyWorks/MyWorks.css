@@ -1,0 +1,101 @@
+.myWorksDiv {
+    position: absolute;
+    top: 0px;
+    margin-left: -30%;
+    perspective: 1000px;
+    z-index: 3;
+    /* opacity: 0; */
+    /* border: 5px solid white; */
+
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+.myWorksTextWrapper {
+    transform: 
+    skewX(-20deg)
+    rotateY(45deg)
+    rotateX(10deg)
+    rotateZ(-8deg)
+    translateZ(50px)
+    ;
+    
+    /* border: 3px solid red; */
+    position: absolute;
+    top: 0px;
+    width: 400px;
+    height: 150px;
+    transition: 2s, 7s transform;
+    /* opacity: 0; */
+    /* transform: translateX(-20px); */
+    /* will-change: transform, stroke-dashoffset; */
+}
+
+.myWorksTextWrapperShow {
+    /* top: -150px;
+    left: -50px; */
+    
+    transform: 
+    skewX(-20deg)
+    rotateY(30deg)
+    rotateX(0deg)
+    rotateZ(-4deg)
+    translateX(0px)
+    translateY(50px)
+    ;
+    
+    /* opacity: unset; */
+    /* transform: unset; */
+}
+
+
+.myWorksTextWrapper .myWorksHeaderTopLine {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    top: 110%;
+    left: 0px;
+    border-radius: 100px;
+    background: linear-gradient(to right, cyan, transparent 100%);
+    box-shadow: 0 0 5px 0 blueviolet;
+    transition: 1s ease-in-out 3s;
+    width: 0%;
+}
+
+.myWorksTextWrapperShow .myWorksHeaderTopLine {
+    width: 180%;
+}
+
+.myWorksTextWrapper .myWorksHeaderBottomLine {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    top: 113%;
+    right: -300px;
+    border-radius: 100px;
+    background: linear-gradient(to left, transparent 10%, rgb(255, 36, 36), transparent 100%);
+    box-shadow: 0 0 5px 0 blueviolet;
+    transition: 1s ease-in-out 4s;
+    width: 0%;
+    /* border: 1px solid red; */
+}
+
+.myWorksTextWrapperShow .myWorksHeaderBottomLine {
+    width: 180%;
+}
+
+
+/* Page transitions */
+
+.pageSwitching-exit .myWorksTextWrapperShow .myWorksHeaderBottomLine
+, .pageSwitching-exit .myWorksTextWrapperShow .myWorksHeaderTopLine
+{
+    transition: 1s;
+    width: 180%;
+}
+.pageSwitching-exit.pageSwitching-exit-active .myWorksTextWrapperShow .myWorksHeaderBottomLine 
+, .pageSwitching-exit.pageSwitching-exit-active .myWorksTextWrapperShow .myWorksHeaderTopLine
+{
+    width: 0%;
+}

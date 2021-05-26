@@ -1,0 +1,124 @@
+/* G first */
+.logoDiv .leftLogoText {
+  li:first-child {
+    opacity: 0;
+    transform: translateX(135px) translateY(20px);
+  }
+
+  .showLetter:first-child {
+    transform: translateX(90px);
+    opacity: 1;
+  }
+
+  .moveFirstLeft:first-child {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* L first */
+.logoDiv .rightLogoText {
+  li:first-child {
+    opacity: 0;
+    transform: translateX(100px) translateY(-20px);
+  }
+
+  .showLetter:first-child {
+    transform: translateX(50px);
+    opacity: 1;
+  }
+
+  .moveFirstLeft:first-child {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* P first */
+.logoDiv .centerLogoText {
+  li:first-child {
+    transform: translateX(45px) translateY(20px);
+    /* opacity: 0; */
+  }
+
+  .showLetter:first-child {
+    transform: translateX(45px);
+    opacity: 1;
+  }
+
+  .moveFirstLeft:first-child {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.logoDiv .leftLogoText {
+  .letterFromAbove:not(:first-child) h1,
+  .logoDiv .rightLogoText .letterFromAbove:not(:first-child) h1 {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  .letterFromBottom:not(:first-child) h1,
+  .logoDiv .rightLogoText .letterFromAbove:not(:first-child) h1 {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+.logoDiv .rightLogoText li:not(:first-child) h1 {
+  opacity: 0;
+  transform:
+     /* translate(-20px) */ translateY(-40px);
+}
+
+.logoDiv .centerLogoText li:not(:first-child) h1 {
+  /* opacity: 0; */
+  transform: 
+    /* translate(20px) */ translateY(40px);
+}
+
+.showLetter {
+  opacity: 1;
+
+  &:first-child {
+    transition: 0.5s;
+    /* color: red; */
+    opacity: 1;
+    /* transform: transform */
+  }
+}
+
+.logoDiv .leftLogoText .reflectiveSliderLogoLetter.showLetter h1,
+.logoDiv .rightLogoText .reflectiveSliderLogoLetter.showLetter h1 {
+  transition-duration: 0.5s;
+  opacity: 1;
+  transform: unset;
+}
+
+.logoDiv .centerLogoText .reflectiveSliderLogoLetter.showLetter h1 {
+  transform: unset;
+  opacity: 1;
+  /* border: 2px solid red; */
+}
+
+.logoDiv .centerLogoText .reflectiveSliderLogoLetter.showLetter {
+  &:nth-child(1) h1 {
+    color: rgb(206, 206, 206);
+  }
+  &:nth-child(2) h1 {
+    color: rgb(161, 161, 161);
+  }
+  &:nth-child(3) h1 {
+    color: rgb(143, 143, 143);
+  }
+  &:nth-child(4) h1 {
+    color: rgb(110, 110, 110);
+  }
+  &:nth-child(5) h1 {
+    color: rgb(90, 90, 90);
+  }
+  &:nth-child(6) h1 {
+    color: rgb(90, 90, 90);
+  }
+}

@@ -1,0 +1,69 @@
+.repeaterExplosionMotionGraphicDiv {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    position: relative;
+    /* border: 1px solid white; */
+    /* display: none; */
+    /* animation: 5s rotateAnim infinite linear; */
+}
+
+@keyframes rotateAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.repeaterLineWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: 1s;
+    position: absolute;
+    /* transform: rotate(360deg); */
+    /* border: 2px solid red; */
+}
+
+.repeaterLine {
+    width: 1px;
+    height: 20%;
+    background-color: yellow;
+    border-radius: 20px;
+    transition: .5s;
+    transform-origin: top;
+    /* animation: 1s repeaterLineAnim ease-in-out; */
+    transform: scaleY(0);
+    will-change: transform;
+}
+
+.animateRepeaterExplosionMotionGraphic .repeaterLine {
+    animation: 1s .4s repeaterLineAnim;
+}
+
+
+@keyframes repeaterLineAnim {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    25% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    26% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    100% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}

@@ -1,0 +1,379 @@
+@media screen and (max-width: 2800px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 2300px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 2150px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    margin-left: 10px;
+  }
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1900px) and (orientation: landscape) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 1750px) and (orientation: landscape) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 70%;
+    width: 50%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 12%;
+    height: 30%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 5%;
+    height: 20%;
+  }
+
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 80%;
+    width: 50%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 40%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 10%;
+    height: 25%;
+  }
+
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    /* border: 2px solid tomato; */
+    margin-left: 5px;
+  }
+
+  /* .mirrorCarouselDivWrapper:nth-child(3) .mirrorCarouselDiv {
+        width: 100%;
+    } */
+
+  /* .mirrorCarouselDivWrapper:nth-child(1), .mirrorCarouselDivWrapper:nth-child(5) {
+        width: 10vw;
+    } */
+
+  /* .mirrorCarouselDivWrapper:nth-child(2), .mirrorCarouselDivWrapper:nth-child(4) {
+        width: 15vw;
+    } */
+
+  /* .mirrorImg {
+    } */
+
+  /* .mirrorCarouselDivWrapper::before {
+        width: 70%;
+        top: 7%;
+        margin-left: 10px;
+    } */
+
+  .mirrorImg {
+    object-position: 25% bottom !important;
+  }
+
+  .slideshowBtnAndReflectionDiv:nth-child(1) {
+    position: absolute;
+    margin-left: 10px;
+    left: 0px;
+    margin-top: 40%;
+  }
+
+  .slideshowBtnAndReflectionDiv:nth-child(3) {
+    position: absolute;
+    right: 0px;
+    margin-top: 40%;
+    margin-right: 10px;
+  }
+
+  .mirrorCarouselContainer {
+    /* border: 2px solid cyan; */
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 50%;
+    width: 50%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 30%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 10%;
+    height: 15%;
+  }
+}
+
+@media screen and (max-width: 1200px) and (max-height: 500px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 100%;
+    width: 45%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    /* height: 30%; */
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 7.5%;
+    /* height: 15%; */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 80%;
+    width: 50%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 40%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 5%;
+    height: 20%;
+  }
+
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    /* border: 1px solid red; */
+    /* transform: scale(0.8, .8); */
+    /* height: 50px; */
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper::before,
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper::after {
+    max-height: 8px;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapperShow:hover::before,
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapperShow:hover::after {
+    max-height: 12px;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnCircle {
+    /* width: 40px; */
+    /* height: 40px; */
+  }
+
+  .mirrorCarouselController {
+    flex-direction: column-reverse;
+  }
+
+  .mirrorCarouselContainer {
+    margin-top: 30px;
+  }
+
+  .slideshowBtnAndReflectionDiv:nth-child(1) {
+    margin-top: 85vh;
+  }
+
+  .slideshowBtnAndReflectionDiv:nth-child(3) {
+    margin-right: 20px;
+    margin-top: 85vh;
+  }
+
+  /* .mirrorCarouselDivWrapper::before {
+        width: 99%;
+    }
+
+    .mirrorCarouselDivWrapper img {
+        opacity: 0.2 !important;
+    } */
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  .mirrorCarouselController .mirrorCarouselCloseBtn {
+    right: unset;
+    margin-right: unset;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper {
+    width: 30px;
+    height: 30px;
+  }
+
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper::before,
+  .mirrorCarouselController .mirrorCarouselCloseBtn .closingBtnMaskedWrapper::after {
+    max-height: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    margin-left: 0px;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2) .mirrorCarouselDiv,
+  .mirrorCarouselDivWrapper:nth-child(4) .mirrorCarouselDiv {
+    /* border: 2px solid red; */
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .mirrorCarouselDivWrapper:not(:first-child) .mirrorCarouselDiv {
+    /* margin-left: 5px; */
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 40%;
+    width: 50%;
+    margin-left: -1px;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 20%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 10%;
+    height: 12%;
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 35%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 100%;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: landscape) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 70%;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    height: 30%;
+    width: 50%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 15%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 10%;
+    height: 7%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mirrorCarouselDivWrapper:not(:first-child) {
+    margin-left: 0px;
+  }
+
+  .mirrorCarouselDivWrapper:not(:first-child) .mirrorCarouselDiv {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(3) {
+    width: 50%;
+    height: 30%;
+    margin-left: -1px;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(2),
+  .mirrorCarouselDivWrapper:nth-child(4) {
+    width: 15%;
+    height: 15%;
+  }
+
+  .mirrorCarouselDivWrapper:nth-child(1),
+  .mirrorCarouselDivWrapper:nth-child(5) {
+    width: 10%;
+    height: 10%;
+  }
+}

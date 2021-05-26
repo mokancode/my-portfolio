@@ -1,0 +1,79 @@
+/* Enter */
+/* .pageSwitching-enter .rearWaveSVG { opacity: 0; }
+.pageSwitching-enter.pageSwitching-enter-active .rearWaveSVG { opacity: 1; }
+.pageSwitching-enter-done .rearWaveSVG { opacity: 1; } */
+
+/* Exit */
+
+.pageSwitching-exit .staircaseScene:nth-child(1), 
+.pageSwitching-exit .staircaseScene:nth-child(2), 
+.pageSwitching-exit .staircaseScene:nth-child(3) { opacity: 1; }
+
+.pageSwitching-exit .staircaseScene:nth-child(1) { transition-delay: 1.5s;  transition-duration: .7s; }
+.pageSwitching-exit .staircaseScene:nth-child(2) { transition-delay: 1.3s;  transition-duration: .7s; }
+.pageSwitching-exit .staircaseScene:nth-child(3) { transition-delay: 1s;  transition-duration: .7s; }
+
+.pageSwitching-exit.pageSwitching-exit-active .staircaseScene:nth-child(1), 
+.pageSwitching-exit.pageSwitching-exit-active .staircaseScene:nth-child(2), 
+.pageSwitching-exit.pageSwitching-exit-active .staircaseScene:nth-child(3) { opacity: 0; }
+
+
+.pageSwitching-exit .stair { transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56); transition-duration: 1.5s; }
+
+.pageSwitching-exit .stair0 { 
+    transition-delay: .7s;
+    transform:
+    translateX(-500px)
+    translateY(-250px)
+    translateZ(-100px)
+    rotateX(-30deg)
+    rotateY(20deg);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .stair0 { 
+    transform: 
+    translateX(-530px)
+    translateY(-180px)
+    translateZ(-100px)
+    rotateX(-35deg) 
+    rotateY(25deg)
+    ;
+}
+
+.pageSwitching-exit .stair1 { 
+    transition-delay: .4s;
+    transform:
+    translateX(-460px)
+    translateY(-165px)
+    translateZ(-100px)
+    rotateX(-25deg)
+    rotateY(35deg);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .stair1 { 
+    transform:
+    translateX(-480px)
+    translateY(-90px)
+    translateZ(-100px)
+    rotateX(-40deg)
+    rotateY(25deg);
+}
+
+.pageSwitching-exit .stair2 { 
+    transition-delay: 0s;
+    transform:  
+    translateX(-380px)
+    translateY(-90px) 
+    translateZ(-100px) 
+    rotateX(-25deg) 
+    rotateY(40deg);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .stair2 { 
+    transform:  
+    translateX(-290px) 
+    translateY(-30px) 
+    translateZ(-100px) 
+    rotateX(-30deg) 
+    rotateY(25deg);
+}

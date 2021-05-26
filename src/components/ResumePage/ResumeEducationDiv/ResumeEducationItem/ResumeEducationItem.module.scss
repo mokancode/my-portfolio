@@ -1,0 +1,100 @@
+.resumeEducationItem {
+  display: flex;
+  margin-top: 10px;
+}
+
+.dateColumn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 1px;
+  padding-right: 10px;
+  width: 50px;
+  position: relative;
+  /* border: 1px solid black; */
+  /* display: none; */
+
+  p {
+    margin: 0px;
+    white-space: pre;
+    transition-duration: 0.5s;
+    transform: translateY(5px);
+    opacity: 0;
+    /* display: none; */
+  }
+}
+
+.resumeEducationItem.show .dateColumn p {
+  opacity: 1;
+  transform: unset;
+}
+
+.circleAndConnectorLine {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 3px;
+  margin-left: 5px;
+  position: relative;
+  height: 100%;
+//   border: 1px solid blue;
+}
+
+:root {
+  --projectDateTimelineColor: rgb(128, 86, 226);
+}
+
+.circle {
+  border: 2px solid var(--projectDateTimelineColor);
+  padding: 5px;
+  border-radius: 50px;
+  transition-duration: 1s;
+  transform: scale(0);
+  transform-origin: center;
+  /* position: absolute; */
+}
+
+.resumeEducationItem.show .circle {
+  transform: unset;
+}
+
+.connectorLine {
+  position: absolute;
+  top: 13px;
+  width: 1.5px;
+  height: calc(100% - .5px);
+  background-color: var(--projectDateTimelineColor);
+  transition-duration: 1s;
+  /* transition: 0s !important; */
+  transform-origin: top;
+  transform: scaleY(0);
+
+  &.lastOne {
+    height: 0px;
+  }
+}
+
+.resumeEducationItem.show .connectorLine {
+  transform: unset;
+}
+.educationAchievement p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.educationSchool p {
+  margin: 0px;
+}
+
+.resumeEducationItem p {
+  opacity: 0;
+  transform: translateX(5px);
+  transition-duration: 1s;
+}
+
+.resumeEducationItem.show p {
+  opacity: 1;
+  transform: unset;
+}

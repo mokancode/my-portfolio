@@ -1,0 +1,85 @@
+@media screen and (max-width: 1400px) {
+    .firstVisitRevealOverlayOpener .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-enter-done .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-exit .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .85); }
+    
+    .firstVisitRevealOverlayOpener .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-enter-done .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .85); }
+    .pageSwitching-exit .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-enter-done .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-exit .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .85); }    
+   
+    .firstVisitRevealOverlayOpener .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .85); }
+    .pageSwitching-enter-done .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .85); }
+    .pageSwitching-exit .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .85); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-enter-done .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .85); }
+    .pageSwitching-exit .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .85); }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .firstVisitRevealOverlayOpener .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .topGradient1 { transform: rotate(20deg) translateY(-1950px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .bottomGradient1 { transform: rotate(20deg) translateY(1950px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .topGradient2 { transform: rotate(22.5deg) translateY(-2040px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .bottomGradient2 { transform: rotate(22deg) translateY(2030px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .topGradient3 { transform: rotate(31deg) translateY(-2300px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-enter-done .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-exit .bottomGradient3 { transform: rotate(30deg) translateY(2280px) translateX(-200px) scale(.8, .8); }
+    
+    .firstVisitRevealOverlayOpener .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-enter-done .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .8); }
+    .pageSwitching-exit .topGradient4 { transform: rotate(55deg) translateY(-2750px) translateX(-200px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-enter-done .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-exit .bottomGradient4 { transform: rotate(55deg) translateY(2750px) translateX(-200px) scale(.8, .8); }    
+   
+    .firstVisitRevealOverlayOpener .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .8); }
+    .pageSwitching-enter-done .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .8); }
+    .pageSwitching-exit .topGradient5 { transform: rotate(20deg) translateY(-1935px) scale(1, .8); }
+    
+    .firstVisitRevealOverlayOpener .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-enter-done .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .8); }
+    .pageSwitching-exit .bottomGradient5 { transform: rotate(20deg) translateY(1935px) translateX(-200px) scale(.8, .8); }
+    
+}

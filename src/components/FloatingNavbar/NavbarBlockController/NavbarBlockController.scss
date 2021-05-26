@@ -1,0 +1,257 @@
+.navbarBlockController {
+  position: fixed;
+  top: -50px;
+  left: 50px;
+  z-index: 10;
+  width: fit-content;
+  transform: translateY(0px);
+  /* animation: 5s hoverNavbar infinite ease-in-out; */
+}
+
+@keyframes hoverNavbar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.navbarBlockControllerInnerWrapper.hover {
+  animation: 2s hoverNavbar infinite ease-in-out;
+}
+
+.toggleBtn {
+  position: absolute;
+  left: 200px;
+  display: none;
+}
+
+.navbarSides {
+  width: fit-content;
+  position: relative;
+}
+
+.navbarSide {
+  &.front {
+    height: fit-content;
+    width: 100px;
+    transform: skewX(3deg);
+  }
+
+  &.left {
+    position: absolute;
+    top: 0px;
+    left: -8.5px;
+    height: 100%;
+    width: 9px;
+    background: linear-gradient(to bottom, rgb(38, 35, 87), rgb(13, 14, 73));
+    transform: skewX(3deg) skewY(-50deg) translateY(5px);
+    border-right: 2px solid rgb(33, 26, 71);
+    border-top: 2px solid rgb(40, 31, 87);
+    border-bottom: 2px solid rgb(48, 38, 104);
+  }
+
+  &.bottom {
+    position: absolute;
+    bottom: -10.5px;
+    left: 0px;
+    height: 10.5px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(24, 13, 87), rgb(10, 13, 49));
+    transform: skewY(0deg) skewX(-40deg) translateX(1.5px);
+  }
+}
+
+.navbarBlockController .navbarBtn {
+  transition: 0.1s linear;
+  transform: translateY(0px) translateX(0px);
+  cursor: pointer;
+
+  &:nth-child(1) {
+    z-index: 1;
+  }
+  &:nth-child(2) {
+    z-index: 2;
+  }
+  &:nth-child(3) {
+    z-index: 3;
+  }
+}
+
+.toggledOn .navbarBlockController .navbarBtn,
+.navbarBlockController .navbarBtn:hover {
+  transform: translateY(-8px) translateX(6px);
+}
+
+.btnSide.front {
+  background-color: rgb(15, 15, 53);
+  background-position-x: -100px;
+  background-attachment: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 0.1s;
+}
+
+.browserNotChrome .btnSide.front {
+  background: unset;
+  background-color: rgb(6, 6, 37);
+}
+
+.navbarBlockController .navbarBtn:hover .btnSide.front {
+  background-color: rgb(6, 11, 49);
+}
+
+.btnSide.front {
+  border-bottom: 2px solid rgb(50, 33, 109);
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: none;
+  }
+}
+
+.btnSide.leftWrapper {
+  position: absolute;
+  top: 0px;
+  left: -6.5px;
+  width: 6px;
+  height: 100%;
+
+  .left {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    background: linear-gradient(to top, rgb(128, 128, 238), rgb(14, 42, 94));
+    width: 6px;
+    height: 100% !important;
+    transform-origin: right;
+    transform: skewY(-50deg) translateX(1.5px) translateY(-3px) scaleX(0);
+    transition: 0.1s linear;
+    box-shadow: 0 0 20px 0px blueviolet;
+
+    background: linear-gradient(to top, #4781ec, #352483, #4781ec, #352483);
+    background-size: 800% 800%;
+
+    animation: btnLeftSideGradient 20s ease infinite;
+  }
+}
+
+@keyframes btnLeftSideGradient {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+
+.toggledOn .btnSide.left,
+.navbarBlockController .navbarBtn:hover .btnSide.left {
+  transform: skewY(-50deg) translateY(-3px);
+}
+
+.btnSide.bottomWrapper {
+  position: absolute;
+  bottom: -8px;
+  left: 0px;
+  width: 100%;
+  height: 8px;
+
+  .bottom {
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    width: 100%;
+    height: 8px;
+    transform-origin: top;
+    transform: skewX(-40deg) translateX(3px) scaleY(0);
+    transition: 0.1s linear;
+    box-shadow: 0 0 20px 0px blueviolet;
+
+    background: linear-gradient(270deg, #3d3d79, #3470df, #3d3d79, #3470df);
+    background-size: 800% 800%;
+    animation: btnBottomSideGradient 7s linear infinite;
+  }
+}
+
+.toggledOn .btnSide.bottom,
+.navbarBlockController .navbarBtn:hover .btnSide.bottom {
+  transform: skewX(-40deg) translateX(3px);
+}
+
+@keyframes btnBottomSideGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Icons */
+.btnSide.front {
+  .element {
+    width: 40px;
+    height: 40px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5), -2px -2px 5px 0 rgba(103, 174, 255, 0.1);
+  }
+
+  .aboutIconSVG {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 35px;
+  }
+
+  .portfolioIconDivWrapper {
+    position: relative;
+    top: -10px;
+    left: 0px;
+    width: 35px;
+    height: 50px;
+
+    .portfolioIconDiv {
+      position: absolute;
+      top: 0px;
+      left: -20px;
+
+      svg {
+        /* border: 1px solid red; */
+        position: absolute;
+        width: 70px !important;
+        height: 70px !important;
+      }
+    }
+  }
+
+  .contactIconDivWrapper {
+    position: relative;
+    top: -10px;
+    left: -5px;
+
+    width: 50px;
+    height: 35px;
+  }
+
+  p {
+    margin: 0px;
+    font-family: Montserrat;
+    font-weight: lighter;
+    letter-spacing: -1px;
+    color: rgb(117, 105, 247);
+    transition-delay: 0s !important;
+  }
+}

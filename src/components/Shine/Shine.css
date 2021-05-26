@@ -1,0 +1,149 @@
+.shineWrapper {
+  position: absolute;
+  /* display: none; */
+}
+
+.shinePositionAndOpacity {
+  /* display: none; */
+  /* position: absolute;
+    top: 200px;
+    left: 30px; */
+  /* animation: 4s shinePosition infinite linear; */
+  /* animation-duration:  */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shinePositionAndOpacityBigger {
+  /* animation: 10s shinePosition infinite linear; */
+}
+
+.positionAnimVer1 {
+  animation-name: shinePosition;
+}
+.positionAnimVer2 {
+  animation-name: shinePosition2;
+}
+.positionAnimVer3 {
+  animation-name: shinePosition3;
+}
+
+@keyframes shinePosition {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes shinePosition2 {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}
+@keyframes shinePosition3 {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
+
+.shineOpacity {
+  opacity: 0;
+  animation-name: shineOpacityAnim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shineOpacityAnim {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.shineShadow {
+  /* width: 3px; */
+  /* height: 3px; */
+  background-color: rgba(255, 247, 130, 0.7);
+  border-radius: 100px;
+  animation: 0.3s shineShadow infinite;
+}
+
+.shineShadowSmaller {
+  width: 3px !important;
+  height: 3px !important;
+}
+
+.shineShadowEvenSmaller {
+  width: 2px !important;
+  height: 2px !important;
+}
+
+.shineShadowBigger {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+@keyframes shineShadow {
+  0% {
+    box-shadow: 0 0 0px 0 white;
+  }
+  50% {
+    box-shadow: 0 0 4px 0 rgb(240, 135, 37);
+  }
+  100% {
+    box-shadow: 0 0 0px 0 white;
+  }
+}
+
+.shineGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  left: 72px;
+  top: -5px;
+  animation: 3s showShineGroup forwards;
+  /* border: 2px solid red; */
+  transform: scale(0.5);
+  transition: 1s;
+}
+
+@keyframes showShineGroup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shineGroupVisible {
+  /* display: flex !important; */
+  /* opacity: 1; */
+
+  /* visibility: visible; */
+}
+
+.pageSwitching-exit .shineGroup {
+  filter: opacity(1);
+}
+.pageSwitching-exit.pageSwitching-exit-active .shineGroup {
+  filter: opacity(0);
+}

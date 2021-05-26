@@ -1,0 +1,106 @@
+.mountains404 {
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* border: 5px solid red; */
+    /* display: none; */
+}
+
+.mountains404 svg {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.rearMountain404SVG {
+    z-index: 1;
+    transform: translateY(100%);
+    transform-origin: bottom;
+    /* border: 3px solid red; */
+    /* filter: drop-shadow(0px -2px 5px rgba(99, 32, 255, 0.801)); */
+    transition: 2s;
+}
+
+.pageNotFoundWrapper.reveal .rearMountain404SVG { 
+    transform: translateY(70px); 
+}
+
+.frontMountain404SVG {
+    z-index: 2;
+    transform: translateY(100%);
+    transform-origin: bottom;
+    filter: drop-shadow(0px -2px 5px rgba(0, 255, 255, 0.2)) blur(5px);
+    /* border: 2px solid red; */
+    transition: 2s .5s;
+}
+
+.pageNotFoundWrapper.reveal .frontMountain404SVG { 
+    transform: translateY(60px);
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .frontMountain404SVG,
+.pageSwitching-exit.pageSwitching-exit-active .rearMountain404SVG
+ {
+    transition-delay: 0s !important;
+    transform: translateY(100%);
+}
+
+.rearMountain404Path0 {
+    fill:url(#RearMountain404_SVGID_1_);
+    /* stroke:#00FFFF; */
+    stroke-miterlimit:10;
+}
+
+.frontMountain404Path0 {
+    fill:url(#frontMountain404_SVGID_1_);
+    /* stroke:#000000; */
+    stroke-miterlimit:10;
+}
+
+.retroGrid {
+    width: 50%;
+    height: 50%;
+    /* border: 60px groove lime; */
+    transform-origin: center bottom;
+    transform: 
+    perspective(300px) 
+    rotateX(35deg)
+    scale(1.5)
+    scaleY(3)
+    translateY(100px)
+    ;
+    background: 
+    repeating-linear-gradient(
+    blueviolet 2px,
+    transparent 3px,
+    transparent 12px
+    ),
+    repeating-linear-gradient(
+    90deg, 
+    blueviolet 2px,
+    transparent 3px,
+    transparent 30px
+    ) transparent;
+    
+    /* transition: 3s 1s; */
+    transition: 3s ease-in-out;
+    background-position: 0 -33.5px;
+    z-index: 2;
+    opacity: 0;
+    /* display: none; */
+}
+
+.pageNotFoundWrapper.reveal .retroGrid {
+    opacity: .25;
+    animation: 4s retroGridAnim linear infinite;   
+}
+
+@keyframes retroGridAnim {
+    to {
+        background-position: 0 -53.5px;
+    }
+}

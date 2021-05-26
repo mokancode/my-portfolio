@@ -1,0 +1,276 @@
+.myNameTextDiv {
+  perspective: 1000px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-left: 110px;
+  /* border: 1px solid white; */
+
+  p {
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "I'm";
+    color: rgba(226, 226, 226, 0.4);
+    top: 20px;
+    font-size: 15px;
+    left: -65px;
+    font-family: Poiret One;
+    letter-spacing: 1px;
+    margin-left: -20px;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  &.revealTopPreText::before {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+.myNameLetters {
+  display: flex;
+  z-index: 3;
+  /* display: none; */
+
+  p {
+    transform: scale(1.5, 1.5);
+    letter-spacing: 150px;
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  .revealParagraph {
+    /* color: rgb(76, 79, 90); */
+    /* color: rgb(76, 79, 90); */
+
+    background: -webkit-linear-gradient(
+      rgb(0, 0, 0),
+      rgb(124, 143, 230),
+      rgb(163, 171, 233),
+      rgb(68, 47, 158)
+        /* rgb(255, 255, 255),
+          rgb(196, 196, 196)
+          , rgb(95, 103, 118),
+          rgb(0, 0, 0) */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: unset;
+    letter-spacing: 115px;
+    filter: unset;
+    opacity: 1;
+
+    /* display: none; */
+  }
+}
+
+.nameBackgroundGlow {
+  position: absolute;
+  display: flex !important;
+  z-index: 2;
+  /* border: 1px solid yellow; */
+
+  p {
+    /* animation-name: glowMyNameText; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    transform: scale(1.5, 1.5);
+    letter-spacing: 10px;
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  .revealParagraph {
+    transform: unset;
+    letter-spacing: 115px;
+    filter: unset;
+    opacity: 1;
+  }
+}
+
+@keyframes glowMyNameText {
+  /* 0% { text-shadow: 0 1.5px 1px rgba(157, 157, 157, 0); } */
+  0% {
+    text-shadow: 0 1.5px 1px rgb(28, 69, 126);
+  }
+  50% {
+    text-shadow: 0 2px 1px rgb(137, 186, 255) /* , 0 1.5px 2px rgb(137, 186, 255) */;
+  }
+  /* 100% { text-shadow: 0 1.5px 1px rgba(157, 157, 157, 0); } */
+  100% {
+    text-shadow: 0 1.5px 1px rgb(29, 71, 130);
+  }
+}
+
+.myNameLetters p,
+.nameBackgroundGlow p {
+  font-family: Italiana;
+  font-size: 60px;
+  letter-spacing: 115px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  transform-origin: bottom;
+  transition: 2s all, letter-spacing 3s 0s ease-out, filter 2s 0.5s, 0.15s opacity, 5s color,
+    0.1s text-shadow;
+  white-space: pre;
+}
+
+.myNameLetters .electrifyK:nth-child(3) {
+  text-shadow: 0 0 3px rgb(189, 243, 255), 0 0 10px rgb(189, 243, 255);
+}
+
+.myNameLetters .myNameTextFirstReveal:nth-child(3) {
+  /* color: rgb(136, 165, 194); */
+  /* filter: drop-shadow(0 0 2px rgb(136, 165, 194)); */
+  /* animation: 0.2s myNameElectricityAnimK 7s; */
+}
+
+.myNameTextDiv .myNameTextVisitedReveal:nth-child(3) {
+  /* color: rgb(136, 165, 194); */
+  /* text-shadow: 0 0 5px rgb(136, 165, 194); */
+  /* animation: 0.2s myNameElectricityAnimK 4s; */
+}
+
+@keyframes myNameElectricityAnimK {
+  0% {
+    color: rgb(76, 79, 90);
+  }
+  50% {
+    text-shadow: 0 0 5px rgb(136, 165, 194);
+    color: rgb(136, 165, 194);
+  }
+  100% {
+    color: rgb(76, 79, 90);
+  }
+}
+
+.myNameTextDiv p {
+  /* animation: 1s myNameElectricityAnim 6s ease-out; */
+}
+
+.myNameTextDiv .revealParagraph:hover {
+  /* border: 1px solid red !important; */
+}
+
+.myNameTextDiv .revealParagraph {
+  /* border: 1px solid red; */
+  /* text-shadow: 0 0 5px rgb(136, 165, 194) !important;
+        color: rgb(136, 165, 194) !important; */
+}
+
+@keyframes myNameElectricityAnim {
+  0% {
+    color: rgb(76, 79, 90);
+    text-shadow: 0 0 0px rgba(136, 165, 194, 0);
+  }
+  50% {
+    text-shadow: 0px 2px 5px rgba(136, 165, 194, 0.8);
+    color: rgb(136, 165, 194);
+  }
+  100% {
+    text-shadow: 0px 5px 20px rgba(136, 165, 194, 0);
+    color: rgb(76, 79, 90);
+  }
+}
+
+/* Page transitions */
+
+/* Left side text enter */
+.pageSwitching-enter .myNameTextDiv .myNameTextVisitedReveal {
+  transition: 2s all, letter-spacing 4s 0s ease-out, filter 2s 0.5s, 3s opacity, 5s color;
+  /* transition: 5s all ease-out !important; */
+  filter: blur(20px);
+  opacity: 0;
+  letter-spacing: 10px;
+}
+
+.pageSwitching-enter.pageSwitching-enter-active .myNameTextDiv .myNameTextVisitedReveal {
+  filter: unset;
+  opacity: 1;
+  letter-spacing: unset;
+}
+
+.pageSwitching-enter .myNameTextDiv .myNameTextFirstReveal {
+  /* transition: 1.5s ease-out; */
+  filter: blur(20px);
+  opacity: 0;
+  letter-spacing: 10px;
+}
+
+/* Left side text exit */
+.pageSwitching-exit .myNameTextDiv p {
+  letter-spacing: unset;
+  transition: 1.5s ease-in !important;
+  filter: unset;
+  opacity: 1;
+}
+.pageSwitching-exit.pageSwitching-exit-active .myNameTextDiv p {
+  filter: blur(20px);
+  letter-spacing: 10px;
+  opacity: 0;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+  .myNameLetters .revealParagraph,
+  .nameBackgroundGlow .revealParagraph {
+    letter-spacing: 90px;
+  }
+
+  .myNameTextDiv {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .myNameLetters .revealParagraph,
+  .nameBackgroundGlow .revealParagraph {
+    letter-spacing: 70px;
+  }
+
+  .myNameTextDiv {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .myNameLetters .revealParagraph,
+  .nameBackgroundGlow .revealParagraph {
+    letter-spacing: 45px;
+  }
+
+  .myNameTextDiv {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .myNameLetters .revealParagraph,
+  .nameBackgroundGlow .revealParagraph {
+    letter-spacing: 35px;
+  }
+
+  .myNameTextDiv {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .myNameLetters .revealParagraph,
+  .nameBackgroundGlow .revealParagraph {
+    letter-spacing: 15px;
+  }
+
+  .myNameTextDiv {
+    margin-left: 10px;
+  }
+}

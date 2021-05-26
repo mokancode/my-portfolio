@@ -1,0 +1,197 @@
+.resumePageBtn {
+    user-select: none;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: fit-content;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 5px;
+
+    /* background: linear-gradient(45deg, 
+    rgb(98, 94, 148) 10%,
+    rgb(179, 169, 212) 70%
+    ); */
+    
+    background: radial-gradient(
+    rgb(97, 90, 116),
+    rgb(31, 30, 48)
+    );
+    
+    /* background: radial-gradient(
+    rgb(30, 29, 46) 10%,
+    rgb(169, 160, 201) 70%
+    ); */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: 1s 2s;
+    transform: translateX(100%);
+    /* transform: unset; */
+}
+
+.resumePageBtn.reveal { transform: unset; }
+.resumePageBtn.hide { transform: translateX(100%); }
+
+.resumePageBtn::after {
+    position: absolute;
+    content: "";
+    border-bottom-left-radius: inherit;
+    width: 100%;
+    height: 100%;
+    /* background: radial-gradient(
+    rgb(179, 169, 212),
+    rgb(98, 94, 148)
+    ); */
+
+    background: radial-gradient(
+    rgb(179, 169, 212),
+    rgb(61, 59, 95)
+    );
+    
+    transition: 1s;
+    opacity: 0;
+}
+
+.resumePageBtn.revealText::after {
+    opacity: 1;
+}
+
+.resumePageBtn::before {
+    position: absolute;
+    content: "";
+    /* padding-left: 0px; */
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid violet;
+    border-bottom-left-radius: inherit;
+    /* filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan)
+    drop-shadow(0 0 5px blueviolet)
+    drop-shadow(0 0 10px blueviolet)
+    ; */
+    transition: 1s;
+    opacity: 0;
+    z-index: 3;
+}
+
+.resumePageBtn.revealText::before { opacity: 1; }
+
+.resumePageBtn button {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    display: none;
+}
+
+.resumePageBtn .darkTextWrapper {
+    position: absolute;
+    display: flex;
+}
+
+.resumePageBtn .darkTextWrapper p {
+    font-family: Quicksand;
+    /* font-weight: bold; */
+    margin: 0px;
+    z-index: 2;
+    /* opacity: 0; */
+    transition-duration: .6s, .3s;
+    transition-property: transform, opacity;
+    
+    /* background: -webkit-linear-gradient(rgb(0, 0, 0, .99) 70%, rgb(211, 144, 255) 50%); */
+    /* background: -webkit-linear-gradient(35deg, rgb(0, 0, 0, .99) 40%, rgb(255, 255, 255) 50%); */
+    /* background: -webkit-linear-gradient(35deg, rgba(107, 54, 255, 0.99) 40%, rgb(78, 0, 78) 20%); */
+    background: -webkit-linear-gradient(rgba(214, 200, 255, 0.99) 90%, rgb(78, 0, 78) 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    /* text-shadow: 0 0 8px rgb(63, 14, 82); */
+
+    /* color: rgb(75, 33, 109);
+    text-shadow: 0 0 8px black; */
+}
+
+.resumePageBtn.revealText .darkTextWrapper p {
+    opacity: 0;
+    transform: 
+    translateX(-50px) 
+    translateY(10px) 
+    rotateX(-20deg) 
+    rotateY(-30deg) 
+    perspective(100px)
+    translateZ(20px)
+    ;
+}
+
+.resumePageBtn a {
+    display: flex;
+}
+
+.resumePageBtn a.linkWrapper {
+    /* border: 2px solid red; */
+    width: 100%;
+    z-index: 3;
+    text-decoration: none;
+}
+
+.resumePageBtn a.linkWrapper p {
+    font-family: Quicksand;
+    /* font-weight: bolder; */
+    font-size: 16px;
+    color: white;
+    transition-duration: .5s, .4s;
+    transition-property: transform, opacity, text-shadow;
+    margin: 0px;
+    transform: 
+    translateX(-50px) 
+    translateY(10px) 
+    rotateX(-20deg) 
+    rotateY(-30deg) 
+    perspective(100px)
+    translateZ(20px)
+    ;
+    opacity: 0;
+    text-shadow: 0 0 5px rgb(78, 0, 78, .99);
+}
+
+.resumePageBtn.revealText a.linkWrapper p {
+    transform: unset;
+    opacity: 1;
+    transition-duration: .9s, .5s, .1s;
+}
+
+.resumePageBtn.revealText a.linkWrapper:hover p {
+    text-shadow: 0 0 5px white;
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+    .resumePageBtn {
+        padding-left: 12px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .resumePageBtn a.linkWrapper p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 300px) and (orientation: portrait),
+screen and (max-height: 400px) and (orientation: landscape)
+{
+    .resumePageBtn {
+        padding-left: 5px;
+        padding-right: 4px;
+        padding-bottom: 3px;
+        transition: 0s !important;
+    }
+    
+    .resumePageBtn a.linkWrapper p {
+        font-size: 12px;
+    }
+}

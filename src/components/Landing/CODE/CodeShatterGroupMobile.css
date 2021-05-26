@@ -1,0 +1,264 @@
+@media screen and (max-width: 700px) {
+    .codeShatterOuterWrapper {
+        margin-left: -40px;
+    }
+
+    .codeShatterPieceWrapper {
+        /* border: 2px solid cyan; */
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    
+    .codeShatterLetter .codeShatterPieceWrapper svg {
+        width: 120px !important;
+        height: 120px !important;
+    }    
+
+    .codeLetterO .codeShatterPieceWrapper svg {
+        width: 125px !important;
+        height: 125px !important;
+    }
+    
+    .codeShatterLetter {
+        width: 120px;
+        height: 120px;
+        /* border: 2px solid red; */
+    }
+
+    .codeLetterE { margin-left: -10px !important; }
+    
+    .codeShatterLetter:not(:first-child) {
+        margin-left: 0px;
+    }
+
+
+    /* By */
+    .codeShatterGroupByWrapper {
+        bottom: -2px;
+        right: -44px;
+        width: 60px;
+        height: 35px;
+        /* border: 1px solid red; */
+    }
+    
+    .codeShatterGroupBy {
+        font-size: 30px;
+        margin-left: -200px;
+    }
+    
+    /* .codeShatterGroupByReveal { margin-left: -200px; } */
+    .codeShatterGroupByReveal { margin-left: unset; }
+}
+
+@media screen and (max-width: 525px) {
+    .codeShatterOuterWrapper {
+        margin-left: -40px;
+    }
+
+    .codeShatterPieceWrapper {
+        /* border: 2px solid cyan; */
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    
+    .codeShatterLetter .codeShatterPieceWrapper svg {
+        width: 100px !important;
+        height: 100px !important;
+    }    
+
+    .codeLetterO .codeShatterPieceWrapper svg {
+        width: 105px !important;
+        height: 105px !important;
+    }
+    
+    .codeShatterLetter {
+        width: 100px;
+        height: 100px;
+        /* border: 2px solid red; */
+    }
+
+    .codeLetterE { margin-left: -10px !important; }
+    
+    .codeShatterLetter:not(:first-child) {
+        margin-left: 0px;
+    }
+
+
+    /* By */
+    .codeShatterGroupByWrapper {
+        bottom: -2px;
+        right: -44px;
+        width: 60px;
+        height: 35px;
+        /* border: 1px solid red; */
+    }
+    
+    .codeShatterGroupBy {
+        font-size: 30px;
+        margin-left: -200px;
+    }
+    
+    /* .codeShatterGroupByReveal { margin-left: -200px; } */
+    .codeShatterGroupByReveal { margin-left: unset; }
+}
+
+@media screen and (max-width: 450px) {
+    .codeShatterOuterWrapper {
+        margin-left: -25px;
+    }
+    
+    .codeShatterPieceWrapper {
+        /* border: 2px solid cyan; */
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    
+    .codeShatterLetter .codeShatterPieceWrapper svg {
+        width: 80px !important;
+        height: 80px !important;
+    }    
+
+    .codeLetterO .codeShatterPieceWrapper svg {
+        width: 85px !important;
+        height: 85px !important;
+    }
+    
+    .codeShatterLetter {
+        width: 80px;
+        height: 80px;
+        /* border: 2px solid red; */
+    }
+
+    .codeLetterE { margin-left: -10px !important; }
+    
+    .codeShatterLetter:not(:first-child) {
+        margin-left: 0px;
+    }
+
+
+    /* By */
+    .codeShatterGroupByWrapper {
+        bottom: -2px;
+        right: -44px;
+        width: 60px;
+        height: 35px;
+        /* border: 1px solid red; */
+    }
+    
+    .codeShatterGroupBy {
+        font-size: 30px;
+        margin-left: -200px;
+    }
+    
+    /* .codeShatterGroupByReveal { margin-left: -200px; } */
+    .codeShatterGroupByReveal { margin-left: unset; }
+    
+}
+
+@media screen and (max-width: 355px) {
+    .codeShatterOuterWrapper {
+        margin-left: -25px;
+    }
+    
+    .codeShatterPieceWrapper {
+        /* border: 2px solid cyan; */
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    
+    .codeShatterLetter .codeShatterPieceWrapper svg {
+        width: 70px !important;
+        height: 70px !important;
+    }    
+
+    .codeLetterO .codeShatterPieceWrapper svg {
+        width: 75px !important;
+        height: 75px !important;
+    }
+    
+    .codeShatterLetter {
+        width: 70px;
+        height: 70px;
+        /* border: 2px solid red; */
+    }
+
+    .codeLetterE { margin-left: -10px !important; }
+    
+    .codeShatterLetter:not(:first-child) {
+        margin-left: 0px;
+    }
+
+
+    /* By */
+    .codeShatterGroupByWrapper {
+        bottom: -2px;
+        right: -44px;
+        width: 60px;
+        height: 35px;
+        /* border: 1px solid red; */
+    }
+    
+    .codeShatterGroupBy {
+        font-size: 30px;
+        margin-left: -200px;
+    }
+    
+    /* .codeShatterGroupByReveal { margin-left: -200px; } */
+    .codeShatterGroupByReveal { margin-left: unset; }
+    
+}
+
+
+
+@media screen and (max-width: 300px) {
+    .codeShatterOuterWrapper {
+        margin-left: -5px;
+    }
+    
+    .codeShatterPieceWrapper {
+        /* border: 2px solid cyan; */
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    
+    .codeShatterLetter .codeShatterPieceWrapper svg {
+        width: 60px !important;
+        height: 60px !important;
+    }    
+
+    .codeLetterO .codeShatterPieceWrapper svg {
+        width: 63px !important;
+        height: 63px !important;
+    }
+    
+    .codeShatterLetter {
+        width: 70px;
+        height: 70px;
+        /* border: 2px solid red; */
+    }
+
+    .codeLetterE { margin-left: -20px !important; }
+    
+    .codeShatterLetter:not(:first-child) {
+        margin-left: -5px;
+    }
+
+
+    /* By */
+    .codeShatterGroupByWrapper {
+        bottom: 3px;
+        right: -25px;
+        width: 50px;
+        height: 35px;
+        /* border: 1px solid red; */
+    }
+    
+    .codeShatterGroupBy {
+        font-size: 20px;
+        margin-left: -200px;
+    }
+    
+    /* .codeShatterGroupByReveal { margin-left: -200px; } */
+    .codeShatterGroupByReveal { margin-left: unset; }
+    
+}

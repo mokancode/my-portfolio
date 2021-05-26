@@ -1,0 +1,59 @@
+.emailIconSVG {
+    width: 19px;
+    height: 12px;
+    margin-left: 8px;
+    margin-top: 5.5px;
+    transition-duration: 2s;
+    stroke-dasharray: 1210;
+    stroke-dashoffset: 1210;
+    /* stroke-dashoffset: 0; */
+    /* transition-delay: calc(var(--contactInfoItemIconShowDelay)); */
+}
+
+.emailIconSVG.show  { stroke-dashoffset: 0; }
+
+.emailIconPath0 {
+    fill:transparent;
+    stroke: black;
+    stroke-width: 20;
+    /* transition-duration: 1s; */
+    transition-delay: 0s, 1s;
+    transition-property: all, fill;
+}
+
+.emailIconSVG.show .emailIconPath0 {
+    fill: rgb(243, 243, 243);
+}
+
+.emailIconPath1 {
+    fill:none;
+    stroke:#000000;
+    stroke-width:10;
+    stroke-miterlimit:10;
+}
+
+.emailIconPath2 {
+    fill:#FFFFFF;
+    stroke:#000000;
+    stroke-width: 10;
+    stroke-miterlimit:10;
+}
+
+/* these are the lips */
+.emailIconSVG polyline {
+    opacity: 1;
+    /* stroke-dasharray: 500;
+    stroke-dashoffset: 500; */
+    transition-timing-function: ease-out;
+    /* transition-delay: calc(var(--contactInfoItemIconShowDelay)); */
+}
+
+
+/* this is the rectangle */
+.emailIconSVG path {
+    /* stroke-dasharray: 1250;
+    stroke-dashoffset: 1250; */
+    transform-origin: center;
+    transition-timing-function: ease-in-out;
+    /* transition-delay: var(--contactInfoItemIconShowDelay); */
+}

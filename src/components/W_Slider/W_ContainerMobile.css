@@ -1,0 +1,294 @@
+@media screen and (max-width: 1400px) {
+    .W_Item_Full_Wrapper {
+        /* border: 3px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0px;
+        width: 100vw;
+        /* height: 100vh; */
+        /* height: calc(var(--vh, 1vh) * 100); */
+        min-height: calc(var(--vh, 1vh) * 100);
+        overflow-y: scroll;
+    }   
+}
+
+@media screen and (max-width: 850px) {
+    .cube {
+        /* margin-left: -500px; */
+        margin-left: -10%;
+        /* border: 3px solid white; */
+        width: 90%;
+    }
+    
+    .cube__face--top, .cube__face--bottom {
+        width: 100%;
+    }
+    
+    .cube__face--right  { 
+        /* transform: rotateY(90deg) translateZ(200px) translateX(-85px);  */
+        transform: rotateY(90deg) translateZ(85.5vw) translateX(-75px); 
+        width: 30px; 
+        height: var(--cubeFrontBackLeftRightHeight); 
+        display: none;
+    }
+    
+    :root {
+        --cubeFrontBackLeftRightHeight: 400px;
+        /* --cubeFrontAndBackWidth: 350px; */
+        --cubeFrontAndBackWidth: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+    .cube {
+        /* border: 2px solid red !important; */
+        height: 70%;
+        width: 90%;
+        margin-top: 0% !important;
+        margin-left: -2% !important;
+    }
+    
+    :root {
+        --cubeFrontBackLeftRightHeight: 100%;
+        --cubeFrontAndBackWidth: 700px;
+    }
+    
+    .cube__face--front, .cube__face--back  { 
+        height: var(--cubeFrontBackLeftRightHeight);
+        /* width: var(--cubeFrontAndBackWidth); */
+        width: 100%;
+    }
+    
+    .cube__face--bottom { 
+        /* width: 100% !important; */
+        transform: rotateX(-90deg) translateZ(100px) translateY(-85px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-height: 650px) and (orientation: portrait) {
+    .cube {
+        margin-top: -20%;
+    }
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .cube {
+        margin-top: -15%;
+    }
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .cube {
+        margin-top: -12% !important;
+    }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .cube {
+        /* margin-top: -30% !important; */
+        margin-top: calc(var(--vh) * -40) !important;
+    }
+}
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+    .cube {
+        margin-top: -30% !important;
+    }
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .cube {
+        margin-top: -15%;
+    }
+}
+
+@media screen and (max-height: 400px) and (max-width: 500px) and (orientation: landscape) {
+    .cube {
+        margin-top: -40% !important;
+    }
+}
+
+@media screen and (max-height: 400px) and (max-width: 700px) and (orientation: landscape) {
+    .cube {
+        margin-top: -35% !important;
+    }
+}
+
+@media screen and (max-height: 300px) and (max-width: 800px) and (orientation: landscape) {
+    .cube {
+        margin-top: -40% !important;
+    }
+}
+
+@media screen and (max-height: 300px) and (max-width: 500px) and (orientation: landscape) {
+    .cube {
+        margin-top: -60% !important;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .cube {
+        margin-top: -10%;
+        margin-left: -45%;
+        height: 70%;
+    }
+    
+    :root {
+        --cubeFrontBackLeftRightHeight: 100%;
+        --cubeFrontAndBackWidth: 700px;
+    }
+    
+    .cube__face--front, .cube__face--back  { 
+        height: var(--cubeFrontBackLeftRightHeight);
+        /* width: var(--cubeFrontAndBackWidth); */
+        /* width: 100%; */
+    }
+    
+    .cube__face--bottom { 
+        transform: rotateX(-90deg) translateZ(100px) translateY(-85px); 
+        height: 30px;
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .cube {
+        margin-left: -5%;
+        margin-top: -30%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) and (max-height: 350px) {
+    .cube {
+        margin-top: -35%;
+    }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .cube {
+        margin-top: -35%;
+    }
+}
+
+@media screen and (max-height: 600px) and (orientation: portrait) {
+    .cube__face--bottom { 
+        transform: rotateX(-90deg) translateZ(500px) translateY(-85px)
+        translateX(80px)
+        !important
+        ;
+        /* filter: unset !important; */
+        
+        /* filter: drop-shadow(0 0 5px cyan); */
+        
+        /* height: 30px; */
+        /* width: 100%; */
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+    .cube {
+        margin-top: -70%;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    .cube__face--bottom {
+        display: none;
+    }
+    
+    .cube__face--right  { 
+        transform: rotateY(90deg) translateZ(85.5vw) translateX(-75px); 
+        width: 30px; 
+        height: var(--cubeFrontBackLeftRightHeight); 
+        display: none;
+    }
+    
+    :root {
+        --cubeFrontBackLeftRightHeight: calc(var(--vh) * 80);
+        /* --cubeFrontAndBackWidth: 350px; */
+        --cubeFrontAndBackWidth: 80%;
+    }
+    
+    .cube__face--top, .cube__face--bottom {
+        width: 80%;
+        min-width: 280px;
+    }
+    
+    .cube__face--front, .cube__face--back  { 
+        min-width: 280px;
+    }
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+    .cube {
+        margin-top: -75%;
+        margin-left: -3%;
+    }
+}
+
+@media screen and (max-width: 330px) and (orientation: portrait) {
+    .cube {
+        margin-top: -75%;
+        margin-left: -10%;
+    }
+}
+
+@media screen and (max-width: 300px) and (orientation: portrait) {
+    .cube__face--top, .cube__face--bottom {
+        width: 80%;
+        min-width: 260px;
+    }
+    
+    .cube__face--front, .cube__face--back  { 
+        min-width: 260px;
+    }
+    
+    .cube {
+        margin-top: -75%;
+        margin-left: -12%;
+    }
+}
+
+@media screen and (max-height: 300px) and (orientation: landscape) {
+    .cube {
+        margin-top: -50% !important;
+    }
+}
+
+/* .W_Item_Full_Wrapper *, .W_Item_Full_Wrapper *::before, .W_Item_Full_Wrapper *::after {
+    filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+} */
+
+/* *, *::before, *::after {
+    filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: unset !important;
+} */
+
+@media screen and (max-height: 750px) and (orientation: portrait) {
+    .W_Container {
+        /* justify-content: flex-start; */
+        /* padding-top: 50px; */
+    }
+}
+
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .W_Container {
+        justify-content: flex-end;
+        /* align-items: flex-end; */
+    }
+}
+
+.isMobileMode .W_Item_Full_Wrapper {
+    padding-top: 20px;
+}

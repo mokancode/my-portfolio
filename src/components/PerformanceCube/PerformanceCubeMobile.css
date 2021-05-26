@@ -1,0 +1,111 @@
+
+@media screen and (orientation: landscape) {
+    .performanceCubeWrapper {
+        /* min-height: 150px; */
+        /* min-width: 550px; */
+        
+        max-width: 700px;
+        max-height: 300px;
+    }
+}  
+
+@media screen and (orientation: portrait) {
+    .performanceCubeWrapper {
+        width: 50%;
+        height: 50%;
+        
+        min-width: 220px;
+        
+        max-width: 400px;
+        max-height: 600px;
+    }
+}  
+
+@media screen and (orientation: landscape) and (max-height: 550px) {
+    .performanceCubeWrapper {
+        margin-bottom: 10%;
+    }
+}  
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .performanceCubeWrapper {
+        height: 55%;
+        width: 80%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+    .performanceCubeWrapper {
+        margin-bottom: 5%;
+        min-height: 200px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 300px) {
+    .performanceCubeWrapper {
+        max-height: 250px;
+        min-height: 200px;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 1050px) {
+    .performanceCubeWrapper {
+        height: 50%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 960px) {
+    .performanceCubeWrapper {
+        /* width: 50%; */
+        height: 60%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 800px) {
+    .performanceCubeWrapper {
+        min-height: 420px;
+        width: 65%;
+        height: 60%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 700px) {
+    .performanceCubeWrapper {
+        min-height: unset;
+        width: 80%;
+        height: 67%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 650px) {
+    .performanceCubeWrapper {
+        min-height: 420px;
+        width: 80%;
+        height: 69%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .performanceCubeWrapper {
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+    .performanceCubeWrapper {
+        min-width: 450px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .performanceCubeWrapper {
+        min-width: 220px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .isMobileMode .performanceCube {
+        margin-left: 25px;
+    }
+}

@@ -1,0 +1,211 @@
+.confirmDone {
+    /* display: none; */
+    position: absolute;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    /* border: 3px solid cyan; */
+    /* border-radius: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: unset !important; */
+    /* transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg); */
+    /* transform: scale(0, 0); */
+    z-index: 4;
+}
+
+.confirmDone::before, .confirmDone::after {
+    transform: rotate(-40deg) translateX(-10px) translateY(-5px) scale(0, 0);
+    position: absolute;
+    content: "";
+}
+
+.confirmDoneX::before {
+    width: 5px;
+    height: 20px;
+    background-color: rgb(255, 199, 94);
+    transform-origin: top;
+    transition: 1s;
+    transform: rotate(0deg) translateX(0px) translateY(-5px) scale(1, 1);
+    border-radius: 20px;
+    /* box-shadow: 0 0 20px rgb(255, 199, 94); */
+}
+
+.confirmDoneX::after {
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 199, 94);
+    transform: rotate(0deg) translateX(0px) translateY(10px) scale(1, 1);
+    transform-origin: bottom;
+    transition: .5s .3s;
+    /* box-shadow: 0 0 20px rgb(255, 199, 94); */
+}
+
+.confirmDoneTick::before {
+    width: 3px;
+    height: 15px;
+    background-color: rgb(89, 255, 47);
+    transform-origin: top;
+    transition: .5s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* box-shadow: 
+    0 0 5px 0px rgb(89, 255, 47)
+    ,0 0 20px 3px rgb(89, 255, 47)
+    ; */
+    animation: .3s confirmDoneTickBeforeAnim forwards;
+}
+
+.confirmDoneTick::after {
+    width: 3px;
+    height: 30px;
+    background-color: rgb(89, 255, 47);
+    transform-origin: bottom;
+    transition: .3s .3s ease-out;
+    /* box-shadow: 
+    0 0 5px 0px rgb(89, 255, 47)
+    ,0 0 20px 3px rgb(89, 255, 47)
+    ; */
+    animation: .2s .2s confirmDoneTickAfterAnim forwards;
+}
+
+@keyframes confirmDoneTickBeforeAnim {
+    0% {
+        transform: rotate(-40deg) translateX(-10px) translateY(-5px) scale(0, 0);
+    }
+    100% {
+        transform: rotate(-40deg) translateX(-10px) translateY(-5px) scale(1, 1);
+    }
+}
+
+@keyframes confirmDoneTickAfterAnim {
+    0% {
+        transform: rotate(45deg) translateX(-8px) translateY(-4px) scale(0, 0);
+    }
+    100% {
+        transform: rotate(45deg) translateX(-8px) translateY(-4px) scale(1, 1);
+    }
+}
+
+.confirmDone svg {
+    position: absolute;
+    fill: none;
+    stroke: cyan;
+    /* filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 30px cyan)
+    drop-shadow(0 0 50px cyan)
+    drop-shadow(0 0 50px cyan)
+    ; */
+    transition: 1s;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300; 
+}
+
+.confirmDone {
+    /* animation: 2s confirmDoneRotateAnim forwards ease-out !important; */
+    /* transition: 1s !important; */
+    /* transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg);
+    transform: 
+    translateZ(45px) 
+    translateX(-35px) 
+    translateY(10px)
+    rotateY(70deg) 
+    rotateX(-30deg)
+    ;
+    
+    transform: 
+    translateZ(85px) 
+    translateX(-15px) 
+    translateY(20px)
+    rotateY(80deg) 
+    rotateX(-40deg)
+    ; */
+}
+
+.confirmDoneAnimateSVG svg { animation: 2s 1s doneCircleAnim forwards ease-out; }
+.confirmDoneAnimateSVG { animation: 2s 1s confirmDoneRotateAnim forwards ease-out; }
+
+.confirmDoneRotateAnimEnded { 
+    animation: unset;
+    transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg); 
+}
+
+.confirmDoneHide {
+    transition: 1s 1s;
+    transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg) scale(0, 0);
+}
+
+@keyframes confirmDoneRotateAnim {
+    0% {
+        transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg);
+    }
+    30% {
+        transform: 
+        translateZ(65px) 
+        translateX(-35px) 
+        translateY(-5px)
+        rotateY(-10deg) 
+        rotateX(5deg)
+        ;
+    }
+    50% {
+        transform: 
+        translateZ(65px) 
+        translateX(-15px) 
+        translateY(-10px)
+        rotateY(10deg) 
+        rotateX(-10deg)
+        ;
+        
+    }
+    70% {        
+        transform: 
+        translateZ(65px) 
+        translateX(-35px) 
+        translateY(15px)
+        rotateY(-10deg) 
+        rotateX(-20deg)
+        ;
+    }
+    80% {
+        transform: 
+        translateZ(65px) 
+        translateX(-35px) 
+        translateY(15px)
+        rotateY(-10deg) 
+        rotateX(-20deg)
+        ;
+    }
+    100% {
+        transform: translateZ(60px) translateX(-30px) rotateY(0deg) rotateX(0deg);
+    }
+}
+
+@keyframes doneCircleAnim {
+    0% {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300; 
+    }
+    30% {
+        stroke-dasharray: 15;
+        stroke-dashoffset: 15; 
+    }
+    70% {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50; 
+    }
+    100% {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 0; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .confirmDone {
+        margin-top: -20px;
+        margin-left: 50px;
+    }
+}

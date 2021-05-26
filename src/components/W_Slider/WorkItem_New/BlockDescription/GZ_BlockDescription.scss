@@ -1,0 +1,160 @@
+.greenZenphonyWorkItemDiv {
+  .blockDescriptionItem {
+    .blockFirstWord {
+      color: rgb(217, 251, 169);
+      text-shadow: 0 0 5px rgba(172, 255, 47, 0.5);
+      /* font-size: 25px; */
+      letter-spacing: 3px;
+      margin-bottom: -7px;
+    }
+
+    .blockSentence {
+      /* font-size: 20px; */
+      color: rgb(187, 187, 187);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      /* 1px 0 2px rgb(23, 23, 23)
+       , 1px 0 2px rgb(71, 71, 71)
+       , -2px 0 1px rgb(30, 30, 30)
+       , 0px 1.5px 2px rgb(180, 255, 173) */
+      position: relative;
+      perspective: 100px;
+    }
+  }
+  
+  .blockDescriptionsWrapper {
+    transition: 3s 0s;
+    animation-duration: 2s;
+
+    &::before {
+      border-radius: 10px;
+      padding-top: 10px;
+      background: linear-gradient(to top, rgb(10, 57, 43), rgb(7, 42, 32));
+      box-shadow: 5px 3px 10px 0 rgba(0, 0, 0, 0.8);
+      opacity: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      /* border: 1px solid cyan; */
+      width: 90%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 1px 0 2px 0 rgb(8, 81, 17), 0px 1.5px 2px 0 rgb(62, 255, 123), 0px 0px 3px 1px rgba(83, 241, 21, 0.7),
+        -4px 2px 2px 0 rgb(13, 25, 9);
+      opacity: 0;
+      transition-delay: 0.8s;
+    }
+
+    &.blockDescriptionsWrapperShadow {
+      &::before,
+      &::after {
+        opacity: 1;
+        /* animation-name: workItem1BlockDescriptionWrapperShadowAnim;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;    
+      animation-duration: inherit; */
+        /* border: 2px solid cyan; */
+      }
+    }
+
+    .blockDescriptionIcon {
+      top: -30px;
+      left: 30px;
+      margin: 15px;
+      width: 75px;
+      height: 75px;
+    }
+
+    &:nth-of-type(1) {
+      .blockDescriptionItem:nth-child(1) {
+        .blockDescriptionIcon {
+          /* display: none; */
+          top: -29px;
+          left: 5px;
+          transform: scale(0.45, 0.45);
+
+          &::before {
+            position: absolute;
+            top: -8px;
+            left: 4px;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid rgb(217, 251, 169);
+            border-radius: 50px;
+            animation: 0.7s fingerPointerAnim infinite linear;
+            transform-origin: center;
+          }
+        }
+      }
+
+      .blockDescriptionItem:nth-child(2) {
+        margin-left: 50px;
+        margin-right: -30px;
+
+        .blockDescriptionIcon {
+          top: -31px;
+          left: 20px;
+          transform: scale(0.35, 0.35);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fingerPointerAnim {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .greenZenphonyWorkItemDiv .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .greenZenphonyWorkItemDiv .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 25px;
+    margin-right: -5px;
+  }
+}
+
+@keyframes workItem1BlockDescriptionWrapperShadowAnim {
+  0% {
+    opacity: 0;
+    box-shadow: unset;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 5px 3px 40px 0 rgba(0, 0, 0, 0.8), 1px 0 2px 0 rgb(8, 81, 17), 0px 1.5px 2px 0 rgb(62, 255, 123),
+      0px 0px 3px 1px rgba(83, 241, 21, 0.7), -4px 2px 2px 0 rgb(13, 25, 9);
+    opacity: 1;
+  }
+}
+
+@keyframes iconFloatAnim {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

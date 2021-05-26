@@ -1,0 +1,58 @@
+.pageNotFoundCursive {
+    width: 550px;
+    height: 150px;
+    margin: 0px;
+    position: relative;
+    z-index: 2;
+    /* border: 3px solid cornflowerblue; */
+    /* display: none; */
+}
+
+.pageNotFoundCursiveLottie {
+    position: absolute;
+    width: 100%;
+}
+
+.pageNotFoundCursiveLottie:nth-child(1) {
+    /* display: none; */
+    filter: drop-shadow(0 0 8px rgb(27, 9, 77));
+}
+
+.pageNotFoundCursiveLottie:nth-child(1) svg path {
+    z-index: 1;
+    stroke-width: 17;
+    /* stroke: rgb(5, 132, 165); */
+    stroke: rgb(5, 69, 85);
+    filter: blur(2px);
+    stroke-linejoin: round;
+    
+}
+
+.pageNotFoundCursiveLottie:nth-child(2) {
+    z-index: 2;
+    filter: drop-shadow(0 0 8px rgb(23, 190, 190));
+    /* display: none; */
+}
+
+.pageNotFoundCursiveLottie path {
+    stroke-dasharray: 650;
+    stroke-dashoffset: 0;
+}
+
+.pageNotFoundCursiveLottie:nth-child(2) path {
+    stroke: cyan;
+    stroke-width: 2;
+}
+
+.pageSwitching-exit.pageSwitching-exit-active {
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .pageNotFoundCursiveLottie path {
+    stroke-dashoffset: 650;
+    transition: 1s;
+}
+
+.pageSwitching-exit.pageSwitching-exit-active .pageNotFoundCursiveLottie:nth-child(1) {
+    opacity: 0;
+    transition: 1s;
+}

@@ -1,0 +1,63 @@
+.navbarItemTextDiv {
+    display: flex;
+    /* display: none; */
+    /* border: 1px solid yellow; */
+}
+
+.navbarItemTextSingleWrapper {
+    /* animation: .5s navbarItemTextSingleWrapperAnim; */
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    /* opacity: 0; */
+    /* transform: translateY(-10px) translateX(50px); */
+    /* border: 1px solid red; */
+}
+
+.navbarItemTextSingleDivShow {
+    /* animation-name: navbarItemTextSingleWrapperAnim; */
+}
+
+@keyframes navbarItemTextSingleWrapperAnim {
+    0% {
+        transform: translateY(-10px) translateX(50px);
+        opacity: 0;    
+    }
+    100% {
+        opacity: 1;
+        transform: unset;
+    }
+}
+
+.navbarItemTextSingle {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    transition: .5s;
+}
+
+.navbarItemTextSingleAnimateHue {
+    animation-name: hueRotate;
+}
+
+.navbarItemTextSingleShow {
+    opacity: 1;
+    transform: unset;
+}
+
+@keyframes hueRotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(-50deg) brightness(150%);
+    }
+    50% {
+        filter: hue-rotate(0deg);
+    }
+    75% {
+        filter: hue-rotate(-75deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);   
+    }
+}

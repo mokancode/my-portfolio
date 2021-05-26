@@ -1,0 +1,82 @@
+.resumeSkillItem {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: fit-content;
+  /* border: 1px solid red; */
+}
+
+.resumeSkillItem > p {
+  margin: 0px;
+  margin-top: 2px;
+  margin-left: 5px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+.resumeSkillItem.show > p {
+  opacity: 1;
+  transform: unset;
+}
+
+.resumeSkillItem .iconWrapper {
+  filter: drop-shadow(-3px 3px 1px rgba(0, 0, 0, 0.2));
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.8, 1);
+  transform: scale(0);
+}
+
+.resumeSkillItem.show .iconWrapper {
+  transform: scale(1);
+}
+
+.resumeSkillItem img {
+  /* width: 25px;
+    height: auto; */
+
+  height: 20px;
+  width: auto;
+  margin-top: 5px;
+}
+
+.resumeSkillItem .iconWrapper[name="React"],
+.resumeSkillItem .iconWrapper[name="Redux"] {
+  filter: unset;
+}
+
+.resumeSkillItem .iconWrapper[name="React"] img {
+  filter: brightness(70%) saturate(300%) hue-rotate(40deg);
+  animation: 25s rotateIcon infinite linear;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.resumeSkillItem .iconWrapper[name="HTML"] img,
+.resumeSkillItem .iconWrapper[name="CSS"] img {
+  margin-top: 3px;
+}
+
+.resumeSkillItem .iconWrapper[name~="Postgres"] {
+  filter: drop-shadow(-3px 3px 1px rgba(0, 0, 0, 0.1)) brightness(120%);
+}
+
+.resumeSkillItem .iconWrapper[name~="Express.js"] {
+  filter: drop-shadow(-3px 3px 1px rgba(0, 0, 0, 0.1));
+}
+
+.resumeSkillItem .iconWrapper[name~="Next.js"] {
+  filter: drop-shadow(-3px 3px 1px rgba(0, 0, 0, 0));
+}
+
+.resumeSkillItem .iconWrapper[name~="Next.js"] img {
+  height: 25px;
+  width: auto;
+}

@@ -1,0 +1,44 @@
+.adobeIcon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* filter: drop-shadow(-3px 3px 4px rgba(0, 0, 0, 0.2)); */
+    /* border: 5px solid red !important; */
+}
+
+.adobeIcon p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Specific styles */
+.adobeIcon[name="Ps"] {
+    background: radial-gradient(rgb(14, 104, 221), rgb(0, 23, 53));
+    border: 2px solid rgb(128, 209, 255);
+}
+
+.adobeIcon[name="Ps"] p {
+    color: rgb(232, 243, 255);
+}
+
+.adobeIcon[name="Ai"] {
+    background: radial-gradient(rgb(196, 95, 0), rgb(43, 18, 10));
+    border: 2px solid orange;
+}
+
+.adobeIcon[name="Ai"] p {
+    color: orange;
+}
+
+.adobeIcon[name="Ae"] {
+    background: radial-gradient(rgb(121, 115, 186), rgb(26, 21, 51));
+    border: 2px solid rgb(219, 192, 255);
+}
+
+.adobeIcon[name="Ae"] p {
+    color: rgb(235, 219, 255);
+}

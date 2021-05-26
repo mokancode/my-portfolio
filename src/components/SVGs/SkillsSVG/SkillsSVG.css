@@ -1,0 +1,277 @@
+/* .isMobileMode  */
+.skillsSVGWrapper * {
+    /* filter: unset !important; */
+}
+
+.skillsSVGDestroy {
+    display: none !important;
+}
+
+.skillsSVGWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 400px;
+    position: relative;
+    /* border: 2px solid greenyellow; */
+}
+
+.skillsSVGDivWrapper {
+    position: absolute;
+    /* top: -10px; */
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.skillsWordsSVG svg {
+    filter: 
+        drop-shadow(0px 0px 5px rgb(54, 108, 255))
+        ;
+    /* animation: 2s 2s skillWordsShadowAnim infinite alternate-reverse; */
+}
+
+@keyframes skillWordsShadowAnim {
+    0% {
+        filter: 
+        drop-shadow(0px 0px 5px rgb(12, 12, 64))
+        drop-shadow(0px 0px 20px rgb(24, 24, 155, 0.3))
+        
+        drop-shadow(0px 3px .0px rgb(26, 36, 86))
+        drop-shadow(5px 0px .0px rgb(26, 36, 86))
+        ;
+    }
+    10% {
+        filter: 
+        drop-shadow(0px 0px 5px rgb(12, 12, 64))
+        drop-shadow(0px 0px 20px rgb(24, 24, 155, 0.3))
+        
+        drop-shadow(0px 2px .1px rgb(26, 36, 86))
+        drop-shadow(5px -5px .1px rgb(26, 36, 86))
+        ;
+    }
+    25% {
+        filter: 
+        drop-shadow(0px 0px 5px rgb(12, 12, 64))
+        drop-shadow(0px 0px 20px rgb(24, 24, 155, 0.3))
+        
+        drop-shadow(0px 2px .1px rgb(26, 36, 86))
+        drop-shadow(5px 5px .1px rgb(26, 36, 86))
+        ;
+    }
+    30% {
+        filter: 
+        drop-shadow(0px 0px 5px rgb(12, 12, 64))
+        drop-shadow(0px 0px 20px rgb(24, 24, 155, 0.3))
+        
+        drop-shadow(0px 2px .1px rgb(26, 36, 86))
+        drop-shadow(-5px 5px .1px rgb(26, 36, 86))
+        ;
+    }
+    100% {
+        filter: 
+        drop-shadow(0px 0px 5px rgb(12, 12, 64))
+        drop-shadow(0px 0px 20px rgb(24, 24, 155, 0.3))
+        
+        drop-shadow(0px 3px .0px rgb(26, 36, 86))
+        drop-shadow(5px 0px .0px rgb(26, 36, 86))
+        ;
+    }
+}
+
+.skillsSVGDivWrapper:nth-child(1) g[aria-label] {
+    fill: rgb(85, 142, 255, .7);
+    /* fill: rgb(34, 14, 255); */
+    /* fill: rgb(15, 57, 209); */
+    /* fill: transparent; */
+}
+
+.skillsSVGDivWrapper:nth-child(1) svg path {
+    /* stroke: rgb(82, 46, 224); */
+    /* stroke: white; */
+    /* stroke: blue; */
+    /* stroke-width: 3px; */
+    
+    stroke-width: 4;
+    /* stroke: rgb(189, 203, 255); */
+    stroke: rgb(97, 153, 255);
+    /* stroke-dasharray: 650; */
+    /* stroke-dashoffset: 650; */
+
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+
+    /* stroke-dasharray: -200;
+    stroke-dashoffset: -350; */
+    
+    /* transition: 1s; */
+    /* animation: 2s playNeonSkill linear infinite alternate-reverse; */
+    animation: 4s playNeonSkill linear infinite;
+    /* animation: 2s bigLetterStrokeAnim linear infinite; */
+
+}
+
+@keyframes playNeonSkill {
+    /* 0% {        
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+    }
+    50% {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+    }
+    
+    100% {
+        stroke-dasharray: -100;
+        stroke-dashoffset: -100;
+    } */
+    0% {        
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+    }
+    50% {
+        stroke-dasharray: -650;
+        stroke-dashoffset: 0;
+    }
+    
+    100% {
+        stroke-dasharray: -100;
+        stroke-dashoffset: -100;
+    }
+}
+
+/* Lines */
+.skillsSVGDivWrapper {
+    /* display: none; */
+}
+
+.skillLinesSVGDivWrapper {
+    position: absolute;
+    /* top: 0px; */
+    /* left: -300px; */
+    /* width: 300px;
+    height: 300px; */
+    z-index: 200;
+}
+
+.skillLinesSVGDivWrapper svg {
+    filter: 
+    /* drop-shadow(-0.5px .5px 0.5px rgb(25, 25, 255)) */
+    /* drop-shadow(-2px 0 1px rgb(42, 42, 255)) */
+    /* drop-shadow(0px 0 2px rgb(58, 41, 255)) */
+    /* drop-shadow(2px 0 5px rgb(46, 39, 255)) */
+    /* drop-shadow(2px 2px 20px rgb(80, 27, 255)) */
+    ;
+    stroke-linecap: round;
+    stroke-width: 5;
+    stroke: rgb(40, 79, 255);
+}
+
+.skillLinesSVGDivWrapper svg path {
+    fill: rgb(15, 57, 209);
+}
+
+/* MERN */
+.skillsMERNSVGDivWrapper svg {
+    /* width: 300px; */
+    /* height: 300px; */
+    /* border: 1px solid red; */
+    filter: 
+    /* drop-shadow(-0.5px .5px 0.5px rgb(78, 202, 255)) */
+    /* drop-shadow(0 0 .5px rgb(78, 202, 255)) */
+    /* drop-shadow(-2px 0 .5px rgb(78, 202, 255)) */
+    /* drop-shadow(0px 0 2px rgb(78, 202, 255)) */
+    drop-shadow(0px 0 10px rgb(0, 162, 255))
+    drop-shadow(0px 0 5px rgb(0, 162, 255))
+    /* drop-shadow(2px 2px 20px rgb(78, 202, 255)) */
+    ;
+    stroke-linecap: round;
+    /* animation: 2s MERNshadowAnim infinite alternate; */
+}
+
+@keyframes MERNshadowAnim {
+    0% {
+        filter: 
+        drop-shadow(-0.5px .5px 0.5px rgb(78, 202, 255))
+        drop-shadow(0 0 .5px rgb(78, 202, 255))
+        drop-shadow(-2px 0 .5px rgb(78, 202, 255))
+        drop-shadow(0px 0 2px rgb(78, 202, 255))
+        drop-shadow(0px 0 2px rgb(78, 167, 255, .2))
+        drop-shadow(2px 2px 20px rgb(78, 202, 255, 0.5))
+        ;
+    }
+    50% {
+        filter: 
+        drop-shadow(-0.5px .5px 0.5px rgb(78, 202, 255))
+        drop-shadow(0 0 .5px rgb(78, 202, 255))
+        drop-shadow(-2px 0 .5px rgb(78, 202, 255))
+        drop-shadow(0px 0 2px rgb(78, 202, 255))
+        drop-shadow(0px 0 10px rgb(78, 167, 255, .2))
+        drop-shadow(2px 2px 20px rgb(78, 202, 255. 0.5))
+        ;
+    }
+}
+
+.skillsMERNSVGDivWrapper svg path {
+    stroke: rgb(127, 217, 255) !important;
+    stroke-width: 2px;
+}
+
+.pageSwitching-exit .skillsSVGWrapper {
+    opacity: 1;
+}
+.pageSwitching-exit.pageSwitching-exit-active .skillsSVGWrapper {
+    opacity: 0;
+}
+
+
+/* Mobile styles */
+@media screen and (max-width: 450px) {   
+    .skillsWordsSVG {
+        transform: scale(.6, .65);
+    }
+    
+    .skillLinesSVGDivWrapper {
+        transform: scale(.65, .65);
+    }
+    
+    .skillsMERNSVGDivWrapper {
+        transform: scale(.65, .65);
+    }
+}
+
+@media screen and (max-width: 420px) {   
+    .skillsWordsSVG {
+        transform: scale(.55, .65);
+    }
+    
+    .skillLinesSVGDivWrapper {
+        transform: scale(.6, .6);
+    }
+    
+    .skillsMERNSVGDivWrapper {
+        transform: scale(.6, .6);
+    }
+}
+
+@media screen and (max-width: 400px) {    
+    .skillsWordsSVG {
+        transform: scale(.45, .45);
+    }
+    
+    .skillLinesSVGDivWrapper {
+        transform: scale(.45, .45);
+    }
+    
+    .skillsMERNSVGDivWrapper {
+        transform: scale(.45, .45);
+    }
+}
+
+
+@media screen and (max-width: 750px) and (max-height: 450px) {
+    .skillsSVGDivWrapper {
+        margin-top: 90px;
+    }
+}
