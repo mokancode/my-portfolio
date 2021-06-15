@@ -130,7 +130,6 @@ class ResumeSkillsDiv extends Component {
         })}
       >
         <ResumeHeader text="Skills" show={show} />
-
         <div className="skillsContainer">
           {!isEmpty(uniqueIDs) &&
             skillsList.map(function (categoryItem, categoryIndex) {

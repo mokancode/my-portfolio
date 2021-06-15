@@ -70,9 +70,16 @@ class ResumeProjectItem extends Component {
           </div>
         </div>
         <div className={styles.projectContent}>
-          <a className={styles.projectName} href={project.url} target="_blank" style={{ transitionDelay: `${dateCircleDelay}ms` }}>
-            {project.name} {project.workInProgress ? <span>(W.I.P.)</span> : null}
-          </a>
+          <div className={styles.projectNameAndLink}>
+            <a className={styles.projectName} href={project.url} target="_blank" style={{ transitionDelay: `${dateCircleDelay}ms` }}>
+              {project.name} {project.workInProgress ? <span>(W.I.P.)</span> : null}
+            </a>
+            {project.git && (
+              <a className={styles.gitRepoLink} href={project.git} target="_blank" style={{ transitionDelay: `${dateCircleDelay}ms` }}>
+                <img src="/images/github-logo.png"></img>
+              </a>
+            )}
+          </div>
           {/* <h1 className="projectName" href={project.url} target="_blank"
                         style={{ transitionDelay: `${dateCircleDelay}ms` }}>{project.name} {project.workInProgress ? <span>(W.I.P.)</span> : null}</h1> */}
           <div className={styles.stackFrontAndBackEndWrapper}>

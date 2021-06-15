@@ -6,21 +6,12 @@ const projects = [
     description: "Designed and developed a website for the app.",
     thingsLearnedOrAchieved: ["Developed an interactive tutorial library."],
     url: "https://prokarpaty.net",
+    git: "https://github.com/mokancode/ardi",
   },
   {
     name: "Portfolio",
     dateFinished: "Q1 2021",
-    frontEnd: [
-      "ReactJS",
-      "Redux",
-      "CSS",
-      "Sass",
-      "React Transition Group",
-      "Lottie",
-      "AnimeJS",
-      "Serverless emailing",
-      "Waypoints",
-    ],
+    frontEnd: ["ReactJS", "Redux", "CSS", "Sass", "React Transition Group", "Lottie", "AnimeJS", "Serverless emailing", "Waypoints"],
     description: "Personal portfolio.",
     thingsLearnedOrAchieved: [
       "Designed and implemented SVG animations in Adobe After Effects and integrated them into React using Bodymovin and Lottie",
@@ -29,7 +20,8 @@ const projects = [
       "Chose the efficient approach of serverless emailing for the contact form over setting up a backend",
       "Achieved significant performance optimization by manipulating the DOM and implementing PNGs-based shadows over CSS shadows on large elements.",
     ],
-    url: "https://myportfolio-77b3c.web.app/",
+    url: "https://mokancode.com/",
+    git: "https://github.com/mokancode/my-portfolio",
   },
   {
     name: "Project Organizer",
@@ -41,6 +33,7 @@ const projects = [
       "MERN stack 'to-do' web app developed to manage projects and tasks with simple controls and an intuitive UI with a retro neon theme. Designed and implemented Lottie animations." +
       "Initially hosted locally and used localStorage for data storage, later integrated a REST API back-end with a user login system using MongoDB and deployed the app online",
     url: "https://project-organizer-mokancode.herokuapp.com/",
+    git: "https://github.com/mokancode/project-organizer",
   },
   {
     name: "Green Zenphony",
@@ -53,6 +46,7 @@ const projects = [
       "Implemented animated page transitions and waypoint/scroll triggers to reveal components.",
     ],
     url: "http://greenzenphonymvp.web.app",
+    git: "https://github.com/mokancode/green-zenphony",
   },
   {
     name: "Quiza",
@@ -68,6 +62,7 @@ const projects = [
       "Designed and imported SVG art from Adobe Illustrator and integrated it into React.",
     ],
     url: "https://quiza-mokancode.herokuapp.com/",
+    git: "https://github.com/mokancode/quiza",
   },
   //   {
   //     name: "RSG Consulting Group",

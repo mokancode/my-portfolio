@@ -29,3 +29,15 @@
     background: linear-gradient(to top, rgb(182, 174, 211), black);
   }
 }
+
+.projectLinkInstruction {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 4s;
+  transform: translateY(-10px);
+}
+
+.projectLinkInstruction.show {
+  transform: unset;
+  opacity: 1;
+}

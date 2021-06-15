@@ -5,6 +5,7 @@ import ResumeProjectItem from "./ResumeProjectItem";
 import projects from "./ResumeProjectsList";
 import { v4 as uuidv4 } from "uuid";
 import isEmpty from "../../../is-empty";
+import classNames from "classnames";
 
 class ProjectsDiv extends Component {
   constructor(props) {
@@ -36,6 +37,13 @@ class ProjectsDiv extends Component {
     return (
       <div className={styles.projectsDiv}>
         <ResumeHeader text="Recent Projects" show={show} />
+        <p
+          className={classNames(styles.projectLinkInstruction, {
+            [styles.show]: show,
+          })}
+        >
+          Click on a project’s title to open its website, or the Git icon for the repository.
+        </p>
         <ul className={styles.projectsList}>
           {!isEmpty(uniqueIDs) &&
             projects.map(function (project, index) {

@@ -154,6 +154,12 @@
   flex-direction: column;
 }
 
+.projectNameAndLink {
+  display: flex;
+  align-items: center;
+  // border: 1px solid red;
+}
+
 .projectName {
   position: relative;
   display: flex;
@@ -195,7 +201,28 @@
   }
 }
 
-.resumeProjectItem.show .projectName {
+.gitRepoLink {
+  margin-left: 10px;
+  transition-duration: 1s;
+  opacity: 0;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-top: 4px;
+    width: 20px;
+    transition: .3s;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  &:hover img {
+    transform: scale(1.2);
+  }
+}
+
+.resumeProjectItem.show .projectName,
+.resumeProjectItem.show .gitRepoLink {
   transform: unset;
   opacity: 1;
 }
