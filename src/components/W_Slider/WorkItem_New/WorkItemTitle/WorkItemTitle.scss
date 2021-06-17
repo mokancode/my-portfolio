@@ -30,8 +30,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px;
-  padding: 0px;
   /* animation-name: revealTitleLetter; */
   /* animation-duration: 0.3s; */
   /* animation-fill-mode: forwards; */
@@ -263,6 +261,7 @@
     transition: 0.3s all;
     opacity: 1;
     height: fit-content;
+    height: -moz-fit-content;
 
     &.opacityOff {
       opacity: 0;
