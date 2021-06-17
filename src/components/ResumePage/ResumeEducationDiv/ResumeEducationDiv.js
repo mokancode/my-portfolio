@@ -4,6 +4,7 @@ import "./ResumeEducationDiv.css";
 import ResumeEducationItem from "./ResumeEducationItem/ResumeEducationItem";
 import { v4 as uuidv4 } from "uuid";
 import isEmpty from "../../../is-empty";
+import MERNStack from "./MERNStack/MERNStack";
 
 class ResumeEducationDiv extends Component {
   constructor(props) {
@@ -11,7 +12,17 @@ class ResumeEducationDiv extends Component {
     this.state = {
       educationList: [
         {
-          achievement: "Full-stack web development (MERN)",
+          achievement: "Full-stack web development - Next.js",
+          school: "Self-taught",
+          year: "2021",
+        },
+        {
+          achievement: (
+            <div className="MERNStackAchievementWrapper">
+              <p>Full-stack web development -</p>
+              <MERNStack />
+            </div>
+          ),
           school: "Self-taught",
           year: "2018-2021",
         },

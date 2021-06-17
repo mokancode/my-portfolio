@@ -142,7 +142,7 @@ class ResumePage extends Component {
             <ul className="contactInfoDiv">
               <ContactInfoItem
                 type="email"
-                text="bmikekandino@gmail.com"
+                text="mike.kandino@mokancode.com"
                 icon={<EmailIcon show={showComponents} showDelay={500} />}
                 itemIndex={0}
                 show={showComponents}

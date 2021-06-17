@@ -17,3 +17,9 @@
     display: flex;
     flex-direction: column;
 }
+
+.MERNStackAchievementWrapper {
+    display: flex;
+    position: relative;
+    /* border: 1px solid red; */
+}

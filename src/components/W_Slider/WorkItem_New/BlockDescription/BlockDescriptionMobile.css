@@ -1,58 +1,59 @@
 @media screen and (max-width: 520px) {
-    .blockDescriptionItem .blockFirstWord {
-        font-size: 20px;
-    }
-    
-    .blockDescriptionsWrapper::before, .blockDescriptionsWrapper::after {
-        width: 100% !important;
-    }
+  .blockDescriptionItem .blockFirstWord {
+    font-size: 20px;
+  }
+
+  .blockDescriptionsWrapper::before,
+  .blockDescriptionsWrapper::after {
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .blockDescriptionItem .blockFirstWord {
-        font-size: 18px;
-    }
+  .blockDescriptionItem .blockFirstWord {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 360px) {
-    .quizaWorkItemDiv .blockDescriptionItem .blockFirstWord {
-        font-size: 17px;
-    }
+  .quizaWorkItemDiv .blockDescriptionItem .blockFirstWord {
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 350px) {
-    .blockDescriptionItem .blockFirstWord {
-        font-size: 16px;
-    }
+  .blockDescriptionItem .blockFirstWord {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 310px) {
-    .greenZenphonyWorkItemDiv .blockDescriptionItem:nth-child(1) {
-        margin-right: -20px;
-    }
-    
-    .greenZenphonyWorkItemDiv .blockDescriptionItem .blockFirstWord {
-        font-size: 14px;
-    }
-    
-    .greenZenphonyWorkItemDiv .blockDescriptionItem .blockSentence {
-        font-size: 16px;
-    }
+  .greenZenphonyWorkItemDiv .blockDescriptionItem:nth-child(1) {
+    margin-right: -20px;
+  }
 
-    .greenZenphonyWorkItemDiv .blockDescriptionItem .blockDescriptionIcon {
-        margin-left: 10px;
-    }
-    
-    .quizaWorkItemDiv .blockDescriptionItem .blockFirstWord {
-        font-size: 14px;
-    }
-    
-    .quizaWorkItemDiv .blockDescriptionItem .blockSentence {
-        font-size: 16px;
-    }
-    
-    .quizaWorkItemDiv .blockDescriptionItem .happyUserIconSVG {
-        margin-top: 5px;
-        width: 35px;
-    }
+  .greenZenphonyWorkItemDiv .blockDescriptionItem .blockFirstWord {
+    font-size: 14px;
+  }
+
+  .greenZenphonyWorkItemDiv .blockDescriptionItem .blockSentence {
+    font-size: 16px;
+  }
+
+  .greenZenphonyWorkItemDiv .blockDescriptionItem .blockDescriptionIcon {
+    margin-left: 10px;
+  }
+
+  .quizaWorkItemDiv .blockDescriptionItem .blockFirstWord {
+    font-size: 14px;
+  }
+
+  .quizaWorkItemDiv .blockDescriptionItem .blockSentence {
+    font-size: 16px;
+  }
+
+  .quizaWorkItemDiv .blockDescriptionItem .happyUserIconSVG {
+    margin-top: 5px;
+    width: 35px;
+  }
 }

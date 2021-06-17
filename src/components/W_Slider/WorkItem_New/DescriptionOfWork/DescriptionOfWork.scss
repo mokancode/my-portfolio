@@ -169,3 +169,22 @@
     }
   }
 }
+
+.ardi {
+  .descriptionOfWorkWrapper {
+    .descriptionQuotes {
+      &::before {
+        background: linear-gradient(to bottom, white, rgba(0, 128, 0, 0.2));
+      }
+
+      &::after {
+        background: linear-gradient(to top, white, rgba(0, 128, 0, 0.2));
+      }
+    }
+
+    .typeWriterWord {
+      color: white;
+      text-shadow: 0 0 5px rgb(255, 136, 40);
+    }
+  }
+}

@@ -26,10 +26,11 @@ class ResumeProjectItem extends Component {
         backEndIDs.push(uuidv4());
       }
 
-    if (project.thingLearnedOrAchieved)
+    if (project.thingsLearnedOrAchieved) {
       for (var i = 0; i < project.thingsLearnedOrAchieved.length; i++) {
         thingsLearnedIDs.push(uuidv4());
       }
+    }
 
     this.setState({ frontEndIDs, backEndIDs, thingsLearnedIDs });
 
@@ -125,7 +126,7 @@ class ResumeProjectItem extends Component {
             {project.description}
           </p>
           {!isEmpty(project.thingsLearnedOrAchieved) ? (
-            <ul className={styles.thingLearnedOrAchievedList}>
+            <ul className={styles.thingsLearnedOrAchievedList}>
               {!isEmpty(thingsLearnedIDs) &&
                 project.thingsLearnedOrAchieved.map(function (thing, index) {
                   return (

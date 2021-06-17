@@ -5,6 +5,7 @@ import "./BlockDescriptionMobile.css";
 import "./GZ_BlockDescription.scss";
 import "./Quiza_BlockDescription.scss";
 import "./ProjectOrganizer_BlockDescription.scss";
+import "./Ardi_BlockDescription.scss";
 import isEmpty from "../../../../validation/is-empty";
 import { v4 as uuidv4 } from "uuid";
 import BlockDescriptionItem from "./BlockDescriptionItem";

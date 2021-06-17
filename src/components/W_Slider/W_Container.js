@@ -16,6 +16,7 @@ import MobileSlideshowContainer from "../MobileSlideshow/MobileSlideshowContaine
 import { withRouter } from "react-router-dom";
 import MyWorks from "../MyWorks/MyWorks";
 import PerformanceCube from "../PerformanceCube/PerformanceCube";
+import workItems from "./WorkItemsList";
 
 class W_Container extends Component {
   constructor(props) {
@@ -25,71 +26,6 @@ class W_Container extends Component {
       currentPage: 0,
       itemsPerPage: 3, // how many work items per chunk
       workItemsTurn: true, // true = first set, false = next set
-      workItems: [
-        {
-          title: "Green Zenphony",
-          workItemClass: "greenZenphonyWorkItemDiv",
-          cubeClass: "gzCube",
-          descriptionOfWork: "Green Zenphony is a kosher vegetarian restaurant known for its modern interpretation of classic dishes",
-          blocksDescriptionArray: [
-            { firstWord: "Modern", sentence: "interface" },
-            { firstWord: "professional", sentence: "photography" },
-          ],
-          imageSrc: "./images/mango_iced_tea.jpg",
-          complexity: { value: 50, color: "blue" },
-          design: { value: 80, color: "green" },
-          key: uniqueID(),
-          fullHeight: 410,
-          link: "http://greenzenphonymvp.web.app",
-          freeHosting: true,
-        },
-        {
-          title: "Project Organizer",
-          workItemClass: "projectOrganizer",
-          descriptionOfWork: "Project organizer / task manager with easy to learn interface",
-          imageSrc: "/images/projectOrganizerIcon.jpg",
-          blocksDescriptionArray: [
-            { firstWord: "To-Do", sentence: "Style" },
-            { firstWord: "Retro", sentence: "design" },
-          ],
-          // misc: true,
-          key: uniqueID(),
-          link: "https://project-organizer-mokancode.herokuapp.com/",
-          freeHosting: true,
-        },
-        {
-          title: "Quiza",
-          workItemClass: "quizaWorkItemDiv",
-          cubeClass: "quizaCube",
-          imageSrc: "./images/quizaLogo.jpg",
-          descriptionOfWork: "An exam-preparation tool where students and teachers alike can make quizzes to be taken by their classmates",
-          blocksDescriptionArray: [
-            { firstWord: "Full-stack", sentence: "MERN app" },
-            { firstWord: "Exam", sentence: "preparation" },
-          ],
-          // complexity: { value: 95, color: "silver" },
-          complexity: { value: 95, color: "blueviolet" },
-          design: { value: 60, color: "blueviolet" },
-          key: uniqueID(),
-          fullHeight: 300,
-          link: "https://quiza-mokancode.herokuapp.com/",
-          freeHosting: true,
-        },
-        {
-          title: "RSG",
-          workItemClass: "rsgWorkItemDiv",
-          cubeClass: "rsgCube",
-          titleSubheader: "Consulting group",
-          descriptionOfWork: "A modern introductory page to the legal consultation company with a contact form (WIP)",
-          imageSrc: "./images/LawIcon.png",
-          complexity: { value: 30, color: "silver" },
-          design: { value: 60, color: "red" },
-          key: uniqueID(),
-          fullHeight: 370,
-          link: "http://rsg-consulting-group.web.app/",
-          freeHosting: true,
-        },
-      ],
       miniWorkItems: [
         {
           title: "Reflection Image Slider",
@@ -132,7 +68,7 @@ class W_Container extends Component {
   componentDidMount() {
     if (!isEmpty(images) && isEmpty(this.state.images)) this.setState({ images });
 
-    const { workItems, miniWorkItems, itemsPerPage } = this.state;
+    const { miniWorkItems, itemsPerPage } = this.state;
 
     var paginatedWorkItems = [];
     for (var i = 0; i < workItems.length; i += itemsPerPage) paginatedWorkItems.push(workItems.slice(i, i + itemsPerPage));

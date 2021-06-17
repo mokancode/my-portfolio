@@ -49,7 +49,13 @@ class ResumeEducationItem extends Component {
 
         <div className={styles.educationContent}>
           <div className={styles.educationAchievement}>
-            <p style={{ transitionDelay: `${dateLineDelay}ms` }}>{education.achievement}</p>
+            {typeof this.props.education.achievement === "object" ? (
+              <div className={styles.MERNStackAchievementOuterWrapper} style={{ transitionDelay: `${dateLineDelay}ms` }}>
+                {this.props.education.achievement}
+              </div>
+            ) : (
+              <p style={{ transitionDelay: `${dateLineDelay}ms` }}>{education.achievement}</p>
+            )}
           </div>
           <div className={styles.educationSchool}>
             <p style={{ transitionDelay: `${dateLineDelay + (index + 1) * 100}ms` }}>{education.school}</p>

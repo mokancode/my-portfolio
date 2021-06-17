@@ -10,8 +10,8 @@ import "./WorkItem_New/WorkItem2_New.scss";
 import "./WorkItem_New/WorkItemGZ.scss";
 import "./WorkItem_New/WorkItemRSG.scss";
 import "./WorkItem_New/WorkItemProjectOrganizer.scss";
+import "./WorkItem_New/WorkItemArdi.scss";
 import isEmpty from "../../is-empty";
-import classnames from "classnames";
 // import { useSwipeable, Swipeable } from "react-swipeable";
 
 import SwiperCore, { Navigation, EffectCoverflow } from "swiper";

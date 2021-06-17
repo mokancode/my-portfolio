@@ -1,0 +1,89 @@
+.ardi {
+  .blockDescriptionsWrapper {
+    transition: 3s 0s;
+
+    &::before {
+      border-radius: 10px;
+      padding-top: 10px;
+      // background: linear-gradient(to top, rgb(107, 28, 28) 0%, rgb(7, 13, 42) 120%);
+      background: radial-gradient(rgb(65, 106, 136), rgb(19, 29, 80));
+
+      box-shadow: 5px 3px 10px 0 rgba(0, 0, 0, 0.8);
+      opacity: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      /* border: 1px solid cyan; */
+      width: 90%;
+      height: 100%;
+      border-radius: 10px;
+      // box-shadow: 1px 0 2px 0 rgb(116, 34, 34), 0px 1.5px 2px 0 rgb(197, 61, 61), 0px 0px 3px 1px rgb(160, 48, 48),
+      //   -4px 2px 2px 0 rgb(13, 25, 9);
+      box-shadow: 1px 0 2px 0 rgb(34, 46, 116), 0px 1.5px 2px 0 rgb(61, 75, 197), 0px 0px 3px 1px rgb(160, 48, 48),
+        -4px 2px 2px 0 rgb(13, 25, 9);
+      opacity: 0;
+      transition-delay: 0.8s;
+    }
+
+    &.blockDescriptionsWrapperShadow {
+      &::before,
+      &::after {
+        opacity: 1;
+        /* border: 2px solid cyan; */
+      }
+    }
+  }
+
+  .blockDescriptionItem {
+    &:nth-child(1) {
+      margin-right: 50px;
+      /* border: 2px solid white; */
+    }
+
+    .blockFirstWord {
+      color: white;
+      /* text-shadow: 0 0 5px rgb(167, 42, 4); */
+      text-shadow: none;
+      /* font-size: 25px; */
+      letter-spacing: 3px;
+      margin-bottom: -7px;
+      /* font-family: "Didact Gothic"; */
+    }
+
+    .blockSentence {
+      /* font-size: 20px; */
+      color: skyblue;
+      text-shadow: 0 0 5px skyblue;
+      position: relative;
+      perspective: 100px;
+    }
+  }
+
+  .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 50px;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ardi .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ardi .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .ardi .blockDescriptionsWrapper:nth-of-type(1) .blockDescriptionItem:nth-child(2) {
+    margin-left: 25px;
+    margin-right: -5px;
+  }
+}

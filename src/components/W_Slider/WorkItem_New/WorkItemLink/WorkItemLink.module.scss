@@ -213,6 +213,44 @@
   }
 }
 
+:global(.ardi) {
+  .linkBox {
+    // background: radial-gradient(rgb(143, 43, 43), rgb(7, 13, 42));
+    background: radial-gradient(rgb(65, 106, 136), rgb(19, 29, 80));
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.99), 0px 0 20px 0 rgba(0, 0, 0, 0.8), 1px 0 2px 0 rgb(122, 43, 43),
+      -2px 0 1px 0 rgb(184, 67, 67), 0px 1.5px 2px 2px rgb(67, 118, 184), 0px 0px 3px 1px rgba(184, 67, 67, 0.7);
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      transition: 0.5s;
+      border: 1px solid transparent;
+    }
+
+    &:hover:before {
+      border: 1px solid skyblue;
+      filter: drop-shadow(0 0 2px white) drop-shadow(0 0 10px blueviolet) drop-shadow(0 0 5px skyblue);
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  .linkConnectorContainer .linkConnector {
+    background: linear-gradient(black, rgb(51, 102, 117));
+  }
+}
+
 :global(.rsgWorkItemDiv) {
   .linkBox {
     background: radial-gradient(rgb(31, 35, 44), rgb(9, 9, 10));

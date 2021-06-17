@@ -26,7 +26,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      appVer: "1.1.8.9",
+      appVer: "1.1.9.0",
     };
 
     this.documentHasFocusHandler = this.documentHasFocusHandler.bind(this);

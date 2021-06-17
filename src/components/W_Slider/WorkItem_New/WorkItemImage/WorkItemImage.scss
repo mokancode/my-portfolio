@@ -252,3 +252,18 @@
     max-height: 160px;
   }
 }
+
+.ardi {
+  .largeWorkDescriptionImageWrapperBorder .workItemImageBorder {
+    border-color: skyblue;
+    filter: drop-shadow(0 0 5px skyblue);
+    filter: drop-shadow(0 0 5px skyblue) drop-shadow(0 0 3px rgba(255, 166, 0, 0.5));
+  }
+
+  .workDescriptionImage {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 160px;
+  }
+}

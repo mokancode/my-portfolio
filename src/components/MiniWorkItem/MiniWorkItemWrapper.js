@@ -73,9 +73,6 @@ class MiniWorkItemWrapper extends Component {
 
         <div className="miniWorkItemInnerWrapper">
           {workItemClass === "reflectionImageSlider" ? <ReflectiveGallery showWorkItem={showWorkItem_Min} /> : null}
-          {workItemClass === "projectOrganizer" ? (
-            <ProjectOrganizer return_W_Item_Pos={this.return_W_Item_Pos} workItem={workItem} />
-          ) : null}
         </div>
       </div>
     );

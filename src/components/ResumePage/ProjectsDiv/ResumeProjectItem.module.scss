@@ -318,7 +318,7 @@
   transform: unset;
 }
 
-.thingLearnedOrAchievedList {
+.thingsLearnedOrAchievedList {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -368,7 +368,7 @@
   }
 }
 
-.resumeProjectItem.show .thingLearnedOrAchievedList li {
+.resumeProjectItem.show .thingsLearnedOrAchievedList li {
   opacity: 1;
   transform: unset;
 }

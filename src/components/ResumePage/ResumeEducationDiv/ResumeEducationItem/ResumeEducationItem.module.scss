@@ -38,7 +38,7 @@
   margin-left: 5px;
   position: relative;
   height: 100%;
-//   border: 1px solid blue;
+  //   border: 1px solid blue;
 }
 
 :root {
@@ -63,7 +63,7 @@
   position: absolute;
   top: 13px;
   width: 1.5px;
-  height: calc(100% - .5px);
+  height: calc(100% - 0.5px);
   background-color: var(--projectDateTimelineColor);
   transition-duration: 1s;
   /* transition: 0s !important; */
@@ -88,13 +88,15 @@
   margin: 0px;
 }
 
-.resumeEducationItem p {
+.resumeEducationItem p,
+.resumeEducationItem .MERNStackAchievementOuterWrapper {
   opacity: 0;
   transform: translateX(5px);
   transition-duration: 1s;
 }
 
-.resumeEducationItem.show p {
+.resumeEducationItem.show p,
+.resumeEducationItem.show .MERNStackAchievementOuterWrapper {
   opacity: 1;
   transform: unset;
 }
