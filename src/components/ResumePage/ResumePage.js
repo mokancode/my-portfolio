@@ -204,7 +204,7 @@ class ResumePage extends Component {
           <p>The mobile web version of my resume is in development.</p>
           <div className="linkWrapper">
             <p>Meanwhile you may download the</p>
-            <a href={resumeLink}>
+            <a href={resumeLink} download>
               <PDFIcon /> version
             </a>
           </div>

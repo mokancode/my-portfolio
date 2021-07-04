@@ -61,6 +61,7 @@
 .isMobileMode .workItemTitleLetter,
 .browserNotChrome .workItemTitleLetter {
   filter: unset;
+  margin-top: 0px;
 }
 
 /* when is text-shadow initially disabled?! */
@@ -167,6 +168,7 @@
 
 .rsgWorkItemDiv {
   .workItemTitleLetter {
+    margin-bottom: 0px;
     font-family: "Perpetua Titling MT";
     font-size: 80px;
     /* background: linear-gradient(to top, rgb(33, 39, 44), rgb(5, 4, 32)); */
